@@ -1,0 +1,139 @@
+---
+title: "Quick Start Guide"
+description: "Get up and running with BARS in under 10 minutes"
+---
+
+# Quick Start Guide
+
+Get the BARS vatSys plugin installed and operational in just a few simple steps.
+
+<Info>
+  This quick start guide assumes you have vatSys already installed and are
+  familiar with basic ATC operations.
+</Info>
+
+## Before You Begin
+
+Ensure you have:
+
+- A working vatSys installation
+- An active VATSIM account
+- A position at a [compatible airport](https://stopbars.com/airports)
+
+## 5-Minute Setup
+
+<Steps>
+<Step title="Create BARS Account">
+  1. Visit [stopbars.com](https://stopbars.com)
+  2. Sign up using your VATSIM credentials
+  3. Go to Account Settings → Show Token
+  4. Copy your authentication token
+  
+  <Tip>
+  Keep this token safe - you'll need it for vatSys configuration.
+  </Tip>
+</Step>
+
+<Step title="Download and Install Plugin">
+  1. Download the vatSys plugin from the BARS website 2. Copy the .dll file to
+  your vatSys plugins folder: ``` Documents\vatSys Files\Plugins\ ``` 3. Restart
+  vatSys
+</Step>
+
+<Step title="Configure in vatSys">
+  1. Connect to a compatible airport position 2. Go to **Window > BARS
+  Settings** 3. Paste your authentication token 4. Enable "SMR On Ground" if
+  desired
+</Step>
+
+<Step title="Start Controlling">
+  1. Click **Claim Airport** in the BARS panel
+  2. Select your active runways
+  3. Begin normal ATC operations with stop bar control
+  
+  <Check>
+  Stop bars should now appear on your display and respond to mouse clicks.
+  </Check>
+</Step>
+</Steps>
+
+## First Operations
+
+### Basic Stop Bar Control
+
+<Tabs>
+<Tab title="Runway Entry">
+  1. Issue clearance: `"QFA123, runway 34L, line up and wait"`
+  2. Click the stop bar to deactivate (turns off)
+  3. Monitor aircraft movement
+  4. Click stop bar again after aircraft clears (reactivates)
+</Tab>
+
+<Tab title="Runway Crossing">
+  1. Complete coordination with Tower
+  2. Issue crossing clearance
+  3. Deactivate stop bar for crossing
+  4. Reactivate after aircraft crosses completely
+</Tab>
+</Tabs>
+
+### Visual Indicators
+
+<CardGroup cols={3}>
+<Card title="Red Stop Bars" icon="stop">
+  **Active/Illuminated**
+  Aircraft must stop and hold
+</Card>
+
+<Card title="Dark Stop Bars" icon="circle">
+  **Deactivated** Aircraft may proceed past
+</Card>
+
+<Card title="Green Stop Bars" icon="check">
+  **Other Controllers**
+  Not under your control
+</Card>
+</CardGroup>
+
+## Common First-Session Issues
+
+<AccordionGroup>
+<Accordion title="Stop bars not appearing">
+  **Check these items:**
+  - Are you connected to a compatible airport?
+  - Did you claim the airport successfully?
+  - Have you selected at least one runway?
+  - Is your token authentication working?
+</Accordion>
+
+<Accordion title="Stop bars not responding to clicks">
+  **Try these solutions:**
+  - Click directly on the stop bar graphic
+  - Check connection status in control bar
+  - Wait a few seconds for network sync
+  - Try restarting the BARS plugin
+</Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+<Steps>
+<Step title="Practice Basic Operations">
+  Start with simple runway entries and crossings during quiet traffic periods.
+</Step>
+
+<Step title="Learn Advanced Features">
+  Explore multi-controller operations and complex traffic scenarios.
+</Step>
+
+<Step title="Join the Community">
+  Connect with other BARS users on [Discord](https://stopbars.com/discord) for tips and support.
+</Step>
+</Steps>
+
+<Tip>
+  **Pro tip:** Practice during low-traffic periods first to build confidence
+  with the system before handling busy sessions.
+</Tip>
+
+Ready for more detailed information? Continue to the [full installation guide](/vatsys/installation) or [controller operations guide](/vatsys/controller-guide).

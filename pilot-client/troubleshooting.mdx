@@ -1,0 +1,728 @@
+---
+title: "Troubleshooting"
+description: "Solve common BARS Client issues and get your stopbar operations working smoothly"
+---
+
+# BARS Client Troubleshooting
+
+Having issues with BARS Client? This comprehensive troubleshooting guide covers the most common problems and their solutions, from installation issues to operational difficulties.
+
+<Note>
+  Most BARS issues can be resolved quickly with the right troubleshooting steps.
+  If you can't find a solution here, our [Discord
+  community](https://stopbars.com/discord) provides real-time support from
+  experienced users and developers.
+</Note>
+
+## Quick Diagnostics
+
+Before diving into specific troubleshooting, perform these quick checks:
+
+<Steps>
+<Step title="Verify Basic Requirements">
+Ensure your system meets BARS requirements:
+
+- **Windows 10/11** (64-bit)
+- **Microsoft Flight Simulator 2020** (latest version)
+- **Stable internet connection**
+- **BARS Client** properly installed
+- **Valid API token** from your account
+
+<Check>
+If any of these are missing, address them before proceeding with other troubleshooting steps.
+</Check>
+</Step>
+
+<Step title="Check BARS Client Status">
+Verify BARS Client is running and connected:
+
+1. **Look for system tray icon**: BARS should appear in notification area
+2. **Open client window**: Right-click icon and select "Show"
+3. **Check connection status**: Should display "Connected" in green
+4. **Verify API token**: Ensure token is entered correctly
+
+<Warning>
+If BARS Client isn't running or shows "Disconnected" status, connection issues are likely the cause of your problems.
+</Warning>
+</Step>
+
+<Step title="Confirm Operational Context">
+Ensure you're in a scenario where BARS should work:
+
+- **BARS-compatible airport**: Check [airports list](/pilot-client/airports)
+- **Controller online**: BARS-equipped ATC must be present
+- **Network connectivity**: Stable connection to BARS servers
+- **Proper positioning**: Aircraft at gate or taxiway, not airborne
+
+<Info>
+Stopbars only appear when a BARS-equipped controller is actively managing your airport. Without a controller, you won't see any stopbar activity.
+</Info>
+</Step>
+</Steps>
+
+## Installation Issues {#installation}
+
+### BARS Client Won't Install
+
+<AccordionGroup>
+<Accordion title="Installation Fails with Error">
+**Common error messages and solutions**:
+
+**"Access Denied" or "Permission Error"**:
+
+- Run installer as Administrator
+- Disable antivirus temporarily during installation
+- Ensure Windows user account has admin privileges
+
+**"Installation Package Corrupt"**:
+
+- Download fresh installer from official website
+- Check download integrity with provided checksums
+- Clear browser cache and download again
+
+**"Windows SmartScreen Blocked"**:
+
+- Click "More info" on SmartScreen warning
+- Select "Run anyway" to proceed
+- Add exception to Windows Defender if needed
+
+<Tip>
+Always download BARS Client from the official stopbars.com website to avoid corrupted or modified installers.
+</Tip>
+</Accordion>
+
+<Accordion title="Antivirus Interference">
+**Resolving antivirus conflicts**:
+
+Many antivirus programs flag BARS Client as potentially unwanted software because it modifies simulator behavior.
+
+**Solutions**:
+
+1. **Add exclusions**: Add BARS installation folder to antivirus exclusions
+2. **Whitelist executable**: Add `BARSClient.exe` to trusted applications
+3. **Temporary disable**: Disable real-time protection during installation
+4. **Check quarantine**: Restore BARS files if quarantined
+
+**Common antivirus programs and solutions**:
+
+- **Windows Defender**: Add folder exclusion in Windows Security settings
+- **Avast/AVG**: Add exception in Real-time shields settings
+- **Norton**: Add exclusion in Auto-Protect settings
+- **McAfee**: Configure Real-Time Scanning exclusions
+  </Accordion>
+
+<Accordion title="Installation Directory Issues">
+**Problems with installation location**:
+
+**Insufficient disk space**:
+
+- Free up at least 500MB for installation
+- Choose different drive if C: drive is full
+- Clear temporary files before installation
+
+**Path too long errors**:
+
+- Install to shorter path (e.g., `C:\BARS\`)
+- Avoid spaces in installation path
+- Use default installation location when possible
+
+**Permission issues with custom paths**:
+
+- Ensure write permissions for chosen directory
+- Install to user profile if admin rights limited
+- Use default Program Files location for best compatibility
+  </Accordion>
+</AccordionGroup>
+
+### Post-Installation Problems
+
+<AccordionGroup>
+<Accordion title="BARS Client Won't Start">
+**Startup failures and solutions**:
+
+**Missing system tray icon**:
+
+1. Check Task Manager for `BARSClient.exe` process
+2. Look in hidden icons area of system tray
+3. Try launching manually from Start menu
+4. Restart Windows and try again
+
+**Application crashes on startup**:
+
+1. Run as Administrator
+2. Check Windows Event Viewer for error details
+3. Update graphics drivers
+4. Reinstall Microsoft Visual C++ Redistributables
+
+**"Failed to initialize" errors**:
+
+1. Verify .NET Framework installation (4.7.2 or higher)
+2. Update Windows to latest version
+3. Check antivirus real-time protection
+4. Run Windows System File Checker (`sfc /scannow`)
+   </Accordion>
+
+<Accordion title="Missing Dependencies">
+**Required components not installed**:
+
+BARS Client requires certain Windows components:
+
+**Microsoft .NET Framework**:
+
+- Download from Microsoft website
+- Install version 4.7.2 or newer
+- Restart after installation
+
+**Visual C++ Redistributables**:
+
+- Install latest x64 redistributables
+- Available from Microsoft Download Center
+- Required for graphics and network components
+
+**Windows Updates**:
+
+- Install all critical Windows updates
+- Enable automatic updates for security patches
+- Restart after major updates
+  </Accordion>
+</AccordionGroup>
+
+## Connection Problems {#connection}
+
+### Authentication Issues
+
+<AccordionGroup>
+<Accordion title="Invalid API Token">
+**Token-related authentication problems**:
+
+**"Authentication failed" error**:
+
+1. **Verify token accuracy**: Copy token again from account settings
+2. **Check for extra characters**: Ensure no spaces or line breaks
+3. **Account status**: Verify account is active and verified
+4. **Token expiration**: Some tokens may expire - generate new one
+
+**Steps to resolve**:
+
+1. Log into BARS website
+2. Navigate to Account Settings
+3. Click "Show Token" or "Regenerate Token"
+4. Copy the complete token (usually long alphanumeric string)
+5. Paste into BARS Client and restart
+
+<Warning>
+Never share your API token. If you suspect it's been compromised, regenerate a new one immediately.
+</Warning>
+</Accordion>
+
+<Accordion title="Account Verification Issues">
+**Problems with account status**:
+
+**Unverified email address**:
+
+- Check email for verification link
+- Check spam/junk folders
+- Request new verification email from website
+- Contact support if email not received
+
+**Account suspended or banned**:
+
+- Check email for suspension notices
+- Review terms of service compliance
+- Contact support for appeal process
+- Create new account if necessary
+
+**Login problems on website**:
+
+- Reset password using "Forgot Password" link
+- Clear browser cookies and cache
+- Try different browser or incognito mode
+- Check for website maintenance notices
+  </Accordion>
+</AccordionGroup>
+
+### Network Connectivity
+
+<AccordionGroup>
+<Accordion title="Internet Connection Issues">
+**Basic connectivity problems**:
+
+**No internet connection**:
+
+1. Test internet with other applications
+2. Restart modem/router
+3. Check WiFi connection strength
+4. Try wired connection if using WiFi
+
+**Intermittent connectivity**:
+
+1. Run Windows Network Diagnostics
+2. Update network adapter drivers
+3. Change DNS servers (try 8.8.8.8, 1.1.1.1)
+4. Contact ISP about connection stability
+
+**Slow connection speeds**:
+
+- Test connection speed with online tools
+- Close bandwidth-heavy applications
+- Configure QoS settings on router
+- Consider upgrading internet plan
+  </Accordion>
+
+<Accordion title="Firewall and Network Security">
+**Firewall blocking BARS Client**:
+
+**Windows Firewall**:
+
+1. Open Windows Defender Firewall
+2. Click "Allow an app or feature through Windows Defender Firewall"
+3. Click "Change Settings" then "Allow another app"
+4. Browse to BARS Client installation and add `BARSClient.exe`
+5. Ensure both Private and Public networks are checked
+
+**Router/Corporate Firewall**:
+
+- **Ports needed**: BARS typically uses standard HTTPS (443) and HTTP (80)
+- **Proxy settings**: Configure proxy if required by network
+- **VPN considerations**: Some VPNs may block or slow BARS traffic
+- **Corporate networks**: May require IT department to whitelist BARS
+
+**Third-party firewalls**:
+
+- Add BARS Client to allowed applications
+- Create specific rules for network access
+- Temporarily disable to test if firewall is blocking
+- Configure application-specific permissions
+  </Accordion>
+
+<Accordion title="ISP and Regional Issues">
+**Provider-specific problems**:
+
+**ISP throttling or blocking**:
+
+- Some ISPs may throttle gaming/simulation traffic
+- Try VPN to test if ISP is blocking
+- Contact ISP about traffic shaping policies
+- Consider switching to gaming-friendly ISP
+
+**Regional server issues**:
+
+- BARS may have regional server outages
+- Check BARS status page or Discord for announcements
+- Try connecting at different times
+- Report persistent regional issues
+
+**Geographic restrictions**:
+
+- Some regions may have limited BARS server access
+- Use VPN if geographic restrictions apply
+- Contact support about regional availability
+- Check for local network regulations
+  </Accordion>
+</AccordionGroup>
+
+## Operational Issues {#operations}
+
+### Stopbars Not Appearing
+
+<AccordionGroup>
+<Accordion title="No Stopbars Visible">
+**When stopbars don't show up at all**:
+
+**Controller requirements**:
+
+1. **BARS-equipped controller must be online**: Check who's controlling your airport
+2. **Controller must be using BARS plugin**: Not all controllers have BARS enabled
+3. **Network connectivity**: Both you and controller need stable connections
+4. **Loading time**: Allow up to 2 minutes for stopbars to initialize
+
+**Airport compatibility**:
+
+1. **Check airport support**: Verify airport is on [compatibility list](/pilot-client/airports)
+2. **Position verification**: Ensure you're at a supported airport
+3. **Scenery configuration**: Select correct third-party scenery if applicable
+4. **Ground position**: Be on taxiways/gates, not airborne or on runway
+
+**Client configuration**:
+
+1. **Connection status**: Verify BARS Client shows "Connected"
+2. **Airport detection**: Client should display current airport ICAO
+3. **Scenery selection**: Ensure correct scenery is selected in client
+4. **Restart client**: Try restarting BARS Client
+   </Accordion>
+
+<Accordion title="Partial Stopbar Coverage">
+**Some but not all stopbars working**:
+
+**Expected behavior**:
+
+- Not all intersections have stopbars
+- Stopbars only at controlled intersections
+- Controller may not claim all runways
+
+**Troubleshooting steps**:
+
+1. **Check runway ownership**: Controller may only control specific runways
+2. **Airport limitations**: Some airports have limited stopbar coverage
+3. **Scenery differences**: Third-party scenery may have different stopbar layouts
+4. **Progressive loading**: Stopbars may appear as you taxi to different areas
+   </Accordion>
+
+<Accordion title="Stopbars in Wrong Positions">
+**Misplaced or incorrectly positioned stopbars**:
+
+**Scenery mismatch**:
+
+1. **Wrong scenery selected**: Verify correct third-party scenery chosen
+2. **Conflicting sceneries**: Multiple airport addons may conflict
+3. **Outdated configurations**: Scenery updates may require BARS updates
+
+**Solutions**:
+
+1. **Reconfigure scenery**: Select correct addon in BARS Client
+2. **Restart required**: Always restart client after scenery changes
+3. **Default scenery test**: Try switching to default MSFS scenery
+4. **Report issues**: Submit bug report with screenshots and details
+   </Accordion>
+</AccordionGroup>
+
+### Stopbar Behavior Problems
+
+<AccordionGroup>
+<Accordion title="Stopbars Not Responding">
+**Stopbars present but not changing state**:
+
+**Controller connectivity**:
+
+1. **Controller disconnection**: ATC may have lost connection
+2. **Plugin malfunction**: Controller's BARS plugin may have issues
+3. **Network lag**: Delays between controller commands and client updates
+
+**Client issues**:
+
+1. **Connection degradation**: Check if BARS Client connection is stable
+2. **Update frequency**: May be delays in receiving stopbar updates
+3. **Local interference**: Other software may interfere with BARS
+
+**Troubleshooting steps**:
+
+1. **Query controller**: Ask ATC about stopbar functionality
+2. **Client restart**: Restart BARS Client to refresh connection
+3. **Alternative communication**: Use standard radio procedures as backup
+4. **Report to controller**: Inform ATC if stopbars aren't responding
+   </Accordion>
+
+<Accordion title="Inconsistent Stopbar Behavior">
+**Erratic or unpredictable stopbar operation**:
+
+**Network instability**:
+
+- Intermittent internet connection
+- High latency to BARS servers
+- Packet loss during data transmission
+
+**Solutions**:
+
+1. **Stabilize connection**: Use wired instead of WiFi if possible
+2. **Close other applications**: Reduce network usage from other programs
+3. **Router optimization**: Position closer to WiFi router or upgrade equipment
+4. **ISP consultation**: Discuss connection stability with internet provider
+
+**Timing issues**:
+
+- Stopbars changing too quickly or slowly
+- Delays between clearance and stopbar change
+- Stopbars changing without apparent reason
+
+**Mitigation strategies**:
+
+1. **Communication priority**: Always prioritize radio instructions over stopbars
+2. **Confirmation requests**: Ask controller to confirm stopbar states
+3. **Backup procedures**: Use standard taxi procedures when in doubt
+4. **Patience**: Allow time for network synchronization
+   </Accordion>
+</AccordionGroup>
+
+### Performance Issues
+
+<AccordionGroup>
+<Accordion title="Frame Rate Impact">
+**BARS Client affecting simulator performance**:
+
+**Graphics performance**:
+
+1. **Lighting effects**: Stopbar lights may impact frame rates
+2. **Bloom settings**: Enhanced lighting can be GPU-intensive
+3. **Overall graphics load**: Additional lighting increases rendering demand
+
+**Optimization strategies**:
+
+1. **Adjust MSFS graphics**: Lower lighting quality if needed
+2. **Disable bloom temporarily**: Turn off if frame rates are critical
+3. **Update graphics drivers**: Ensure latest GPU drivers installed
+4. **Monitor temperatures**: Check if GPU is overheating
+
+**Memory usage**:
+
+- BARS Client uses minimal RAM
+- Check for memory leaks with Task Manager
+- Restart client if memory usage seems excessive
+- Consider system RAM upgrade if constantly running low
+  </Accordion>
+
+<Accordion title="Client Resource Usage">
+**BARS Client consuming too many resources**:
+
+**High CPU usage**:
+
+1. **Background processes**: Check what else is running
+2. **Windows updates**: Install pending system updates
+3. **Malware scan**: Run full system antivirus scan
+4. **Process monitoring**: Use Task Manager to identify resource hogs
+
+**Network bandwidth**:
+
+- BARS uses minimal bandwidth for normal operation
+- Monitor data usage if on limited connection
+- Consider data-saving modes if available
+- Check for background downloads or updates
+
+**Storage space**:
+
+- BARS Client requires minimal disk space
+- Log files may accumulate over time
+- Clear temporary files periodically
+- Ensure adequate free space on system drive
+  </Accordion>
+</AccordionGroup>
+
+## Advanced Troubleshooting
+
+### Log File Analysis
+
+BARS Client generates log files that can help diagnose complex issues:
+
+<Steps>
+<Step title="Locate Log Files">
+Log files are stored in your local application data:
+
+**Default location**: `%localappdata%\BARS\`
+
+**Accessing logs**:
+
+1. Press `Windows + R` to open Run dialog
+2. Type `%localappdata%\BARS` and press Enter
+3. Look for files named `BARS_log_[date].txt`
+
+<Warning>
+Log files are deleted when BARS Client restarts, so save copies immediately after encountering issues.
+</Warning>
+</Step>
+
+<Step title="Understand Log Content">
+Log files contain technical information about BARS operations:
+
+- **Connection events**: Server connections and disconnections
+- **Authentication attempts**: Token validation and errors
+- **Stopbar updates**: Real-time stopbar state changes
+- **Error messages**: Detailed error information with timestamps
+
+<Note>
+Most log content is technical and intended for developer analysis, but error messages can provide useful troubleshooting clues.
+</Note>
+</Step>
+
+<Step title="Share Logs for Support">
+When reporting issues, include relevant log information:
+
+1. **Reproduce the issue**: Recreate the problem while logging is active
+2. **Save log files immediately**: Copy logs before restarting BARS
+3. **Include timestamps**: Note when the issue occurred
+4. **Submit with bug report**: Attach logs to support requests
+
+<Tip>
+Remove any sensitive information (like API tokens) before sharing log files publicly.
+</Tip>
+</Step>
+</Steps>
+
+### Network Diagnostics
+
+<Tabs>
+<Tab title="Connection Testing">
+**Manual network testing**:
+
+```cmd
+# Test basic connectivity
+ping stopbars.com
+
+# Test DNS resolution
+nslookup stopbars.com
+
+# Test HTTP connectivity
+curl -I https://stopbars.com
+```
+
+**Interpreting results**:
+
+- **Ping failure**: Basic internet connectivity issues
+- **DNS failure**: DNS server problems
+- **HTTP failure**: Firewall or proxy blocking
+
+</Tab>
+
+<Tab title="Advanced Diagnostics">
+**Detailed network analysis**:
+
+```cmd
+# Trace route to BARS servers
+tracert stopbars.com
+
+# Check network adapter configuration
+ipconfig /all
+
+# Test network adapter
+netsh wlan show profiles
+```
+
+**When to use**:
+
+- Intermittent connection issues
+- Regional connectivity problems
+- Corporate network troubleshooting
+- ISP-related issues
+
+</Tab>
+</Tabs>
+
+### Registry and System Issues
+
+<AccordionGroup>
+<Accordion title="Windows Registry Problems">
+**Registry-related BARS issues** (Advanced users only):
+
+**Symptoms**:
+
+- BARS Client settings not saving
+- Installation problems persisting after reinstall
+- Windows not recognizing BARS properly
+
+**Solutions**:
+
+1. **Registry cleanup**: Use CCleaner or similar tool
+2. **Manual registry edit**: Remove BARS entries before reinstall
+3. **Windows system restore**: Revert to point before issues began
+4. **Fresh Windows user profile**: Create new user account to test
+
+<Warning>
+Editing the Windows Registry can damage your system. Only attempt if you're experienced with registry modification.
+</Warning>
+</Accordion>
+
+<Accordion title="System File Corruption">
+**Windows system file issues affecting BARS**:
+
+**Diagnostic commands**:
+
+```cmd
+# Check for system file corruption
+sfc /scannow
+
+# Check Windows image health
+dism /online /cleanup-image /checkhealth
+
+# Repair Windows image if needed
+dism /online /cleanup-image /restorehealth
+```
+
+**When to use**:
+
+- Multiple applications having similar issues
+- Windows updates failing
+- System stability problems
+- BARS installing but not functioning
+  </Accordion>
+</AccordionGroup>
+
+## Getting Additional Help
+
+### Community Support
+
+<CardGroup cols={2}>
+<Card title="Discord Community" icon="discord" href="https://stopbars.com/discord">
+  Join our active Discord server for real-time help from experienced users and developers.
+</Card>
+
+<Card title="GitHub Issues" icon="github" href="https://github.com/stopbars/bars-client/issues">
+  Report bugs and request features through our GitHub repository.
+</Card>
+</CardGroup>
+
+### Professional Support
+
+<Steps>
+<Step title="Prepare Information">
+Before contacting support, gather:
+
+- **System specifications** (OS version, hardware details)
+- **BARS Client version** and installation date
+- **Error messages** and screenshots
+- **Log files** from when issues occurred
+- **Steps to reproduce** the problem
+  </Step>
+
+<Step title="Contact Channels">
+Reach out through appropriate channels:
+
+- **Technical issues**: GitHub Issues with detailed reports
+- **Account problems**: Support portal on BARS website
+- **General questions**: Discord community channels
+- **Feature requests**: Community voting and discussion
+  </Step>
+
+<Step title="Follow Up">
+After reporting issues:
+
+- **Monitor responses**: Check back regularly for developer feedback
+- **Test solutions**: Try suggested fixes and report results
+- **Provide updates**: Share additional information if requested
+- **Confirm resolution**: Report when issues are resolved
+  </Step>
+</Steps>
+
+<Note>
+  The BARS development team and community are committed to helping resolve
+  issues quickly. Most problems can be solved with proper troubleshooting and
+  community support.
+</Note>
+
+## Prevention and Maintenance
+
+### Regular Maintenance
+
+<Tabs>
+<Tab title="Weekly Tasks">
+- **Check for updates**: Keep BARS Client current
+- **Verify connectivity**: Test connection before flights
+- **Clear temporary files**: Remove accumulated cache
+- **Monitor performance**: Check resource usage
+</Tab>
+
+<Tab title="Monthly Tasks">
+  - **Review log files**: Look for recurring issues - **Update system drivers**:
+  Keep graphics and network drivers current - **Clean registry**: Use system
+  maintenance tools - **Backup settings**: Save BARS configuration
+</Tab>
+
+<Tab title="As Needed">
+- **Update Windows**: Install security patches
+- **Scan for malware**: Run comprehensive antivirus scans
+- **Defragment storage**: Optimize hard drive performance
+- **Check system health**: Monitor overall system stability
+</Tab>
+</Tabs>
+
+<Tip>
+  Proactive maintenance prevents many common BARS issues and ensures optimal
+  performance during your flights.
+</Tip>

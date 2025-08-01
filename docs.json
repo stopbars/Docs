@@ -1,0 +1,175 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "BARS Docs",
+  "colors": {
+    "primary": "#fb2c36",
+    "light": "#fb2c36",
+    "dark": "#18181b"
+  },
+  "favicon": "/favicon.png",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Pilot Client",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "pilot-client/index",
+              "pilot-client/installation",
+              "pilot-client/setup",
+              "pilot-client/quickstart"
+            ]
+          },
+          {
+            "group": "Operations",
+            "pages": [
+              "pilot-client/airports",
+              "pilot-client/troubleshooting",
+              "pilot-client/faq"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "EuroScope Plugin",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "euroscope/index",
+              "euroscope/installation",
+              "euroscope/quickstart"
+            ]
+          },
+          {
+            "group": "Controller Operations",
+            "pages": [
+              "euroscope/controller-guide",
+              "euroscope/best-practices"
+            ]
+          },
+          {
+            "group": "Support",
+            "pages": [
+              "euroscope/troubleshooting",
+              "euroscope/faq"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "vatSys Plugin",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "vatsys/index",
+              "vatsys/quickstart",
+              "vatsys/installation"
+            ]
+          },
+          {
+            "group": "Controller Operations",
+            "pages": [
+              "vatsys/controller-guide",
+              "vatsys/best-practices"
+            ]
+          },
+          {
+            "group": "Support",
+            "pages": [
+              "vatsys/troubleshooting",
+              "vatsys/faq"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "BARS API",
+        "groups": [
+          {
+            "group": "API documentation",
+            "pages": [
+              "api-reference/introduction"
+            ]
+          },
+          {
+            "group": "Endpoint examples",
+            "pages": [
+              "api-reference/endpoint/get",
+              "api-reference/endpoint/create",
+              "api-reference/endpoint/delete",
+              "api-reference/endpoint/webhook"
+            ]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Discord",
+          "href": "https://stopbars.com/discord",
+          "icon": "discord"
+        },
+        {
+          "anchor": "GitHub",
+          "href": "https://github.com/stopbars",
+          "icon": "github"
+        },
+        {
+          "anchor": "Open Collective",
+          "href": "https://opencollective.com/stopbars",
+          "icon": "hand-holding-dollar"
+        }
+      ]
+    }
+  },
+  "logo": {
+    "light": "/logo/banner.png",
+    "dark": "/logo/banner.png"
+  },
+  "fonts": {
+    "family": "Segoe UI"
+  },
+  "appearance": {
+    "default": "dark",
+    "strict": true
+  },
+  "background": {
+    "color": {
+      "dark": "#09090b"
+    }
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Support",
+        "href": "https://stopbars.com/support"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Status",
+      "href": "https://status.stopbars.com"
+    }
+  },
+  "contextual": {
+    "options": [
+     "copy",
+     "view",
+     "chatgpt",
+     "claude",
+     "perplexity"
+   ]
+  },
+  "footer": {
+    "socials": {
+      "discord": "https://stopbars.com/discord",
+      "github": "https://github.com/stopbars",
+      "website": "https://stopbars.com/donate"
+    }
+  }
+}

@@ -1,0 +1,203 @@
+---
+title: "Quick Start Guide"
+description: "Get up and running with the BARS EuroScope plugin in minutes - from first connection to controlling your first stopbar"
+---
+
+# Quick Start Guide
+
+This guide will have you controlling stopbars with the BARS EuroScope plugin in just a few minutes. Follow these steps to go from installation to your first successful stopbar operation.
+
+<Info>
+  This quick start assumes you've already [installed the
+  plugin](/euroscope/installation) and configured your API key. If not, complete
+  those steps first.
+</Info>
+
+## Your First Connection
+
+<Steps>
+  <Step title="Connect to VATSIM">
+    The BARS plugin activates automatically when you connect as a controller: 1.
+    **Connect to VATSIM** using your preferred method in EuroScope 2. **Log in**
+    with your controller credentials 3. **Wait for connection** - the plugin
+    will automatically attempt to connect to BARS
+    <Check>
+      Watch the BARS menu button - it should change from "BARS off" to show your
+      connection status.
+    </Check>
+  </Step>
+
+  <Step title="Manual Connection (if needed)">
+    If automatic connection doesn't work: 1. **Click** the **BARS menu button**
+    2. **Select** **"Connect"** from the dropdown menu 3. **Wait** for the
+    connection to establish
+    <Tip>
+      Manual connection is rarely needed. If you frequently need to connect
+      manually, check your firewall settings or contact support.
+    </Tip>
+  </Step>
+
+  <Step title="Verify Connection Status">
+    Confirm you're successfully connected: - **Menu button** should show
+    **"BARS: 0 runways"** (or similar) - **Green status** indicates active
+    connection - **Red status** indicates connection problems
+    <Frame>
+      <img
+        src="/images/euroscope/connected-status.png"
+        alt="BARS menu button showing successful connection with 0 runways claimed"
+      />
+    </Frame>
+  </Step>
+</Steps>
+
+## Claiming Your First Runway
+
+<Steps>
+  <Step title="Set Your Active Airports">
+    Configure which airports you're controlling: 1. **Open** the **EuroScope
+    runways popup** (standard EuroScope function) 2. **Add** the airports you're
+    actively controlling 3. **Save** your configuration
+    <Note>
+      The BARS plugin uses EuroScope's airport configuration to determine which
+      runways you can claim.
+    </Note>
+  </Step>
+
+  <Step title="Access Runway Ownership">
+    Open the runway management interface: 1. **Click** the **BARS menu button**
+    2. **Select** **"Set runway ownership"** 3. **View** available runways for
+    your active airports
+    <Check>
+      You should see a list of runways associated with airports in the BARS
+      database. If no runways appear, verify your airport configuration.
+    </Check>
+  </Step>
+
+  <Step title="Claim a Runway">
+    Select which runways you want to control: 1. **Click** on a runway in the
+    ownership menu to **claim** it 2. **Claimed runways** will be highlighted or
+    marked 3. **Click again** to **unclaim** if needed
+    <Frame>
+      <img
+        src="/images/euroscope/runway-claiming.png"
+        alt="Runway ownership menu showing one runway claimed and available runways to claim"
+      />
+    </Frame>
+    <Check>
+      The BARS menu button should update to show the number of claimed runways
+      (e.g., "BARS: 1 runway").
+    </Check>
+  </Step>
+</Steps>
+
+## Your First Stopbar Operation
+
+<Steps>
+  <Step title="Locate Stopbars on Display">
+    Find stopbar controls on your radar display: - **Stopbars appear** as
+    clickable elements on SMR/ground displays - **Positioned accurately** to
+    match real-world pilot scenery - **May not align** perfectly with EuroScope
+    runway graphics
+    <Warning>
+      Stopbar positions reflect real-world locations, not EuroScope graphical
+      elements. They may appear slightly offset from runway centerlines.
+    </Warning>
+  </Step>
+
+  <Step title="Toggle Stopbar State">
+    Control stopbars with simple clicks: 1. **Click directly** on a stopbar
+    element 2. **Watch** for visual feedback indicating state change 3. **State
+    changes** are immediately sent to connected pilots
+    <Tip>
+      Start with a single stopbar to verify the system is working before
+      managing multiple stopbars simultaneously.
+    </Tip>
+  </Step>
+
+  <Step title="Verify Pilot Connectivity">
+    Identify which pilots can receive your stopbar commands: - **Green dots**
+    appear over aircraft using BARS-compatible pilot clients - **No indicator**
+    means the pilot isn't using BARS - **Focus** stopbar control on
+    BARS-equipped aircraft for maximum effectiveness
+    <Frame>
+      <img
+        src="/images/euroscope/pilot-indicators.png"
+        alt="Radar display showing green dots over aircraft using BARS pilot clients"
+      />
+    </Frame>
+  </Step>
+</Steps>
+
+## Quick Reference - Common Operations
+
+<Tabs>
+  <Tab title="Basic Controls">
+    **Connect to BARS** - Automatic when connecting to VATSIM - Manual: BARS
+    menu → "Connect" **Claim Runway** - BARS menu → "Set runway ownership" -
+    Click runway name to toggle claim status **Toggle Stopbar** - Click directly
+    on stopbar element - Immediate effect for BARS-equipped pilots
+  </Tab>
+
+  <Tab title="Status Indicators">
+    **Connection Status** - "BARS off" = Not connected - "BARS: X runways" =
+    Connected, X runways claimed - Red text = Connection problems **Pilot
+    Compatibility** - Green dot = BARS-equipped pilot - No indicator = Standard
+    pilot client **Runway Ownership** - Highlighted = Claimed by you - Standard
+    = Available to claim
+  </Tab>
+
+  <Tab title="Troubleshooting">
+    **Can't Connect** - Check internet connection - Verify API key is set
+    correctly - Try manual connection via BARS menu **No Runways Available** -
+    Set active airports in EuroScope - Ensure airports exist in BARS database -
+    Check spelling of airport codes **Stopbars Not Responding** - Verify runway
+    is claimed - Check connection status - Ensure clicking on actual stopbar
+    elements
+  </Tab>
+</Tabs>
+
+## Success Checklist
+
+Verify you've completed all essential steps:
+
+<AccordionGroup>
+  <Accordion title="✅ Connection Verified">
+    - [ ] BARS menu button shows connection status - [ ] Button displays "BARS:
+    X runways" format - [ ] No red error indicators visible
+  </Accordion>
+
+  <Accordion title="✅ Runway Claimed">
+    - [ ] Active airports configured in EuroScope - [ ] At least one runway
+    claimed via ownership menu - [ ] Menu button shows correct runway count
+  </Accordion>
+
+  <Accordion title="✅ Stopbar Control Working">
+    - [ ] Stopbar elements visible on radar display - [ ] Clicking stopbars
+    produces visual feedback - [ ] At least one pilot shows green dot indicator
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+Now that you have basic functionality working, explore advanced features:
+
+<CardGroup cols={2}>
+  <Card
+    title="Controller Guide"
+    icon="book-open"
+    href="/euroscope/controller-guide"
+  >
+    Learn advanced techniques for managing multiple runways and complex traffic
+    scenarios
+  </Card>
+
+  <Card title="Best Practices" icon="star" href="/euroscope/best-practices">
+    Discover professional tips for efficient operations and common workflow
+    patterns
+  </Card>
+</CardGroup>
+
+<Note>
+  Remember that stopbar control is most effective when coordinated with voice
+  communications and standard ground control procedures.
+</Note>

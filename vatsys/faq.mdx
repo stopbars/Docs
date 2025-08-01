@@ -1,0 +1,280 @@
+---
+title: "Frequently Asked Questions"
+description: "Common questions and answers about the BARS vatSys plugin"
+---
+
+# Frequently Asked Questions
+
+Find answers to the most commonly asked questions about the BARS vatSys plugin.
+
+## General Questions
+
+<AccordionGroup>
+<Accordion title="What is BARS and how does it enhance vatSys?">
+BARS (Bidirectional Aircraft Runway Safety) is a plugin that simulates real-world stop bar systems used at airports. It allows vatSys controllers to manage illuminated stop bars at runway intersections, providing enhanced realism and safety for virtual air traffic control operations.
+
+The system synchronizes between controllers using the vatSys plugin and pilots using the BARS client, creating a comprehensive ground control experience.
+
+</Accordion>
+
+<Accordion title="Do I need to pay for BARS?">
+  No, BARS is completely free to use. You only need to create a free account on
+  the BARS website to obtain your authentication token.
+</Accordion>
+
+<Accordion title="Which airports support BARS?">
+BARS supports major international airports with implemented stop bar systems. The list of compatible airports is continuously expanding. Check the [BARS website](https://stopbars.com/airports) for the most current list of supported airports.
+
+If your preferred airport isn't supported, you can request implementation through the BARS Discord community.
+
+</Accordion>
+
+<Accordion title="Do pilots need special software to see stop bars?">
+Yes, pilots need to install the BARS client software to see and interact with stop bars. However, the system is designed to work safely even when some pilots don't have the client installed - controllers can use standard voice instructions as backup.
+</Accordion>
+</AccordionGroup>
+
+## Installation and Setup
+
+<AccordionGroup>
+<Accordion title="I installed the plugin but don't see BARS Settings in vatSys. What's wrong?">
+This is usually caused by one of these issues:
+
+1. **Plugin not in correct location**: Ensure the .dll file is in `Documents\vatSys Files\Plugins\`
+2. **File blocked by Windows**: Right-click the plugin file > Properties > Unblock
+3. **Antivirus interference**: Add the plugin to your antivirus exclusions
+4. **Position not compatible**: You must be connected to a supported airport position
+5. **vatSys needs restart**: Restart vatSys after installing the plugin
+
+If none of these solve the issue, check the troubleshooting guide for more detailed solutions.
+
+</Accordion>
+
+<Accordion title="My authentication token isn't working. What should I do?">
+Token issues are usually resolved by:
+
+1. **Verify token accuracy**: Copy the token directly from your BARS account settings
+2. **Check for extra characters**: Ensure no spaces or line breaks are included
+3. **Account activation**: Check your email for any required activation steps
+4. **Try re-generating**: Generate a new token from your account settings
+5. **Network issues**: Test your internet connection and firewall settings
+
+If problems persist, contact BARS support with your account details.
+
+</Accordion>
+
+<Accordion title="Can I use BARS on multiple computers?">
+Yes, you can use the same BARS account and token on multiple computers. However, you cannot be connected to the same airport from multiple instances simultaneously.
+</Accordion>
+</AccordionGroup>
+
+## Operations
+
+<AccordionGroup>
+<Accordion title="How do I handle aircraft that don't have the BARS client?">
+The system is designed to work safely with mixed client situations:
+
+1. **Use standard procedures**: Continue using normal hold short instructions
+2. **Voice confirmation**: Provide additional verbal confirmation for non-BARS aircraft
+3. **Visual monitoring**: Watch aircraft movements more closely
+4. **Clear instructions**: Be explicit about hold short requirements
+
+The stop bar system enhances safety but doesn't replace standard ATC procedures.
+
+</Accordion>
+
+<Accordion title="What happens if BARS goes offline during my session?">
+If BARS becomes unavailable:
+
+1. **Continue operations**: Use standard hold short procedures immediately
+2. **Inform pilots**: Advise aircraft that stop bar indications are not available
+3. **Increase vigilance**: Monitor runway movements more closely
+4. **Document issues**: Record the problem for reporting to BARS support
+5. **Enhanced coordination**: Use more explicit communication with pilots
+
+Safety is maintained through backup procedures and enhanced controller awareness.
+
+</Accordion>
+
+<Accordion title="Can multiple controllers control the same airport?">
+Yes, BARS supports multiple ADC positions at the same airport:
+
+1. **Runway claiming**: Each controller claims specific runways within their jurisdiction
+2. **Coordination required**: Controllers must coordinate runway assignments
+3. **First claim priority**: The first controller to claim a runway maintains control
+4. **Transfer procedures**: Runway control can be transferred through coordination
+
+This mirrors real-world operations at complex airports with multiple ground control positions.
+
+</Accordion>
+
+<Accordion title="How do Centre controllers use BARS?">
+C1/C3 Centre controllers can manage stop bars at remote airports:
+
+1. **Access via Windows menu**: Open Windows > BARS in vatSys
+2. **Enter ICAO code**: Input the 4-letter airport code you want to control
+3. **Single airport limitation**: Currently limited to one airport per session
+4. **Coordination needed**: Must coordinate with local controllers if present
+
+This feature is useful for Centre controllers managing airports without local ATC coverage.
+
+</Accordion>
+</AccordionGroup>
+
+## Technical Issues
+
+<AccordionGroup>
+<Accordion title="Stop bars aren't responding when I click them. Why?">
+This can be caused by several factors:
+
+1. **Connection issues**: Check the status indicator in the BARS control bar
+2. **Runway not claimed**: Ensure you've properly claimed the runway
+3. **Network lag**: Wait a few seconds and try again
+4. **Click precision**: Click directly on the stop bar graphic
+5. **System overload**: Close unnecessary applications to free up resources
+
+If problems persist, try restarting the BARS plugin or re-claiming the airport.
+
+</Accordion>
+
+<Accordion title="Why do some stop bars appear green when I haven't touched them?">
+Green stop bars indicate runways that are not under your control:
+
+1. **Unclaimed runways**: Runways you haven't selected automatically show green
+2. **Other controller's runways**: Runways claimed by other ADC positions
+3. **System default**: This ensures aircraft can move freely on runways not actively controlled
+
+This is normal behavior and ensures safe operations when multiple controllers are present.
+
+</Accordion>
+
+<Accordion title="The plugin is causing performance issues. How can I optimize it?">
+To improve performance:
+
+1. **Close unnecessary applications**: Free up system resources
+2. **Update drivers**: Ensure graphics and network drivers are current
+3. **Check network speed**: Ensure adequate internet connection
+4. **Minimize other displays**: Reduce vatSys resource usage
+5. **Monitor system resources**: Check CPU and RAM usage
+
+If performance issues persist, report them to BARS support with your system specifications.
+
+</Accordion>
+</AccordionGroup>
+
+## Advanced Operations
+
+<AccordionGroup>
+<Accordion title="How should I coordinate runway crossings with other controllers?">
+Follow standard coordination procedures enhanced by BARS:
+
+1. **Complete verbal coordination**: Use standard crossing coordination phraseology
+2. **ADC manages stop bars**: The ADC controller operates stop bars for crossings
+3. **Timing coordination**: Coordinate timing of stop bar changes with clearances
+4. **Clear handoff points**: Establish clear points where control transfers
+
+BARS enhances but doesn't replace standard coordination procedures.
+
+</Accordion>
+
+<Accordion title="What's the best way to handle emergency situations with BARS?">
+During emergencies:
+
+1. **Prioritize safety**: Use all available tools including voice instructions
+2. **Clear communications**: Ensure emergency aircraft receive clear, explicit instructions
+3. **Disable conflicting stop bars**: Quickly clear paths for emergency vehicles
+4. **Coordinate extensively**: Inform all relevant personnel about emergency procedures
+5. **Document actions**: Record BARS-related actions during emergency response
+
+Emergency procedures always take priority over normal BARS operations.
+
+</Accordion>
+
+<Accordion title="How can I train new controllers on BARS?">
+Effective BARS training includes:
+
+1. **Start with basics**: Begin with installation and basic configuration
+2. **Low-traffic practice**: Practice during quiet periods first
+3. **Standard integration**: Emphasize how BARS enhances existing procedures
+4. **Error scenarios**: Practice what to do when BARS isn't working
+5. **Gradual complexity**: Progress from single runway to multi-runway operations
+
+Consider pairing new users with experienced BARS controllers for initial sessions.
+
+</Accordion>
+</AccordionGroup>
+
+## Support and Community
+
+<AccordionGroup>
+<Accordion title="Where can I get help if I'm still having problems?">
+BARS support is available through multiple channels:
+
+**For technical issues:**
+
+- [GitHub Issues](https://github.com/stopbars/bars/issues) for bug reports
+- Include detailed information about your problem and system
+
+**For general questions:**
+
+- [Discord Community](https://stopbars.com/discord) for real-time help
+- Active community of controllers and developers
+
+**For urgent issues:**
+
+- Check the [BARS Status Page](https://status.stopbars.com) for known outages
+- Use backup procedures and report issues promptly
+</Accordion>
+
+<Accordion title="How can I contribute to BARS development?">
+You can contribute in several ways:
+
+1. **Bug reporting**: Report issues with detailed information
+2. **Feature suggestions**: Propose improvements through GitHub or Discord
+3. **Documentation**: Help improve guides and documentation
+4. **Testing**: Participate in beta testing of new features
+5. **Community support**: Help other users in Discord and forums
+
+The BARS project welcomes community contributions and feedback.
+
+</Accordion>
+
+<Accordion title="Are there plans for new features?">
+BARS is actively developed with planned features including:
+
+1. **Multi-airport support** for Centre controllers
+2. **Enhanced visual indicators** and interface improvements
+3. **Additional airport implementations** based on community requests
+4. **Integration improvements** with other simulation software
+5. **Performance optimizations** and bug fixes
+
+Check the BARS Discord and GitHub for the latest development updates.
+
+</Accordion>
+</AccordionGroup>
+
+## Still Need Help?
+
+If you can't find the answer to your question here:
+
+<CardGroup cols={2}>
+<Card title="Join Discord" icon="discord" href="https://stopbars.com/discord">
+  Get real-time help from the community and developers
+</Card>
+
+<Card
+  title="Report Issues"
+  icon="github"
+  href="https://github.com/stopbars/bars/issues"
+>
+  Submit detailed bug reports and feature requests
+</Card>
+
+<Card title="Check Status" icon="activity" href="https://status.stopbars.com">
+  Monitor system status and known issues
+</Card>
+
+<Card title="Read Documentation" icon="book" href="/vatsys">
+  Review comprehensive guides and tutorials
+</Card>
+</CardGroup>

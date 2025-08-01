@@ -1,0 +1,176 @@
+---
+title: "Installation Guide"
+description: "Step-by-step instructions for installing and configuring the BARS plugin in EuroScope"
+---
+
+# Installing the BARS Plugin for EuroScope
+
+This guide walks you through the complete installation and initial configuration process for the BARS EuroScope plugin.
+
+## Prerequisites
+
+Before installing the BARS plugin, ensure you have:
+
+- **EuroScope 3.2 or higher** installed and working
+- **Administrative access** to your computer for plugin installation
+- **BARS account** with API key from [stopbars.com](https://stopbars.com/)
+- **Active internet connection** for downloading and server communication
+
+<Warning>
+  Make sure EuroScope is completely closed before beginning the installation
+  process to avoid file conflicts.
+</Warning>
+
+## Download and Install
+
+<Steps>
+  <Step title="Download the Plugin">
+    Download the latest BARS plugin from the official website: 1. Visit
+    [stopbars.com/downloads](https://stopbars.com/downloads) 2. Select
+    **EuroScope Plugin** from the available downloads 3. Save the ZIP file to a
+    temporary location
+    <Check>
+      Verify the download completed successfully and the file size matches the
+      expected size shown on the website.
+    </Check>
+  </Step>
+
+  <Step title="Extract Plugin Files">
+    Extract the downloaded ZIP file to access the plugin components: ```
+    BARS-EuroScope-Plugin/ ├── bars.dll # Main plugin file ├── README.txt #
+    Installation notes └── Assets/ # Plugin resources ```
+    <Tip>
+      Extract to a permanent location as you'll need to reference these files
+      from EuroScope. Many users create a `Plugins` folder in their EuroScope
+      directory.
+    </Tip>
+  </Step>
+
+  <Step title="Load Plugin in EuroScope">
+    Configure EuroScope to load the BARS plugin: 1. **Open EuroScope** with your
+    preferred profile 2. **Access the Plugins menu**: - Click **"Other Set"** in
+    the toolbar - Select **"Plug-ins"** from the dropdown menu 3. **Load the
+    plugin**: - Click **"Load"** button - Navigate to and select **`bars.dll`**
+    - Click **"Open"**
+    <Check>
+      The plugin should appear in the loaded plugins list. If you see an error,
+      verify the file path and ensure EuroScope has sufficient permissions.
+    </Check>
+  </Step>
+
+  <Step title="Configure Display Types">
+    Enable the plugin on appropriate radar displays: 1. In the **Plugins
+    dialog**, locate **BARS** in the loaded plugins list 2. Move desired display
+    types from **"Forbidden to draw on types"** to **"Allowed to draw on
+    types"** 3. **Recommended display types**: - All SMR (Surface Movement
+    Radar) displays - Ground radar screens - Tower displays
+    <Warning>
+      Do not enable the plugin on airborne radar displays as stopbar controls
+      are only relevant for ground operations.
+    </Warning>
+    <Frame>
+      <img
+        src="/images/euroscope/plugin-display-config.png"
+        alt="EuroScope plugin display configuration showing allowed and forbidden display types"
+      />
+    </Frame>
+  </Step>
+
+  <Step title="Verify Installation">
+    Confirm the plugin is working correctly: 1. **Close the Plugins dialog** 2.
+    **Check for the BARS menu button** in the top-right corner of enabled
+    displays 3. **Initial state**: The button should show **"BARS off"**
+    <Frame>
+      <img
+        src="/images/euroscope/bars-menu-button.png"
+        alt="BARS menu button showing 'BARS off' status in EuroScope interface"
+      />
+    </Frame>
+    <Check>
+      If you see the BARS menu button, the installation was successful! You're
+      ready to proceed with API key configuration.
+    </Check>
+  </Step>
+</Steps>
+
+## API Key Configuration
+
+Before using the plugin, you must configure your BARS API key:
+
+<Steps>
+  <Step title="Obtain Your API Key">
+    Get your personal API key from the BARS website: 1. **Sign up** for a BARS
+    account at [stopbars.com](https://stopbars.com/) 2. **Log in** to your
+    account 3. **Navigate** to **"Account Settings"** 4. **Click** **"Show
+    Token"** to reveal your API key 5. **Copy** the token to your clipboard
+    <Warning>
+      Never share your API key with anyone. Treat it like a password - it
+      provides access to your BARS account and controller privileges.
+    </Warning>
+  </Step>
+
+  <Step title="Configure Plugin Authentication">
+    Enter your API key in the EuroScope plugin: 1. **Click** the **BARS menu
+    button** in EuroScope 2. **Select** **"Set API key"** from the menu 3.
+    **Paste** your API key into the text box 4. **Press** <kbd>Enter</kbd> to
+    confirm
+    <Check>
+      The plugin will validate your API key with the BARS server. A successful
+      connection will be indicated by a status change in the menu button.
+    </Check>
+  </Step>
+</Steps>
+
+## Troubleshooting Installation Issues
+
+<AccordionGroup>
+  <Accordion title="Plugin Won't Load">
+    **Symptoms**: Error message when loading `bars.dll` or plugin doesn't appear
+    in list **Solutions**: - Verify you have the correct version for your
+    EuroScope installation - Check that Windows hasn't blocked the DLL
+    (right-click → Properties → Unblock) - Ensure EuroScope is running with
+    appropriate permissions - Try extracting the plugin to a different location
+    with shorter file paths
+  </Accordion>
+
+  <Accordion title="Menu Button Not Visible">
+    **Symptoms**: Plugin loads successfully but BARS button doesn't appear
+    **Solutions**: - Check display type configuration - ensure BARS is allowed
+    on current display - Verify you're viewing a ground/SMR display type, not an
+    airborne radar - Try refreshing the display or switching to a different
+    radar view - Confirm the plugin loaded without errors in the Plugins dialog
+  </Accordion>
+
+  <Accordion title="API Key Authentication Fails">
+    **Symptoms**: Invalid key error or connection problems after entering API
+    key **Solutions**: - Verify the API key was copied correctly without extra
+    spaces - Check your internet connection and firewall settings - Ensure your
+    BARS account is active and in good standing - Try generating a new API key
+    from your account settings
+  </Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+With the plugin successfully installed and configured, you're ready to start using BARS:
+
+<CardGroup cols={2}>
+  <Card title="Quick Start Guide" icon="rocket" href="/euroscope/quickstart">
+    Learn basic operations including connecting to BARS and claiming your first
+    runway
+  </Card>
+
+  <Card
+    title="Controller Guide"
+    icon="tower-control"
+    href="/euroscope/controller-guide"
+  >
+    Master advanced features and professional techniques for efficient stopbar
+    management
+  </Card>
+</CardGroup>
+
+<Note>
+  The plugin will remember your API key between EuroScope sessions, so you only
+  need to configure it once per installation.
+</Note>

@@ -1,0 +1,442 @@
+---
+title: "Troubleshooting Guide"
+description: "Comprehensive solutions for common BARS vatSys plugin issues and error resolution"
+---
+
+# Troubleshooting
+
+This guide provides solutions for common issues encountered while using the BARS vatSys plugin.
+
+## Quick Diagnostics
+
+Before diving into specific issues, perform these basic diagnostic steps:
+
+<Steps>
+<Step title="Check Connection Status">
+  Verify the connection indicator in the BARS control bar shows a positive status.
+</Step>
+
+<Step title="Confirm Airport Compatibility">
+  Ensure you're connected to a [compatible
+  airport](https://stopbars.com/airports) position.
+</Step>
+
+<Step title="Verify Plugin Version">
+  Check that you're running the latest version of the BARS plugin from the
+  downloads page.
+</Step>
+
+<Step title="Review Recent Changes">
+  Consider any recent changes to vatSys, Windows, or network configuration.
+</Step>
+</Steps>
+
+## Installation Issues
+
+### Plugin Not Appearing in vatSys
+
+<AccordionGroup>
+<Accordion title="BARS Settings missing from Window menu">
+  **Symptoms:**
+  - No "BARS Settings" option in vatSys Window menu
+  - Plugin appears to not be loaded
+  
+  **Solutions:**
+  1. Verify plugin file location:
+     ```
+     C:\Users\[Username]\Documents\vatSys Files\Plugins\BARS_vatSys_vX.X.X.dll
+     ```
+  2. Check file permissions (should not be blocked)
+  3. Ensure vatSys has been restarted after plugin installation
+  4. Right-click plugin file > Properties > Unblock if necessary
+  
+  <Warning>
+  Some antivirus software may quarantine the plugin file. Check your antivirus logs and add an exception if needed.
+  </Warning>
+</Accordion>
+
+<Accordion title="Plugin installation error messages">
+  **Common error messages and solutions:**
+  
+  - **"Failed to load plugin"**: Check .NET Framework version compatibility
+  - **"Access denied"**: Run vatSys as administrator or check file permissions
+  - **"Plugin already loaded"**: Remove duplicate plugin files from the directory
+</Accordion>
+</AccordionGroup>
+
+### Compatibility Issues
+
+<Tabs>
+<Tab title="vatSys Version">
+  **Minimum Requirements:**
+  - vatSys version 4.0 or higher
+  - .NET Framework 4.7.2 or higher
+  - Windows 10/11 (Windows 7/8 not supported)
+  
+  **Version Conflicts:**
+  - Update vatSys to latest stable version
+  - Check BARS website for compatibility matrix
+  - Use compatible plugin version for your vatSys installation
+</Tab>
+
+<Tab title="Windows Compatibility">
+  **Supported Systems:**
+  - Windows 10 (version 1809 or higher)
+  - Windows 11 (all versions)
+  
+  **Known Issues:**
+  - Windows 7/8: Not supported
+  - Windows Server: Limited testing, use at own risk
+  - Virtual machines: May experience performance issues
+</Tab>
+</Tabs>
+
+## Authentication Problems
+
+### Token Authentication Failures
+
+<AccordionGroup>
+<Accordion title="Invalid token error">
+  **Symptoms:**
+  - "Authentication failed" message
+  - Unable to claim airport despite correct token
+  
+  **Solutions:**
+  1. **Verify token accuracy:**
+     - Copy token directly from BARS website
+     - Ensure no extra spaces or characters
+     - Check for token expiration
+  
+  2. **Account verification:**
+     - Confirm BARS account is activated
+     - Check email for activation requirements
+     - Verify VATSIM CID association
+  
+  3. **Network troubleshooting:**
+     - Test internet connectivity
+     - Check firewall settings for BARS domains
+     - Try connecting from different network
+</Accordion>
+
+<Accordion title="Token not being saved">
+  **Possible causes:**
+  - vatSys configuration file write permissions
+  - Antivirus interference with config files
+  - Multiple vatSys instances running
+  
+  **Solutions:**
+  - Run vatSys as administrator
+  - Add vatSys config directory to antivirus exclusions
+  - Ensure only one vatSys instance is running
+  - Manually check vatSys configuration file for token storage
+</Accordion>
+</AccordionGroup>
+
+## Connection Issues
+
+### Unable to Connect to BARS Servers
+
+<Steps>
+<Step title="Check Server Status">
+  Visit the [BARS Status Page](https://status.stopbars.com) to verify server availability.
+</Step>
+
+<Step title="Network Connectivity Tests">
+  Test basic connectivity:
+  ```bash
+  ping api.stopbars.com
+  nslookup stopbars.com
+  ```
+  <Info>
+    If ping fails, check your internet connection or contact your network
+    administrator.
+  </Info>
+</Step>
+
+<Step title="Firewall Configuration">
+  Ensure the following are allowed through your firewall: - **Outbound HTTPS
+  (port 443)** to *.stopbars.com - **Outbound HTTP (port 80)** for initial
+  connections - **WebSocket connections** for real-time updates
+</Step>
+
+<Step title="Proxy Settings">
+  If using a corporate network with proxy:
+  
+  1. Configure proxy settings in vatSys
+  2. Ensure proxy allows WebSocket connections
+  3. Add BARS domains to proxy exceptions if needed
+</Step>
+</Steps>
+
+### Intermittent Connection Issues
+
+<AccordionGroup>
+<Accordion title="Frequent disconnections">
+  **Common causes:**
+  - Unstable internet connection
+  - Power management settings
+  - Network adapter drivers
+  
+  **Solutions:**
+  1. **Check network stability:**
+     - Run network diagnostics
+     - Update network adapter drivers
+     - Disable power management for network adapter
+  
+  2. **Optimize connection settings:**
+     - Close unnecessary network applications
+     - Use wired connection instead of WiFi if possible
+     - Contact ISP if problems persist
+</Accordion>
+
+<Accordion title="Slow response times">
+  **Performance optimization:**
+  - Close resource-intensive applications
+  - Check for Windows updates
+  - Verify adequate system resources (RAM, CPU)
+  - Consider upgrading internet connection speed
+</Accordion>
+</AccordionGroup>
+
+## Operational Issues
+
+### Stop Bar Control Problems
+
+<AccordionGroup>
+<Accordion title="Stop bars not responding to clicks">
+  **Immediate actions:**
+  1. Check connection status indicator
+  2. Try clicking directly on stop bar graphic
+  3. Verify runway is properly claimed
+  4. Ensure mouse cursor is positioned correctly
+  
+  **If problem persists:**
+  - Restart BARS plugin via vatSys Window menu
+  - Re-claim airport and runways
+  - Check for conflicting mouse settings or software
+</Accordion>
+
+<Accordion title="Stop bars showing incorrect states">
+  **Synchronization issues:**
+  - Wait 5-10 seconds for network synchronization
+  - Refresh display by minimizing/maximizing BARS window
+  - Check if other controllers are managing the same runway
+  
+  **Persistent state issues:**
+  - Report to BARS support with specific runway and time
+  - Use voice instructions as backup
+  - Document issue for future reference
+</Accordion>
+</AccordionGroup>
+
+### Airport and Runway Management
+
+<AccordionGroup>
+<Accordion title="Cannot claim airport">
+  **Possible causes and solutions:**
+  
+  1. **Another controller active:**
+     - Check who currently has airport claimed
+     - Coordinate transfer if appropriate
+     - Wait for automatic release (2 minutes after disconnect)
+  
+  2. **Position not recognized:**
+     - Verify callsign matches airport requirements
+     - Check if position is configured for the airport
+     - Contact BARS support for airport configuration issues
+  
+  3. **Server synchronization:**
+     - Wait 30 seconds and retry
+     - Restart vatSys if problem persists
+     - Check server status page
+</Accordion>
+
+<Accordion title="Runway selection issues">
+  **Common scenarios:**
+  
+  - **Runway already claimed:** Another controller has selected this runway
+  - **Airport not claimed:** Must claim airport before selecting runways
+  - **Invalid runway configuration:** Report to BARS support
+  
+  **Resolution steps:**
+  1. Verify airport claim status
+  2. Coordinate with other controllers
+  3. Try deselecting and reselecting runways
+  4. Restart plugin if necessary
+</Accordion>
+</AccordionGroup>
+
+## Multi-Controller Issues
+
+### Coordination Problems
+
+<AccordionGroup>
+<Accordion title="Conflicting runway claims">
+  **Resolution process:**
+  1. **Immediate coordination:**
+     - Contact the other controller directly
+     - Determine who should control which runways
+     - Follow standard ATC coordination procedures
+  
+  2. **System resolution:**
+     - First controller to claim maintains control
+     - Use voice coordination for transfers
+     - Document agreements for consistency
+</Accordion>
+
+<Accordion title="Handoff complications">
+  **Best practices:**
+  - Complete runway transfers before position handoffs
+  - Ensure receiving controller has BARS access
+  - Provide clear briefing on current runway status
+  - Test stop bar functionality after handoff
+</Accordion>
+</AccordionGroup>
+
+## Centre Controller Issues
+
+### Remote Airport Control
+
+<AccordionGroup>
+<Accordion title="ICAO code not recognized">
+  **Troubleshooting steps:**
+  1. Verify correct 4-letter ICAO code format
+  2. Check if airport is BARS-compatible
+  3. Ensure no typing errors in code entry
+  4. Try alternative airport ICAO codes if applicable
+</Accordion>
+
+<Accordion title="Multiple airport limitations">
+  **Current restrictions:**
+  - Only one airport window supported per session
+  - Cannot switch between airports without reconnection
+  - Multiple runway support within single airport works normally
+  
+  **Workarounds:**
+  - Plan airport selection based on traffic needs
+  - Coordinate with local controllers when possible
+  - Await future multi-airport support updates
+</Accordion>
+</AccordionGroup>
+
+## Performance Issues
+
+### System Resource Problems
+
+<Tabs>
+<Tab title="High CPU Usage">
+  **Monitoring and optimization:**
+  1. Check Task Manager for BARS/vatSys CPU usage
+  2. Close unnecessary applications
+  3. Update graphics drivers
+  4. Reduce vatSys display refresh rates if needed
+  
+  **If CPU usage remains high:**
+  - Report issue with system specifications
+  - Consider hardware upgrade if consistently problematic
+  - Use minimal graphics settings in vatSys
+</Tab>
+
+<Tab title="Memory Issues">
+  **Memory management:**
+  - Monitor RAM usage during extended sessions
+  - Restart vatSys every 4-6 hours during long events
+  - Close unused browser tabs and applications
+  - Ensure adequate system RAM (minimum 8GB recommended)
+</Tab>
+</Tabs>
+
+## Error Reporting
+
+### Information to Include
+
+When reporting issues to BARS support, include:
+
+<Steps>
+<Step title="Basic Information">
+  - BARS plugin version
+  - vatSys version
+  - Windows version
+  - Time and date of issue (UTC)
+</Step>
+
+<Step title="Issue Details">
+  - Specific error messages - Airport ICAO code - Controller position - Steps to
+  reproduce the problem
+</Step>
+
+<Step title="System Information">
+  - Network connection type - Firewall/antivirus software - Any recent system
+  changes - Screenshots or screen recordings if applicable
+</Step>
+
+<Step title="Log Files">
+  Attach relevant log files from:
+  ```
+  %localappdata%\BARS\
+  ```
+  
+  <Warning>
+  Save log files immediately after encountering issues, as they are cleared on each BARS restart.
+  </Warning>
+</Step>
+</Steps>
+
+### Reporting Channels
+
+<CardGroup cols={2}>
+<Card title="GitHub Issues" icon="github" href="https://github.com/stopbars/bars/issues">
+  Technical issues and bug reports with detailed logs and reproduction steps
+</Card>
+
+<Card title="Discord Support" icon="discord" href="https://stopbars.com/discord">
+  General questions, usage help, and community assistance
+</Card>
+</CardGroup>
+
+## Emergency Procedures
+
+### Backup Operations
+
+When BARS is completely unavailable:
+
+<Steps>
+<Step title="Notify Pilots">
+  Inform connected aircraft that stop bar indications are not available.
+</Step>
+
+<Step title="Increase Vigilance">
+  Use enhanced hold short procedures and positive confirmation for all runway
+  movements.
+</Step>
+
+<Step title="Document Issues">
+  Record system problems for post-event reporting and improvement.
+</Step>
+
+<Step title="Coordinate Extensively">
+  Maintain extra coordination with ground personnel and other controllers.
+</Step>
+</Steps>
+
+## Preventive Maintenance
+
+### Regular Maintenance Tasks
+
+<AccordionGroup>
+<Accordion title="Weekly checks">
+  - Verify plugin is latest version
+  - Test basic stop bar functionality
+  - Clear temporary files and logs
+  - Check for Windows updates
+</Accordion>
+
+<Accordion title="Monthly maintenance">
+  - Review and update firewall rules
+  - Clean vatSys configuration if needed
+  - Backup important configuration files
+  - Review BARS usage patterns and optimization
+</Accordion>
+</AccordionGroup>
+
+For issues not covered in this guide, contact BARS support through the appropriate channels with detailed information about your problem.

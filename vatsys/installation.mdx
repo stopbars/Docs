@@ -1,0 +1,213 @@
+---
+title: "Installation Guide"
+description: "Step-by-step instructions for installing and configuring the BARS vatSys plugin"
+---
+
+# Installation and Setup
+
+This guide will walk you through installing the BARS vatSys plugin and configuring it for your first session.
+
+## Prerequisites
+
+Before installing the BARS plugin, ensure you have:
+
+- A working installation of vatSys
+- An active VATSIM account and CID
+- A position at a [compatible airport](https://stopbars.com/airports)
+
+## Account Registration
+
+<Steps>
+<Step title="Create BARS Account">
+  Navigate to the [BARS Website](https://stopbars.com) and create a new account using your VATSIM credentials.
+  
+  <Check>
+  You should receive a confirmation email after successful registration.
+  </Check>
+</Step>
+
+<Step title="Obtain Authentication Token">
+  1. Log into your BARS account
+  2. Go to **Account Settings**
+  3. Click **Show Token** to reveal your unique authentication token
+  4. Copy this token for use in vatSys
+  
+  <Warning>
+  Never share your authentication token with anyone. Treat it like a password.
+  </Warning>
+</Step>
+</Steps>
+
+## Plugin Installation
+
+<Steps>
+<Step title="Download Plugin">
+  Download the latest vatSys plugin from the [BARS Website downloads section](https://stopbars.com/downloads).
+  
+  <Info>
+  The plugin file will be named `BARS_vatSys_vX.X.X.dll` where X.X.X represents the version number.
+  </Info>
+</Step>
+
+<Step title="Install Plugin">
+  1. Close vatSys if it's currently running 2. Copy the downloaded `.dll` file
+  to your vatSys plugins directory 3. Restart vatSys
+  <Tip>
+    The default vatSys plugins directory is typically located at:
+    `C:\Users\[Username]\Documents\vatSys Files\Plugins\`
+  </Tip>
+</Step>
+
+<Step title="Verify Installation">
+  1. Open vatSys and connect to a compatible airport position
+  2. Check for **BARS Settings** in the Window dropdown menu
+  
+  <Check>
+  If you see the BARS Settings option, the plugin has been installed successfully.
+  </Check>
+</Step>
+</Steps>
+
+## Initial Configuration
+
+### Token Setup
+
+<Steps>
+<Step title="Access BARS Settings">
+  In vatSys, navigate to **Window > BARS Settings** to open the configuration panel.
+</Step>
+
+<Step title="Enter Authentication Token">
+  Paste your authentication token (obtained during account registration) into
+  the token field.
+  <Frame>
+    <img
+      src="/images/token-setup.png"
+      alt="BARS Settings window showing token input field"
+    />
+  </Frame>
+</Step>
+
+<Step title="Configure Ground Display">
+  Toggle the **SMR On Ground** option if you want the BARS Ground window to display connected pilots.
+  
+  <Info>
+  This feature shows which pilots are currently connected with the BARS client at your airport.
+  </Info>
+</Step>
+</Steps>
+
+### Connection and Airport Claiming
+
+After configuring your token, the BARS plugin will automatically open when you launch vatSys at a compatible position.
+
+<Steps>
+<Step title="Claim Airport">
+  Click the **Claim Airport** button in the BARS control panel to take control of the airport's stop bar system.
+  
+  <Frame>
+  <img src="/images/claim-airport.png" alt="BARS control panel with Claim Airport button highlighted" />
+  </Frame>
+</Step>
+
+<Step title="Monitor Status">
+  The control bar displays important status information including:
+  - Airport claim status
+  - Active runway claims
+  - Connection status
+  - Current Zulu time
+</Step>
+</Steps>
+
+## Runway Selection
+
+<Warning>
+  Controllers **must** select active runways after claiming the airport. Only
+  selected runways will have controllable stop bars.
+</Warning>
+
+<Steps>
+<Step title="Select Active Runways">
+  Choose which runways you'll be actively controlling. Only these runways' stop bars will appear on your BARS display.
+  
+  <Frame>
+  <img src="/images/runway-selection.png" alt="Runway selection interface showing available runways" />
+  </Frame>
+</Step>
+
+<Step title="Understand Runway Claims">
+  - **Selected runways**: Stop bars under your control (red when active)
+  - **Unselected runways**: Stop bars automatically green (always permissive)
+  - **Other controller's runways**: Unavailable for selection if claimed by another controller
+</Step>
+</Steps>
+
+## Interface Optimization
+
+### Minimizing the Control Bar
+
+To maximize screen real estate while maintaining essential information:
+
+<Steps>
+<Step title="Minimize Control Bar">
+  Click just above the ground map area to collapse the control bar to a minimal status display.
+  
+  <Frame>
+  <img src="/images/minimize-control-bar.gif" alt="Animation showing control bar minimization process" />
+  </Frame>
+</Step>
+
+<Step title="Verify Minimal Display">
+  The minimized control bar should still show:
+  - Connection status indicator
+  - Current Zulu time
+  - Quick access to expand the full interface
+</Step>
+</Steps>
+
+## Session Persistence
+
+<Info>
+  BARS automatically retains your airport and runway claims for 2 minutes after
+  vatSys closes. This ensures you won't lose control in case of unexpected
+  disconnections or crashes.
+</Info>
+
+## Troubleshooting Installation
+
+<AccordionGroup>
+<Accordion title="BARS Settings not appearing in Window menu">
+  **Possible causes:**
+  - Plugin not installed in correct directory
+  - Incompatible vatSys version
+  - Position not at a compatible airport
+  
+  **Solutions:**
+  - Verify plugin file location
+  - Check BARS website for vatSys compatibility
+  - Ensure you're connected to a supported airport position
+</Accordion>
+
+<Accordion title="Token authentication failing">
+  **Possible causes:** - Incorrect token copied - Account not properly activated
+  - Network connectivity issues **Solutions:** - Re-copy token from BARS website
+  - Check email for activation requirements - Verify internet connection and
+  firewall settings
+</Accordion>
+
+<Accordion title="Unable to claim airport">
+  **Possible causes:**
+  - Another controller already claimed the airport
+  - Position not recognized as valid for the airport
+  - Server connectivity issues
+  
+  **Solutions:**
+  - Coordinate with other controllers
+  - Verify your position callsign matches airport requirements
+  - Check BARS status page for server issues
+</Accordion>
+</AccordionGroup>
+
+## Next Steps
+
+With BARS successfully installed and configured, you're ready to begin controlling stop bars. Continue to the [Controller Operations Guide](/vatsys/controller-guide) to learn how to effectively manage stop bars during active ATC sessions.

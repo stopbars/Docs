@@ -1,0 +1,303 @@
+---
+title: "Frequently Asked Questions"
+description: "Answers to common questions about the BARS EuroScope plugin functionality, compatibility, and usage"
+---
+
+# Frequently Asked Questions
+
+Find answers to the most commonly asked questions about the BARS EuroScope plugin. This FAQ covers everything from basic functionality to advanced operational scenarios.
+
+## General Questions
+
+### What is BARS and how does it work?
+
+<AccordionGroup>
+  <Accordion title="What does BARS stand for?">
+    BARS stands for **Bidirectional Aircraft Runway Stopbars**. It's a system
+    that allows air traffic controllers to remotely control runway stopbar
+    lights, which are then displayed to pilots using compatible flight
+    simulation software.
+  </Accordion>
+
+  <Accordion title="How does the EuroScope plugin communicate with pilots?">
+    The EuroScope plugin connects to the BARS server network, which relays
+    stopbar state changes to pilots using BARS-compatible pilot clients. When
+    you toggle a stopbar in EuroScope, the change is immediately transmitted to
+    all connected pilots in the area.
+  </Accordion>
+
+  <Accordion title="Is BARS only for VATSIM?">
+    While BARS was designed primarily for the VATSIM network, it can function on
+    other flight simulation networks that support the required data protocols.
+    However, VATSIM remains the primary supported platform.
+  </Accordion>
+</AccordionGroup>
+
+### System Requirements and Compatibility
+
+<Tabs>
+  <Tab title="EuroScope Compatibility">
+    **Supported versions**: EuroScope 3.2 and higher **Operating systems**: -
+    Windows 7 (Service Pack 1) or later - Windows 8/8.1 - Windows 10 (all
+    versions) - Windows 11 **Hardware requirements**: - Minimum 2GB RAM (4GB
+    recommended) - Stable internet connection (broadband recommended) - Graphics
+    card supporting DirectX 9.0c or higher
+  </Tab>
+
+  <Tab title="Network Requirements">
+    **Internet connection**: - Minimum: 1 Mbps download/upload - Recommended: 5
+    Mbps or higher - Low latency preferred (under 200ms to BARS servers)
+    **Firewall considerations**: - HTTPS outbound connections (port 443) - Allow
+    EuroScope.exe and bars.dll network access - No special inbound port
+    requirements
+  </Tab>
+
+  <Tab title="Pilot Client Compatibility">
+    **Supported pilot clients**: - MSFS with BARS add-on - X-Plane with BARS
+    plugin - FSX/P3D with compatible add-ons **Important note**: Not all pilots
+    use BARS-compatible clients. The system gracefully handles mixed
+    environments with both BARS and non-BARS equipped aircraft.
+  </Tab>
+</Tabs>
+
+## Installation and Setup
+
+### Account and Authentication
+
+<AccordionGroup>
+  <Accordion title="Do I need a special account to use BARS?">
+    Yes, you need a free BARS account with a valid API key. Sign up at
+    [stopbars.com](https://stopbars.com/), then access your API key from the
+    account settings page. The API key links your EuroScope plugin to your BARS
+    account.
+  </Accordion>
+
+  <Accordion title="Can multiple controllers share the same API key?">
+    **No, never share API keys.** Each controller must have their own individual
+    BARS account and API key. Sharing API keys can lead to: - Account suspension
+    - Operational conflicts - Security vulnerabilities - Audit trail problems
+  </Accordion>
+
+  <Accordion title="What if I forget my API key?">
+    Log into your BARS account at [stopbars.com](https://stopbars.com/),
+    navigate to Account Settings, and click "Show Token" to view your current
+    API key. You can also generate a new key if needed, but remember to update
+    it in the EuroScope plugin.
+  </Accordion>
+</AccordionGroup>
+
+### Plugin Configuration
+
+<Steps>
+  <Step title="Why isn't the BARS menu button appearing?">
+    Common causes and solutions: 1. **Display type configuration**: Ensure BARS
+    is allowed on your current display type 2. **Display compatibility**: Verify
+    you're using a ground/SMR display, not airborne radar 3. **Plugin loading**:
+    Check that bars.dll loaded successfully in the Plugins dialog 4. **Interface
+    scaling**: Look in different screen areas if using high-DPI displays
+  </Step>
+
+  <Step title="How do I know which display types to enable?">
+    **Enable BARS on**: - SMR (Surface Movement Radar) displays - Ground radar
+    screens - Tower displays with ground elements - Combined displays that
+    include ground operations **Don't enable BARS on**: - Pure airborne radar
+    displays - En-route control displays - Approach displays without ground
+    elements
+  </Step>
+</Steps>
+
+## Operations and Usage
+
+### Runway Management
+
+<Tabs>
+  <Tab title="Claiming Runways">
+    **Q: How many runways can I claim at once?** A: There's no hard limit, but
+    best practice is to claim only the runways you're actively controlling.
+    Claiming unused runways creates unnecessary notifications and can impact
+    system performance. **Q: What happens if another controller tries to claim
+    my runway?** A: The BARS system prevents conflicts by allowing only one
+    controller to claim each runway at a time. If someone attempts to claim your
+    runway, they'll receive a "runway unavailable" message. **Q: Do I need to
+    unclaim runways when I log off?** A: The system automatically releases your
+    runway claims when you disconnect from VATSIM or close EuroScope. However,
+    manually unclaiming runways before logging off is good practice.
+  </Tab>
+
+  <Tab title="Stopbar Control">
+    **Q: Why don't stopbars align perfectly with EuroScope graphics?** A:
+    Stopbars are positioned to match real-world pilot scenery locations, which
+    may not align exactly with EuroScope's graphical representations. This is
+    intentional to ensure accuracy for pilots using realistic airport scenery.
+    **Q: How do I know if a pilot received my stopbar command?** A: Pilots with
+    BARS-compatible clients will show a green dot indicator over their aircraft.
+    These pilots should receive your stopbar commands immediately. Non-BARS
+    pilots won't see stopbar changes and rely on voice communication. **Q:
+    What's the range of stopbar visibility?** A: Pilots typically see stopbar
+    changes when within 5-10 nautical miles of the airport, depending on their
+    client settings and system performance.
+  </Tab>
+</Tabs>
+
+### Pilot Interaction
+
+<AccordionGroup>
+  <Accordion title="How do I know which pilots are using BARS?">
+    Aircraft using BARS-compatible pilot clients display a **green dot
+    indicator** over their radar target. This indicator appears automatically
+    when the pilot's client connects to the BARS network and disappears when
+    they disconnect.
+  </Accordion>
+
+  <Accordion title="Should I give different instructions to BARS vs non-BARS pilots?">
+    **For BARS-equipped pilots** (green dot visible): - Use more concise taxi
+    instructions - Reference stopbar control for holding points - Monitor for
+    immediate compliance with stopbar changes - Reduce repetitive voice
+    confirmations **For non-BARS pilots**: - Use traditional detailed taxi
+    instructions - Specify exact holding point references - Maintain standard
+    communication frequency - Don't reference stopbar control in instructions
+  </Accordion>
+
+  <Accordion title="What if a pilot doesn't comply with stopbar instructions?">
+    Always maintain verbal communication as primary control method: 1. **Issue
+    immediate voice instruction** if aircraft doesn't respond to stopbar 2.
+    **Verify pilot can see stopbar** (may not be BARS-equipped despite
+    indicator) 3. **Fall back to standard procedures** if BARS control isn't
+    effective 4. **Report persistent issues** to technical support
+  </Accordion>
+</AccordionGroup>
+
+## Technical Issues
+
+### Connection Problems
+
+<Steps>
+  <Step title="Why does my plugin show 'BARS off' all the time?">
+    This indicates a connection problem. Check: 1. **Internet connectivity**:
+    Verify EuroScope can access external servers 2. **API key validity**: Ensure
+    your key is entered correctly and account is active 3. **Firewall
+    settings**: Allow EuroScope and bars.dll network access 4. **Server
+    status**: Check if BARS servers are operational
+  </Step>
+
+  <Step title="Why do I get authentication errors?">
+    Authentication failures typically result from: 1. **Incorrect API key**:
+    Copy/paste directly from your account settings 2. **Account issues**: Verify
+    your BARS account is active and in good standing 3. **Network problems**:
+    Check for unstable internet connections 4. **Expired credentials**: Generate
+    a new API key if the current one is old
+  </Step>
+</Steps>
+
+### Performance Issues
+
+<Tabs>
+  <Tab title="Slow Response Times">
+    **Q: Why do stopbar commands take several seconds to execute?** A: Slow
+    response times usually indicate: - Network latency or congestion - BARS
+    server load during peak hours - Local system performance issues - Firewall
+    or proxy interference **Solutions**: - Use wired internet connection when
+    possible - Close unnecessary applications - Check for background network
+    usage - Contact ISP if problems persist
+  </Tab>
+
+  <Tab title="Plugin Stability">
+    **Q: Why does the plugin crash or freeze occasionally?** A: Stability issues
+    often result from: - Outdated plugin or EuroScope versions - System resource
+    constraints - Network connectivity interruptions - Software conflicts
+    **Prevention measures**: - Keep software updated - Ensure adequate system
+    memory - Use stable network connections - Close unnecessary background
+    applications
+  </Tab>
+</Tabs>
+
+## Best Practices and Professional Use
+
+### Operational Integration
+
+<AccordionGroup>
+  <Accordion title="How should I integrate BARS into my normal controlling procedures?">
+    **Use BARS as an enhancement, not a replacement**: - Maintain standard
+    communication as primary control method - Use stopbars to reinforce and
+    clarify voice instructions - Adapt communication style based on pilot
+    equipment - Always have backup procedures ready **Workflow integration**: -
+    Check BARS connectivity at start of shift - Claim runways as you assume
+    control responsibilities - Use stopbars for strategic traffic positioning -
+    Release runways when transferring control
+  </Accordion>
+
+  <Accordion title="What's the best way to handle mixed BARS/non-BARS traffic?">
+    **Adapt your technique to the pilot's equipment**: 1. **Identify pilot
+    capabilities** using the green dot indicator 2. **Use appropriate
+    communication style** for each aircraft type 3. **Don't compromise service**
+    for non-BARS equipped aircraft 4. **Maintain situation awareness** for all
+    aircraft regardless of equipment **Pro tip**: Focus BARS control on equipped
+    aircraft while maintaining traditional procedures for all others.
+  </Accordion>
+</AccordionGroup>
+
+### Safety and Reliability
+
+<Steps>
+  <Step title="What happens if BARS fails during busy operations?">
+    **Emergency fallback procedures**: 1. **Immediately announce system
+    failure** to affected pilots 2. **Revert to standard ground control
+    procedures** 3. **Increase verbal communication frequency** 4. **Use
+    traditional holding point references** 5. **Continue operations safely**
+    without technology dependence
+  </Step>
+
+  <Step title="How reliable is the BARS system?">
+    **System reliability features**: - Redundant server infrastructure for high
+    availability - Automatic reconnection for temporary network issues -
+    Graceful degradation when pilot clients disconnect - No impact on EuroScope
+    core functionality if BARS fails **Your responsibility**: Always maintain
+    proficiency in non-BARS procedures as backup
+  </Step>
+</Steps>
+
+## Getting Help and Support
+
+### Community Resources
+
+<CardGroup cols={2}>
+  <Card
+    title="Discord Community"
+    icon="discord"
+    href="https://stopbars.com/discord"
+  >
+    Join the active BARS community for real-time help, tips, and discussion with
+    other controllers
+  </Card>
+
+  <Card title="Documentation" icon="book" href="/euroscope">
+    Access comprehensive guides, tutorials, and best practices documentation
+  </Card>
+</CardGroup>
+
+### Technical Support
+
+<AccordionGroup>
+  <Accordion title="When should I contact technical support?">
+    **Contact support for**: - Persistent connection or authentication issues -
+    Plugin crashes or stability problems - Missing airports or runways in the
+    database - Suspected security or account issues **Try community resources
+    first for**: - Basic usage questions - Best practice advice - General
+    operational guidance - Learning new techniques
+  </Accordion>
+
+  <Accordion title="What information should I provide when reporting issues?">
+    **Include in your support request**: - Detailed description of the problem -
+    Steps to reproduce the issue - Error messages (screenshots preferred) -
+    EuroScope and plugin version numbers - Your BARS account username - Time and
+    date when issues occurred **This helps support staff**: - Diagnose problems
+    more quickly - Provide targeted solutions - Identify systemic issues -
+    Improve the system for everyone
+  </Accordion>
+</AccordionGroup>
+
+<Note>
+  Can't find the answer to your question? Visit our [Discord
+  community](https://stopbars.com/discord) or [submit a support
+  request](https://stopbars.com/support) for personalized assistance.
+</Note>

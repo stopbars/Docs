@@ -1,0 +1,382 @@
+---
+title: "Account Setup"
+description: "Configure your BARS account and client settings for optimal stopbar operations"
+---
+
+# Account Setup and Configuration
+
+After installing BARS Client, you'll need to set up your account and configure the client for your specific needs. This guide covers account creation, authentication, and all available configuration options.
+
+## Account Creation
+
+<Steps>
+<Step title="Visit BARS Website">
+Navigate to [stopbars.com](https://stopbars.com) and click the "Sign Up" button to begin account creation.
+</Step>
+
+<Step title="Complete Registration">
+Fill out the registration form with your information:
+
+- **Username**: Choose a unique identifier for your account
+- **Email address**: Used for account verification and communications
+- **Password**: Create a secure password for your account
+- **VATSIM CID** (optional): Link your VATSIM account if applicable
+
+<Note>
+Linking your VATSIM account enables enhanced integration with VATSIM network operations and provides additional features for network pilots.
+</Note>
+</Step>
+
+<Step title="Verify Your Account">
+Check your email for a verification message and click the confirmation link to activate your account.
+
+<Check>
+Once verified, you can log into your BARS account and access all available features.
+</Check>
+</Step>
+</Steps>
+
+## Obtaining Your API Token
+
+Your API token serves as your unique identifier and authentication key for BARS services:
+
+<Steps>
+<Step title="Access Account Settings">
+Log into your BARS account and navigate to the "Account Settings" page.
+</Step>
+
+<Step title="Generate Token">
+In the API section, click "Show Token" to reveal your unique authentication token.
+
+<Frame>
+<img src="/images/BARS_token.png" alt="BARS account settings showing API token generation interface" />
+</Frame>
+</Step>
+
+<Step title="Copy and Secure Token">
+Copy your API token and store it securely. You'll need this for BARS Client authentication.
+
+<Warning>
+Your API token is sensitive information that provides access to your BARS account. Never share this token with others or post it publicly.
+</Warning>
+</Step>
+</Steps>
+
+## Client Authentication
+
+<Steps>
+<Step title="Open BARS Client">
+Right-click the BARS Client icon in your system tray and select "Show" to open the client interface.
+
+<Frame>
+<img src="/images/BARS_client_connection.png" alt="BARS Client main interface showing connection status and settings" />
+</Frame>
+</Step>
+
+<Step title="Enter API Token">
+  Paste your API token into the "API Token" field in the client interface.
+</Step>
+
+<Step title="Verify Connection">
+The client will automatically attempt to authenticate with the BARS servers. Look for:
+
+- **Connection status**: Should display "Connected"
+- **Account information**: Your username should appear in the client
+- **Service availability**: All BARS features should become active
+
+<Check>
+A green "Connected" status indicates successful authentication and full access to BARS services.
+</Check>
+</Step>
+</Steps>
+
+## Stopbar Behavior Configuration
+
+Configure how stopbars appear and behave in your simulator:
+
+<Tabs>
+<Tab title="Realistic Mode">
+**Authentic real-world behavior**
+
+- **Active state**: Red illuminated lights
+- **Inactive state**: Unilluminated (dark)
+- **Use case**: Maximum realism for serious simulation
+
+```
+Real Airport Operation:
+✓ Red lights = STOP
+✓ No lights = PROCEED
+```
+
+**Advantages**:
+
+- Most realistic experience
+- Matches actual airport operations
+- Enhances training value
+
+**Considerations**:
+
+- May be harder to see in bright conditions
+- Requires good monitor contrast settings
+</Tab>
+
+<Tab title="Enhanced Mode">
+**Improved visibility with green lights**
+
+- **Active state**: Red illuminated lights
+- **Inactive state**: Green illuminated lights
+- **Use case**: Better visibility and clearer indication
+
+```
+Enhanced Operation:
+✓ Red lights = STOP
+✓ Green lights = PROCEED
+```
+
+**Advantages**:
+
+- Clear visual indication in all conditions
+- Easier to distinguish states
+- Better for training scenarios
+
+**Considerations**:
+
+- Less realistic than actual airports
+- May create dependency on green lights
+</Tab>
+</Tabs>
+
+<Frame>
+  <img
+    src="/images/BARS_stopbar_behaviour.png"
+    alt="BARS Client stopbar behavior selection dropdown showing realistic and enhanced options"
+  />
+</Frame>
+
+## Scenery Configuration
+
+Optimize BARS for your specific airport scenery:
+
+### Default MSFS Scenery
+
+For airports using default Microsoft Flight Simulator scenery:
+
+<Steps>
+<Step title="Automatic Detection">
+BARS Client automatically detects and configures most default MSFS airports that support stopbar operations.
+</Step>
+
+<Step title="Verify Configuration">
+Check that your airport appears in the client's airport detection display when you spawn at a compatible location.
+</Step>
+</Steps>
+
+### Third-Party Scenery
+
+For payware and freeware airport add-ons:
+
+<Steps>
+<Step title="Access Scenery Settings">
+In the BARS Client, navigate to the "Scenery" section to configure third-party airports.
+
+<Frame>
+<img src="/images/BARS_client_scenery.png" alt="BARS Client scenery configuration interface showing airport selection and scenery options" />
+</Frame>
+</Step>
+
+<Step title="Select Your Airport">
+Find your airport using the search function or browse the alphabetical list of supported airports.
+
+<Tip>
+Use the ICAO code (e.g., KJFK, EGLL, EDDF) for faster searching in the airport list.
+</Tip>
+</Step>
+
+<Step title="Choose Scenery Developer">
+Click the dropdown menu for your selected airport and choose your specific scenery:
+
+- **FlyTampa airports** (KJFK, KORD, etc.)
+- **FSDT sceneries** (KLAX, KIAH, etc.)
+- **Aerosoft products** (EDDF, EDDM, etc.)
+- **Other developers** as supported
+
+<Note>
+If your scenery isn't listed, BARS will attempt to use the default configuration. Contact support if you experience issues with unlisted scenery.
+</Note>
+</Step>
+
+<Step title="Apply Configuration">
+Click "Restart to Apply Changes" to implement your scenery settings. The client will restart and load with your new configuration.
+
+<Warning>
+Always restart the client after changing scenery settings to ensure proper stopbar placement and functionality.
+</Warning>
+</Step>
+</Steps>
+
+## Advanced Settings
+
+### Connection Settings
+
+Configure network and performance options:
+
+<Tabs>
+<Tab title="Network Configuration">
+**Connection optimization**:
+
+- **Server region**: Automatically selected based on location
+- **Connection timeout**: Default 30 seconds (adjustable)
+- **Retry attempts**: Configure automatic reconnection behavior
+- **Bandwidth usage**: Optimize for your internet connection
+
+Most users can leave these at default values.
+
+</Tab>
+
+<Tab title="Performance Settings">
+**Client performance tuning**:
+
+- **Update frequency**: How often stopbar states are checked
+- **Visual effects**: Enable/disable additional lighting effects
+- **Memory usage**: Configure client resource consumption
+- **Background operation**: Minimize performance impact
+
+Adjust these settings if you experience performance issues with MSFS.
+
+</Tab>
+</Tabs>
+
+### Display Options
+
+Customize the client interface:
+
+- **Always on top**: Keep client window above other applications
+- **Minimize to tray**: Automatically minimize client on startup
+- **Notifications**: Configure popup alerts for important events
+- **Theme**: Choose between light and dark interface themes
+
+### Audio Settings
+
+Configure audio feedback for stopbar operations:
+
+- **Sound effects**: Enable audio cues for stopbar state changes
+- **Volume levels**: Adjust notification volume
+- **Audio device**: Select specific output device if needed
+- **Mute options**: Disable audio during specific conditions
+
+## Account Management
+
+### Profile Settings
+
+Manage your account information:
+
+<Tabs>
+<Tab title="Personal Information">
+- **Display name**: How your name appears to controllers
+- **Email preferences**: Configure notification settings
+- **Time zone**: Set for accurate session logging
+- **Language**: Select interface language (where available)
+</Tab>
+
+<Tab title="Integration Settings">
+- **VATSIM integration**: Link/unlink VATSIM account
+- **Discord integration**: Connect with BARS Discord community
+- **API access**: Manage third-party application permissions
+- **Data sharing**: Configure analytics and usage data preferences
+</Tab>
+</Tabs>
+
+### Security Settings
+
+Maintain account security:
+
+<Steps>
+<Step title="Password Management">
+Regularly update your password and ensure it meets security requirements:
+- Minimum 8 characters
+- Mix of letters, numbers, and symbols
+- Unique to your BARS account
+</Step>
+
+<Step title="Two-Factor Authentication">
+  Enable 2FA for enhanced account security (if available): - Authenticator app
+  integration - SMS backup options - Recovery code generation
+</Step>
+
+<Step title="Session Management">
+Monitor and manage active sessions:
+- View recent login activity
+- Terminate suspicious sessions
+- Set automatic logout preferences
+</Step>
+</Steps>
+
+## Troubleshooting Setup Issues
+
+<AccordionGroup>
+<Accordion title="Authentication Problems">
+**Token-related issues**:
+
+1. **Invalid token error**: Verify you copied the complete token from your account
+2. **Expired session**: Log out and back into your BARS account to refresh
+3. **Account suspended**: Check email for account status notifications
+4. **Network blocking**: Ensure firewall allows BARS Client internet access
+
+**Solution steps**:
+
+- Copy a fresh token from your account settings
+- Check internet connectivity
+- Verify account status on the website
+- Contact support if issues persist
+</Accordion>
+
+<Accordion title="Scenery Configuration Issues">
+**Airport and scenery problems**:
+
+1. **Airport not detected**: Ensure you're at a BARS-compatible airport
+2. **Wrong scenery selected**: Verify you chose the correct payware option
+3. **Stopbars not appearing**: Confirm a controller is online and using BARS
+4. **Performance issues**: Try default scenery settings
+
+**Solution steps**:
+
+- Check the [compatible airports list](/pilot-client/airports)
+- Restart the client after scenery changes
+- Wait up to 2 minutes for stopbar loading
+- Contact scenery developer for compatibility updates
+</Accordion>
+
+<Accordion title="Connection Stability">
+**Network and connectivity issues**:
+
+1. **Frequent disconnections**: Check internet stability
+2. **Slow response times**: Test network latency
+3. **Regional server issues**: Try different server regions
+4. **Firewall interference**: Configure firewall exceptions
+
+**Solution steps**:
+
+- Test with other online applications
+- Configure router QoS for BARS Client
+- Contact ISP about connection stability
+- Join Discord for real-time status updates
+</Accordion>
+</AccordionGroup>
+
+## What's Next?
+
+<CardGroup cols={2}>
+<Card title="Take Your First Flight" icon="plane-departure" href="/pilot-client/quickstart">
+  Ready to experience BARS in action? Follow our quickstart guide for your first stopbar-controlled flight.
+</Card>
+
+<Card title="Compatible Airports" icon="map-pin" href="/pilot-client/airports">
+  Discover which airports support BARS operations and plan your flights accordingly.
+</Card>
+</CardGroup>
+
+<Note>
+  For additional help with account setup, join our [Discord
+  community](https://stopbars.com/discord) where experienced users and support
+  staff can provide real-time assistance.
+</Note>

@@ -1,0 +1,418 @@
+---
+title: "Quickstart Guide"
+description: "Take your first BARS-enabled flight and experience realistic stopbar operations in Microsoft Flight Simulator"
+---
+
+# Your First BARS Flight
+
+Experience the future of flight simulation ground operations with this step-by-step guide to your first BARS-enabled flight. This quickstart will walk you through a complete flight from startup to shutdown, highlighting key BARS features and proper usage.
+
+## Pre-Flight Preparation
+
+<Steps>
+<Step title="Choose a BARS-Compatible Airport">
+For your first flight, select an airport that supports BARS operations:
+
+**Recommended airports for beginners**:
+
+- **KJFK** - John F. Kennedy International (busy operations)
+- **EGLL** - London Heathrow (complex ground layout)
+- **EDDF** - Frankfurt Airport (excellent stopbar coverage)
+- **KLAX** - Los Angeles International (multiple runway configurations)
+
+<Tip>
+Check our [compatible airports list](/pilot-client/airports) for the most current information on BARS-supported locations.
+</Tip>
+</Step>
+
+<Step title="Verify BARS Client Status">
+Before spawning in the simulator, ensure your BARS Client is properly configured:
+
+1. **Check system tray**: BARS Client icon should be visible
+2. **Open client window**: Right-click and select "Show"
+3. **Verify connection**: Status should show "Connected"
+4. **Confirm authentication**: Your username should be displayed
+
+<Check>
+Green "Connected" status indicates you're ready for BARS operations.
+</Check>
+</Step>
+
+<Step title="Plan Your Flight">
+Choose a realistic flight scenario that will showcase BARS features:
+
+- **Departure flight**: Experience stopbar-controlled taxi to runway
+- **Arrival flight**: See stopbar guidance during taxi to gate
+- **Touch-and-go**: Practice multiple runway operations
+
+For this guide, we'll focus on a departure from a gate to demonstrate the complete BARS experience.
+
+</Step>
+</Steps>
+
+## Spawning and Initial Setup
+
+<Steps>
+<Step title="Load Your Flight">
+Start Microsoft Flight Simulator and create a new flight:
+
+1. **Select your aircraft** (any aircraft works with BARS)
+2. **Choose departure airport** from the BARS-compatible list
+3. **Select a gate position** rather than runway spawn
+4. **Set weather and time** as desired
+5. **Load the flight**
+
+<Note>
+Spawning at a gate provides the full ground taxi experience that showcases BARS capabilities.
+</Note>
+</Step>
+
+<Step title="Wait for BARS Initialization">
+After spawning, allow time for BARS to detect your location:
+
+1. **Check BARS Client**: Should display your current airport
+2. **Look for airport confirmation**: ICAO code should appear in client
+3. **Monitor status**: Wait for "Airport detected" confirmation
+
+<Frame>
+  <img
+    src="/images/BARS_client_connection.png"
+    alt="BARS Client showing successful airport detection and connection status"
+  />
+</Frame>
+
+<Info>
+It may take 30-60 seconds for BARS to fully detect your position and initialize.
+</Info>
+</Step>
+
+<Step title="Confirm Stopbar Readiness">
+Check if stopbars are active at your location:
+
+- **Controller presence**: Stopbars only function when a BARS-equipped controller is online
+- **Loading time**: Allow up to 2 minutes for stopbars to appear after controller connection
+- **Visual confirmation**: Look for stopbar lights at nearby taxiway intersections
+
+<Warning>
+If no controller is online, you won't see stopbars. Consider joining a VATSIM session or coordinating with other BARS users for the full experience.
+</Warning>
+</Step>
+</Steps>
+
+## Understanding Stopbar Indicators
+
+Before taxiing, familiarize yourself with stopbar visual cues:
+
+<Tabs>
+<Tab title="Realistic Mode">
+**Traditional airport lighting**:
+
+- **Red lights**: STOP - Do not proceed past this point
+- **No lights**: PROCEED - Safe to continue taxi
+- **Behavior**: Lights turn on/off as controllers manage traffic
+
+Look for red light bars across taxiways at holding points and runway entrances.
+
+</Tab>
+
+<Tab title="Enhanced Mode">
+**Improved visibility**:
+
+- **Red lights**: STOP - Hold your position
+- **Green lights**: PROCEED - Cleared to continue
+- **Behavior**: Clear color indication for all states
+
+This mode provides obvious visual feedback, especially helpful during training flights.
+
+</Tab>
+</Tabs>
+
+<Frame caption="Example of stopbar lights at a runway holding point">
+  <img
+    src="/images/BARS_stopbar.gif"
+    alt="Animation showing stopbar lights changing from red to clear, indicating proceed clearance"
+  />
+</Frame>
+
+## Your First Taxi
+
+<Steps>
+<Step title="Request Taxi Clearance">
+Contact ground control for taxi clearance as you normally would:
+
+```
+"Ground, [Aircraft callsign] at gate [X], ready for taxi"
+```
+
+<Note>
+BARS enhances but does not replace normal radio communication. Always follow standard phraseology and procedures.
+</Note>
+</Step>
+
+<Step title="Receive Taxi Instructions">
+Ground control will provide taxi routing. If they're BARS-equipped, they may reference stopbar control:
+
+_Example clearance_: "Taxi to runway 24L via Alpha, Bravo. Monitor stopbars for hold instructions."
+
+<Tip>
+BARS-equipped controllers may provide fewer verbal "hold short" instructions since they can control your progress with stopbars.
+</Tip>
+</Step>
+
+<Step title="Begin Taxi with Stopbar Awareness">
+Start your taxi, paying attention to stopbar indications:
+
+1. **Normal taxi speed**: Proceed at normal ground speed
+2. **Scan ahead**: Look for stopbar lights at intersections
+3. **Respect stopbars**: Stop immediately when encountering red lights
+4. **Continue when clear**: Proceed when lights turn off (realistic) or green (enhanced)
+
+<Warning>
+Always stop for red stopbars, even if you receive verbal clearance to proceed. The stopbar indication takes precedence for safety.
+</Warning>
+</Step>
+
+<Step title="Navigate Intersections">
+As you approach taxiway intersections and runway crossings:
+
+**Before the stopbar**:
+
+- Reduce speed as you approach
+- Prepare to stop if lights are red
+- Look for visual confirmation of light state
+
+**At the stopbar**:
+
+- Stop completely if lights are red
+- Wait for controller action (lights off/green)
+- Proceed when given appropriate indication
+
+**After the stopbar**:
+
+- Resume normal taxi speed
+- Continue to next intersection or runway
+
+<Check>
+Successful navigation means stopping for red lights and proceeding appropriately when cleared.
+</Check>
+</Step>
+</Steps>
+
+## Real-World Scenarios
+
+### Scenario 1: Runway Approach
+
+<Steps>
+<Step title="Approaching the Runway">
+As you near your departure runway, stopbars become critical for safety:
+
+- **Outer stopbar**: May hold you while previous aircraft clears
+- **Inner stopbar**: Final holding point before runway entry
+- **Coordination**: Controller manages your progression to runway
+
+<Frame>
+<img src="/images/BARS_selecting_runways.gif" alt="Animation showing progression through multiple stopbars approaching runway" />
+</Frame>
+</Step>
+
+<Step title="Holding for Traffic">
+When stopbars are red, you'll wait for:
+
+- **Departing aircraft**: Previous departure to clear runway
+- **Arriving aircraft**: Landing traffic to clear and taxi clear
+- **Runway inspection**: Ground vehicles or runway checks
+- **Traffic coordination**: Optimal sequencing by controller
+
+<Info>
+Controllers use stopbars to optimize traffic flow, often holding aircraft briefly to improve overall efficiency.
+</Info>
+</Step>
+
+<Step title="Cleared for Takeoff">
+When ready for departure:
+
+1. **Stopbar clears**: Lights turn off (realistic) or green (enhanced)
+2. **Radio clearance**: "Cleared for takeoff runway 24L"
+3. **Enter runway**: Proceed onto runway for departure
+4. **Continue flight**: Complete your takeoff as normal
+
+<Check>
+Both stopbar clearance AND radio clearance are required before entering the runway.
+</Check>
+</Step>
+</Steps>
+
+### Scenario 2: Busy Ground Operations
+
+<Steps>
+<Step title="Complex Taxi Routes">
+At busy airports, expect multiple stopbar interactions:
+
+- **Progressive control**: Controllers move you forward in segments
+- **Dynamic routing**: Route may change based on traffic
+- **Multiple holds**: Several stops during taxi are normal
+
+<Tip>
+Trust the system - controllers use stopbars to optimize traffic flow and prevent conflicts you might not see.
+</Tip>
+</Step>
+
+<Step title="Traffic Conflicts">
+Stopbars help prevent ground conflicts:
+
+- **Intersection protection**: Stopbars prevent runway incursions
+- **Aircraft separation**: Maintains safe spacing during taxi
+- **Priority handling**: Emergency vehicles get priority routing
+
+Watch how stopbars coordinate complex traffic movements automatically.
+
+</Step>
+</Steps>
+
+## Common Situations and Responses
+
+<AccordionGroup>
+<Accordion title="Stopbar Doesn't Clear">
+**What to do when stuck at a red stopbar**:
+
+1. **Wait patiently**: Controller may be coordinating other traffic
+2. **Check radio**: Listen for any relevant instructions
+3. **After reasonable time**: Query ground control politely
+4. **Never proceed**: Don't cross red stopbars without clearance
+
+_Example query_: "Ground, [callsign] holding at taxiway Alpha intersection, requesting status."
+
+</Accordion>
+
+<Accordion title="Conflicting Instructions">
+**When radio and stopbar conflict**:
+
+1. **Stopbar takes precedence**: Always respect the stopbar indication
+2. **Query controller**: "Ground, [callsign] has conflicting clearance and stopbar indication"
+3. **Wait for clarification**: Don't proceed until conflict is resolved
+4. **Safety first**: Better to delay than create a dangerous situation
+</Accordion>
+
+<Accordion title="Technical Issues">
+**If stopbars aren't working properly**:
+
+1. **Check BARS Client**: Verify connection status
+2. **Continue normal procedures**: Use standard taxi procedures
+3. **Inform controller**: "Ground, [callsign] not receiving stopbar indications"
+4. **Request confirmation**: Ask for verbal confirmation at intersections
+</Accordion>
+</AccordionGroup>
+
+## Post-Flight Review
+
+After completing your first BARS flight:
+
+<Steps>
+<Step title="Evaluate the Experience">
+Consider how BARS enhanced your flight:
+
+- **Improved safety**: How stopbars prevented potential conflicts
+- **Better flow**: Smoother taxi operations with less radio chatter
+- **Enhanced realism**: More authentic airport ground operations
+- **Learning value**: Understanding real-world procedures
+
+<Note>
+Each BARS flight teaches you more about realistic ground operations and traffic management.
+</Note>
+</Step>
+
+<Step title="Check Flight Statistics">
+Review your BARS Client for flight information:
+
+- **Stopbar interactions**: Number of stopbar encounters
+- **Response time**: How quickly you responded to indications
+- **Airport coverage**: Percentage of taxi route with stopbar control
+- **Controller efficiency**: Traffic flow improvements
+
+<Tip>
+These statistics help you understand your performance and the system's effectiveness.
+</Tip>
+</Step>
+
+<Step title="Plan Future Flights">
+Build on your BARS experience:
+
+- **Try different airports**: Each has unique stopbar configurations
+- **Various traffic levels**: Experience both quiet and busy operations
+- **Different aircraft**: See how aircraft type affects ground operations
+- **Time of day**: Night operations showcase lighting effects
+
+<Frame>
+<img src="/images/BARS_control_bar.gif" alt="Animation showing BARS control interface managing multiple aircraft" />
+</Frame>
+</Step>
+</Steps>
+
+## Best Practices for BARS Operations
+
+### For Pilots
+
+<CardGroup cols={2}>
+<Card title="Communication" icon="radio">
+- Maintain standard radio procedures
+- Acknowledge stopbar instructions when appropriate
+- Report technical issues promptly
+- Stay alert for both visual and audio cues
+</Card>
+
+<Card title="Situational Awareness" icon="eye">
+- Scan for stopbars during taxi
+- Understand your position relative to runways
+- Anticipate holds at busy intersections
+- Watch for other traffic movements
+</Card>
+</CardGroup>
+
+### Safety Guidelines
+
+<Warning>
+  **Critical safety reminders**: - Never cross a red stopbar without explicit
+  clearance - Stopbar indication supersedes prior taxi clearances - Report
+  malfunctioning stopbars immediately - Maintain normal separation standards
+</Warning>
+
+<Check>
+  **Signs of successful BARS usage**: - Smooth taxi operations with minimal
+  delays - Reduced radio congestion - Improved traffic flow awareness - Enhanced
+  ground operation realism
+</Check>
+
+## What's Next?
+
+<CardGroup cols={2}>
+<Card title="Explore More Airports" icon="map" href="/pilot-client/airports">
+  Discover other BARS-compatible airports and their unique ground operations.
+</Card>
+
+<Card
+  title="Advanced Operations"
+  icon="graduation-cap"
+  href="/pilot-client/advanced-operations"
+>
+  Learn about complex scenarios, emergency procedures, and advanced BARS
+  features.
+</Card>
+
+<Card
+  title="Troubleshooting"
+  icon="wrench"
+  href="/pilot-client/troubleshooting"
+>
+  Get help with technical issues and operational questions.
+</Card>
+
+<Card title="Community" icon="users" href="https://stopbars.com/discord">
+  Join other BARS users to share experiences and coordinate flights.
+</Card>
+</CardGroup>
+
+<Tip>
+  The more you use BARS, the more natural it becomes. Each flight provides new
+  learning opportunities and enhances your understanding of real-world airport
+  operations.
+</Tip>
