@@ -88,23 +88,7 @@
       },
       {
         "tab": "BARS API",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
-          }
-        ]
+        "openapi": "https://v2.stopbars.com/openapi.json"
       }
     ],
     "global": {
@@ -141,6 +125,16 @@
   "background": {
     "color": {
       "dark": "#09090b"
+    }
+  },
+  "api": {
+    "playground": {
+      "display": "interactive",
+      "proxy": true
+    },
+    "examples": {
+      "languages": ["curl", "python", "javascript"],
+      "defaults": "required"
     }
   },
   "navbar": {
