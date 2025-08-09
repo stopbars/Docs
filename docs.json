@@ -130,7 +130,7 @@
   "api": {
     "playground": {
       "display": "interactive",
-      "proxy": true
+      "proxy": false
     },
     "examples": {
       "languages": ["curl", "python", "javascript"],
