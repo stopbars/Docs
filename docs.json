@@ -88,8 +88,7 @@
       },
       {
         "tab": "BARS API",
-        "openapi": "https://v2.stopbars.com/openapi.json",
-        "asyncapi": "https://v2.stopbars.com/asyncapi.json"
+        "openapi": "https://v2.stopbars.com/openapi.json"
       }
     ],
     "global": {
