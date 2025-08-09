@@ -88,7 +88,12 @@
       },
       {
         "tab": "BARS API",
-        "openapi": "https://v2.stopbars.com/openapi.json"
+        "groups": [
+          {
+            "group": "BARS API",
+            "openapi": "https://v2.stopbars.com/openapi.json"
+          }
+        ]
       }
     ],
     "global": {
