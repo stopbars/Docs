@@ -88,7 +88,7 @@
       },
       {
         "tab": "BARS API",
-        "openapi": "https://petstore3.swagger.io/api/v3/openapi.json"
+        "openapi": "https://v2.stopbars.com/openapi.json"
       }
     ],
     "global": {
