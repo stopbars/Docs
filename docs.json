@@ -104,7 +104,11 @@
         "label": "Status",
         "href": "https://status.stopbars.com/"
       }
-    ]
+    ],
+    "primary": {
+      "type": "github",
+      "href": "https://github.com/stopbars/Docs"
+    }
   },
   "contextual": {
     "options": [
