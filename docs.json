@@ -16,18 +16,7 @@
           {
             "group": "Getting Started",
             "pages": [
-              "pilot-client/index",
-              "pilot-client/installation",
-              "pilot-client/setup",
-              "pilot-client/quickstart"
-            ]
-          },
-          {
-            "group": "Operations",
-            "pages": [
-              "pilot-client/airports",
-              "pilot-client/troubleshooting",
-              "pilot-client/faq"
+              "pilot-client/index"
             ]
           }
         ]
@@ -38,23 +27,7 @@
           {
             "group": "Getting Started",
             "pages": [
-              "euroscope/index",
-              "euroscope/installation",
-              "euroscope/quickstart"
-            ]
-          },
-          {
-            "group": "Controller Operations",
-            "pages": [
-              "euroscope/controller-guide",
-              "euroscope/best-practices"
-            ]
-          },
-          {
-            "group": "Support",
-            "pages": [
-              "euroscope/troubleshooting",
-              "euroscope/faq"
+              "euroscope/index"
             ]
           }
         ]
@@ -65,23 +38,7 @@
           {
             "group": "Getting Started",
             "pages": [
-              "vatsys/index",
-              "vatsys/quickstart",
-              "vatsys/installation"
-            ]
-          },
-          {
-            "group": "Controller Operations",
-            "pages": [
-              "vatsys/controller-guide",
-              "vatsys/best-practices"
-            ]
-          },
-          {
-            "group": "Support",
-            "pages": [
-              "vatsys/troubleshooting",
-              "vatsys/faq"
+              "vatsys/index"
             ]
           }
         ]
@@ -142,12 +99,15 @@
       {
         "label": "Support",
         "href": "https://stopbars.com/support"
+      },
+      {
+        "label": "Status",
+        "href": "https://status.stopbars.com/"
       }
     ],
     "primary": {
-      "type": "button",
-      "label": "Status",
-      "href": "https://status.stopbars.com"
+      "type": "github",
+      "href": "https://github.com/stopbars/Docs"
     }
   },
   "contextual": {
@@ -163,7 +123,7 @@
     "socials": {
       "discord": "https://stopbars.com/discord",
       "github": "https://github.com/stopbars",
-      "website": "https://stopbars.com/donate"
+      "website": "https://opencollective.com/stopbars"
     }
   }
 }
