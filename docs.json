@@ -36,9 +36,19 @@
         "tab": "vatSys Plugin",
         "groups": [
           {
-            "group": "Getting Started",
+            "group": "Get Started",
             "pages": [
-              "vatsys/index"
+              "vatsys/index",
+              "vatsys/installation"
+            ]
+          },
+          {
+            "group": "Overview",
+            "pages": [
+              "vatsys/config",
+              "vatsys/profiletypes",
+              "vatsys/INTAS",
+              "vatsys/Legacy"
             ]
           }
         ]
@@ -96,10 +106,6 @@
   },
   "navbar": {
     "links": [
-      {
-        "label": "Support",
-        "href": "https://stopbars.com/support"
-      },
       {
         "label": "Status",
         "href": "https://status.stopbars.com/"
