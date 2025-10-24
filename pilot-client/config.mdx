@@ -1,0 +1,109 @@
+---
+title: "Configuration"
+---
+
+## Configuring Your Airport Scenery Packages
+
+Once the Pilot Client is installed, you'll need to configure which scenery package you use for each airport.
+
+### Finding Your Airport
+
+Navigate to the **Airport List** section in the Pilot Client. You can search for airports by:
+- **ICAO code** (e.g., `EGLL`)
+- **Package name** (e.g., `FlyTampa`)
+- **Airport name** (e.g., `East Midlands`)
+
+### Selecting Your Scenery Package
+
+<Steps>
+<Step title="Find your desired airport">
+  Use the search function to locate your airport.
+</Step>
+
+<Step title="Click the dropdown menu">
+  Click the **dropdown menu** next to the airport ICAO code.
+</Step>
+
+<Step title="Choose a scenery package">
+  Choose from the available scenery packages for that airport.
+</Step>
+
+<Step title="Verify your selection">
+  Your selection will update where lights are placed in your simulator.
+</Step>
+</Steps>
+
+<Note>
+If an airport does not appear in the list or a specific scenery package is missing, it may not have been contributed yet. You can contribute to BARS by following the [scenery contribution guide](https://preview.stopbars.com/contribute).
+</Note>
+
+## System Tray and Window Management
+
+### Minimize to System Tray
+
+The Pilot Client can be minimized to your system tray for quick access while keeping your desktop clean. Click the **minimize button** in the top-right corner of the window to minimize the application to your system tray.
+
+![Minimize button](/images/v2/minimize-button.png)
+
+### System Tray Icon Settings
+
+Right-click on the BARS Pilot Client icon in your system tray to access additional settings:
+
+![System tray context menu](/images/v2/system-tray-context-menu.png)
+
+#### Auto Minimize on Start
+
+Enabling **Auto Minimize on Start** will automatically minimize the Pilot Client to your system tray when you launch it. 
+
+<Tip>
+We recommend enabling this setting after you've configured your scenery packages, so the application starts quietly in the background without taking up screen space.
+</Tip>
+
+#### Discord Rich Presence
+
+Toggle **Discord Rich Presence** to show your activity in the BARS Pilot Client on your Discord profile. When enabled, your Discord status will display:
+- Your nearest airport (automatically detected from your simulator position)
+- Your current server connection status (Connected, Disconnected, Error, or No VATSIM Connection)
+- Your active connected flight simulator (MSFS 2020 or MSFS 2024) with a small icon indicator
+
+This allows your Discord friends to see what you're up to in the simulator!
+
+![Discord Rich Presence example](/images/v2/discord-rich-presence-example.png)
+
+<Tip>
+The nearest airport is automatically resolved based on your current aircraft position in the simulator when available.
+</Tip>
+
+## Auto-Start Configuration
+
+### Starting Pilot Client with Your Flight Simulator
+
+The BARS Pilot Client is configured to **automatically launch when you start your flight simulator by default**. This ensures BARS lights are active whenever you fly without requiring manual startup.
+
+If you need to disable auto-start or re-enable it, you can modify this setting at any time:
+
+<Steps>
+<Step title="Open the BARS Installer">
+  Launch the **BARS Installer** application.
+</Step>
+
+<Step title="Navigate to Settings">
+  Go to the **Settings** page.
+</Step>
+
+<Step title="Configure auto-start option">
+  Check or uncheck the **"Start Pilot Client automatically with Microsoft Flight Simulator"** option as desired.
+</Step>
+</Steps>
+
+The Pilot Client will automatically launch (or not launch) whenever you start Microsoft Flight Simulator 2020 or 2024, depending on your preference.
+
+<Tip>
+Combined with the **Auto Minimize on Start** setting (see above), the Pilot Client will quietly launch in the background whenever you start your simulator, keeping your desktop clean while ensuring BARS lights are active.
+</Tip>
+
+<Note>
+For detailed information about the installer and its configuration options, see the [Installation guide](/pilot-client/installation).
+</Note>
+
+

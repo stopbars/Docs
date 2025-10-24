@@ -1,31 +1,35 @@
 ---
-title: "Pilot Guide"
-description: "Welcome to the BARS Pilot Client documentation"
+title: "Pilot Client Overview"
+description: "Learn how the BARS Pilot Client connects your flight simulator with real-time airport lighting"
 ---
 
-BARS Pilot Client enables pilots to interact with real-time airport lighting systems managed by controllers. Experience synchronized lighting states, realistic stopbar behavior, and dynamic runway environments that respond to controller actions in real-time.
+## What is the Pilot Client?
 
-![Pilot Client](/images/v2/pilot_client.png)
+The **BARS Pilot Client** is the bridge between your flight simulator and the BARS ecosystem. It dynamically injects airport lighting objects into your simulator, enabling controllers to manage realistic, real-time airport lighting during your flights.
 
-## Next Steps
+### How It Works
 
-<Columns cols={2}>
-    <Card
-    title="Pilot Client GitHub"
-    icon="github"
-    href="https://github.com/stopbars/pilot-client"
-    arrow="true"
-    cta="View on GitHub"
-    >
-    Interested in helping develop BARS? Explore the codebase, open an issue, or drop a star to support ongoing development.
-    </Card>
-    <Card
-    title="Getting started"
-    icon="arrow-right"
-    href="#"
-    arrow="true"
-    cta="Get started"
-    >
-    Ready to use BARS as a pilot? Jump to the getting started guide and connect to the system in minutes.
-    </Card>
-</Columns>
+The Pilot Client operates through a seamless three-step process:
+
+1. **Receives Real-Time State** — The client connects to the BARS Core server and continuously receives live lighting state updates from active controllers
+2. **Loads Your Scenery Package** — Based on your configuration, it loads the scenery package positions for your current airport
+3. **Spawns and Controls Lights** — Using BARS contribution data, the client places airport lights at precise positions in your simulator. Controllers can then adjust these lights in real-time through VatSys or Euroscope, and you'll see the changes instantly in your cockpit
+
+<Tip>
+Since the Pilot Client communicates directly with the BARS Core server (which connects to controller plugins), you get real-time lighting changes without any delay or manual updates.
+</Tip>
+
+## Getting Started
+
+The Pilot Client is simple to install and configure. Follow these guides to get up and running:
+
+<CardGroup cols={2}>
+<Card title="Installation" icon="download" href="/pilot-client/installation">
+  Step-by-step guide to install the BARS Pilot Client and complete initial setup with your API token.
+</Card>
+
+<Card title="Configuration" icon="sliders" href="/pilot-client/config">
+  Learn how to select your scenery packages, manage system tray settings, and enable auto-start.
+</Card>
+</CardGroup>
+
