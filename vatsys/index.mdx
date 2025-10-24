@@ -1,31 +1,48 @@
 ---
-title: "Introduction"
-description: "Welcome to the home of the vatSys Plugin documentation"
+title: "Installation"
 ---
 
-BARS vatSys Plugin enables controllers to manage and update airport lighting that directly reflects into simulators, synchronizing lighting state between controllers and pilots. The plugin supports multiple airport profiles, windows, customization, stopbar reactivation timers, modern true to life design and animations, and easy rescaling and responsiveness for different screen sizes.
+This quickstart guide shows you how to install and setup the BARS vatSys Plugin in minutes.
+After completing this guide, you will have successfully installed the plugin and are ready for network use.
 
-![vatSys Plugin](/images/v2/vatSys_INTAS.png)
+<Info>
 
-## Next Steps
+**Prerequisites**: 
 
-<Columns cols={2}>
-    <Card
-    title="vatSys Plugin GitHub"
-    icon="github"
-    href="https://github.com/stopbars/vatSys-Plugin"
-    arrow="true"
-    cta="View on GitHub"
-    >
-    Interested helping develop BARS? Explore the codebase, open an issue, or drop a star to support ongoing development.
-    </Card>
-    <Card
-    title="Install the plugin"
-    icon="arrow-right"
-    href="/vatsys/installation"
-    arrow="true"
-    cta="Start installing"
-    >
-        Ready to use BARSs in vatSys? Jump to the installation guide and get the plugin running in minutes.
-    </Card>
-</Columns>
+Before you begin, you must have the following:
+1. BARS Account & API Token
+2. BARS Installer
+3. vatSys Installed
+
+</Info>
+
+<Steps>
+<Step title="Install the plugin with BARS Installer">
+  Launch the **BARS Installer**, choose and install the **vatSys Plugin**. 
+</Step>
+
+<Step title="Open vatSys and confirm the plugin installed">
+  After install, open vatSys and select **Windows** from the menu bar. If the plugin installed successfully, **BARS** should appear as an option in the dropdown. If not, verify the installation by:
+
+    1. Selecting **Info → About** and confirming "**BARS for vatSys**" appears in the "**Plugins**" list.
+    2. Checking your vatSys Plugins folder: `C:\Program Files (x86)\vatSys\bin\Plugins`.
+
+  <Info>
+    If BARS doesn't appear in vatSys or the Plugins folder, check the installer for any warnings or errors during download, then reattempt the installation.
+  </Info>
+</Step>
+
+<Step title="Connect to an ATC position">
+  Select a position, and connect to the network through vatSys as you normally would. Once connected, the **BARS** window becomes selectable from the Windows menu.
+</Step>
+
+<Step title="Enter with your API token">
+  Open the **BARS** window, paste your API token from the [account page](https://preview.stopbars.com/account).
+
+    ![BARS Config](/images/v2/vatSys_BARS-Config.png)
+
+    <Danger>
+        Keep this token secret, never share it with anyone. It is used to authenticate API requests.
+    </Danger>
+</Step>
+</Steps>

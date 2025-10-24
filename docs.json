@@ -40,13 +40,12 @@
             "group": "Get Started",
             "pages": [
               "vatsys/index",
-              "vatsys/installation"
+              "vatsys/config"
             ]
           },
           {
             "group": "Overview",
             "pages": [
-              "vatsys/config",
               "vatsys/profiletypes",
               "vatsys/INTAS",
               "vatsys/Legacy"
