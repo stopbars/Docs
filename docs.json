@@ -17,7 +17,8 @@
             "group": "Getting Started",
             "pages": [
               "pilot-client/index",
-              "pilot-client/installation"
+              "pilot-client/installation",
+              "pilot-client/config"
             ]
           }
         ]

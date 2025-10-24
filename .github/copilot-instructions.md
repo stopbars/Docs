@@ -356,6 +356,42 @@ description: "Concise description explaining page purpose and value"
 ---
 ```
 
+## Updating docs.json
+
+After adding new documentation pages, you **must** update the `docs.json` file to register the new pages in the navigation structure. This file controls how pages appear in the documentation site's navigation tabs and groups.
+
+### Steps to update docs.json
+
+1. Locate the appropriate tab and group in `docs.json` where your new page belongs
+2. Add the page reference to the `pages` array in the format: `"path/to/page"` (without the `.mdx` extension)
+3. Ensure the page path matches the file location in your workspace
+4. Commit the `docs.json` changes along with your documentation files
+
+### Example
+
+If you add a new page at `pilot-client/troubleshooting.mdx`, add it to the appropriate group:
+
+```json
+{
+  "tab": "Pilot Client",
+  "groups": [
+    {
+      "group": "Getting Started",
+      "pages": [
+        "pilot-client/index",
+        "pilot-client/installation",
+        "pilot-client/config",
+        "pilot-client/troubleshooting"
+      ]
+    }
+  ]
+}
+```
+
+<Warning>
+Failing to update `docs.json` will result in new pages not appearing in the navigation, making them inaccessible to users through the site's menu structure.
+</Warning>
+
 ## Content quality standards
 
 ### Code examples requirements
