@@ -4,7 +4,7 @@ title: "Configuration"
 
 ## Configuring Your Airport Scenery Packages
 
-Once the Pilot Client is installed, you'll need to configure which scenery package you use for each airport.
+With the plethora of scenery options available in simulators nowadays, pilots use a wide range of different scenery packages. Once the Pilot Client is [installed](/pilot-client/installation), you'll need to configure which scenery package you use for each supported airport.
 
 ### Finding Your Airport
 
@@ -21,7 +21,7 @@ Navigate to the **Airport List** section in the Pilot Client. You can search for
 </Step>
 
 <Step title="Click the dropdown menu">
-  Click the **dropdown menu** next to the airport ICAO code.
+  Click the dropdown menu next to the airport ICAO code.
 </Step>
 
 <Step title="Choose a scenery package">
@@ -34,7 +34,7 @@ Navigate to the **Airport List** section in the Pilot Client. You can search for
 </Steps>
 
 <Note>
-If an airport does not appear in the list or a specific scenery package is missing, it may not have been contributed yet. You can contribute to BARS by following the [scenery contribution guide](https://preview.stopbars.com/contribute).
+If an airport does not appear in the list or a specific scenery package is missing, it may not have been contributed yet. You can help contribute to BARS by following the [scenery contribution guide](https://preview.stopbars.com/contribute).
 </Note>
 
 ## System Tray and Window Management
@@ -43,40 +43,36 @@ If an airport does not appear in the list or a specific scenery package is missi
 
 The Pilot Client can be minimized to your system tray for quick access while keeping your desktop clean. Click the **minimize button** in the top-right corner of the window to minimize the application to your system tray.
 
-![Minimize button](/images/v2/minimize-button.png)
-
 ### System Tray Icon Settings
 
 Right-click on the BARS Pilot Client icon in your system tray to access additional settings:
 
-![System tray context menu](/images/v2/system-tray-context-menu.png)
+![System tray context menu](/images/v2/Pilot_Client-System_Tray_Context_Menu.png)
 
 #### Auto Minimize on Start
 
-Enabling **Auto Minimize on Start** will automatically minimize the Pilot Client to your system tray when you launch it. 
+Enabling **Auto Minimize on Start** will automatically minimize the Pilot Client to your system tray.
 
-<Tip>
+<Check>
 We recommend enabling this setting after you've configured your scenery packages, so the application starts quietly in the background without taking up screen space.
-</Tip>
+</Check>
 
 #### Discord Rich Presence
 
-Toggle **Discord Rich Presence** to show your activity in the BARS Pilot Client on your Discord profile. When enabled, your Discord status will display:
+By default, **Discord Rich Presence** is enabled to show your activity in the BARS Pilot Client on your Discord profile. When enabled, your Discord status will display:
 - Your nearest airport (automatically detected from your simulator position)
-- Your current server connection status (Connected, Disconnected, Error, or No VATSIM Connection)
+- Your current server status (Connected, Disconnected, Error, or No VATSIM Connection)
 - Your active connected flight simulator (MSFS 2020 or MSFS 2024) with a small icon indicator
 
-This allows your Discord friends to see what you're up to in the simulator!
+![Discord Rich Presence example](/images/v2/Pilot_Client-Discord_Rich_Presence_Example.png)
 
-![Discord Rich Presence example](/images/v2/discord-rich-presence-example.png)
-
-<Tip>
-The nearest airport is automatically resolved based on your current aircraft position in the simulator when available.
-</Tip>
+<Info>
+If you wish to disable Discord Rich Presence, simply uncheck it in the system tray settings.
+</Info>
 
 ## Auto-Start Configuration
 
-### Starting Pilot Client with Your Flight Simulator
+### Starting Pilot Client with the Flight Simulator
 
 The BARS Pilot Client is configured to **automatically launch when you start your flight simulator by default**. This ensures BARS lights are active whenever you fly without requiring manual startup.
 
@@ -92,18 +88,14 @@ If you need to disable auto-start or re-enable it, you can modify this setting a
 </Step>
 
 <Step title="Configure auto-start option">
-  Check or uncheck the **"Start Pilot Client automatically with Microsoft Flight Simulator"** option as desired.
+  Toggle the **"Start Pilot Client automatically with Microsoft Flight Simulator"** option as desired.
 </Step>
 </Steps>
 
 The Pilot Client will automatically launch (or not launch) whenever you start Microsoft Flight Simulator 2020 or 2024, depending on your preference.
 
 <Tip>
-Combined with the **Auto Minimize on Start** setting (see above), the Pilot Client will quietly launch in the background whenever you start your simulator, keeping your desktop clean while ensuring BARS lights are active.
+Auto Start combined with the **[Auto Minimize on Start](/pilot-client/config#auto-minimize-on-start)** setting, enables the Pilot Client to quietly launch in the background whenever you start your simulator, keeping your desktop clean while ensuring BARS lights are active, ready for use without manual starting.
 </Tip>
-
-<Note>
-For detailed information about the installer and its configuration options, see the [Installation guide](/pilot-client/installation).
-</Note>
 
 

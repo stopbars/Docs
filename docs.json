@@ -14,7 +14,7 @@
         "tab": "Pilot Client",
         "groups": [
           {
-            "group": "Getting Started",
+            "group": "Get Started",
             "pages": [
               "pilot-client/index",
               "pilot-client/installation",
@@ -41,6 +41,7 @@
             "group": "Get Started",
             "pages": [
               "vatsys/index",
+              "vatsys/installation",
               "vatsys/config"
             ]
           },
@@ -49,7 +50,7 @@
             "pages": [
               "vatsys/profiletypes",
               "vatsys/INTAS",
-              "vatsys/Legacy"
+              "vatsys/legacy"
             ]
           }
         ]
