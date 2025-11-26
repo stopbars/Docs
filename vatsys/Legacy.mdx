@@ -1,3 +1,51 @@
 ---
 title: "Legacy"
 ---
+
+Legacy is a simple straightforward system, containing the core airport lighting management features. This guide covers everything you need to know to effectively operate airport lighting using the Legacy interface.
+
+<Frame>
+  <img src="/images/v2/vatSys_Legacy.png" alt="Legacy interface" />
+</Frame>
+
+## Understanding Shared State
+
+One of the key characteristics of the Legacy profile type is that **stopbar states are shared between all controllers** using the plugin.
+
+Unlike older versions of BARS, you do not "own" or "claim" a runway when managing stopbars. Any controller with the airport configured can toggle any stopbar, and all changes are immediately visible to other controllers and pilots.
+
+## Stopbar Controls
+
+### Toggling Stopbars
+
+To toggle a stopbar, simply **left-click or right-click** on the stopbar. Both mouse buttons perform the same action.
+
+<Steps>
+  <Step title="Click to toggle">
+    Locate the stopbar you want to toggle in your runway window, then click it using either your **left or right mouse button**. The stopbar will toggle between on and off states.
+    
+    <Frame>
+      <img src="/images/v2/vatSys_Legacy-Toggle.gif" alt="Legacy stopbar toggle" />
+    </Frame>
+  </Step>
+</Steps>
+
+<Info>
+The Legacy profile type does not include a countdown timer, stopbars toggle instantly.
+</Info>
+
+## Stopbar States
+
+| State | Appearance |
+|-------|------------|
+| **On** | Red |
+| **Off** | Black |
+
+<Columns>
+  <Frame caption="Stopbar On">
+    <img src="/images/v2/vatSys_Legacy-StopbarOn.png" alt="Legacy stopbar on" />
+  </Frame>
+  <Frame caption="Stopbar Off">
+    <img src="/images/v2/vatSys_Legacy-StopbarOff.png" alt="Legacy stopbar off" />
+  </Frame>
+</Columns>
