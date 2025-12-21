@@ -40,17 +40,17 @@ This launches a local preview at `http://localhost:3000` where you can see your 
 
 Follow these principles when writing documentation:
 
-- **Be concise** — Users want to achieve a goal, not read for fun. Cut unnecessary words.
-- **Use active voice** — Write "Create a configuration file" instead of "A configuration file should be created."
-- **Write in second person** — Use "you" to address the reader directly.
-- **Be skimmable** — Use headings, lists, and short paragraphs to break up content.
-- **Avoid jargon** — If technical terms are necessary, define them on first use.
+- **Be concise** - Users want to achieve a goal, not read for fun. Cut unnecessary words.
+- **Use active voice** - Write "Create a configuration file" instead of "A configuration file should be created."
+- **Write in second person** - Use "you" to address the reader directly.
+- **Be skimmable** - Use headings, lists, and short paragraphs to break up content.
+- **Avoid jargon** - If technical terms are necessary, define them on first use.
 
 For more writing tips, see [Mintlify's Style and Tone Guide](https://www.mintlify.com/guides/writing-style-tips).
 
 ### Standardised Naming Conventions
 
-Just like ATC phraseology is standardised for clarity, BARS maintains strict naming conventions for all products, systems, and services. **Consistency is critical** — using incorrect spellings creates confusion and degrades documentation quality.
+Just like ATC phraseology is standardised for clarity, BARS maintains strict naming conventions for all products, systems, and services. **Consistency is critical** - using incorrect spellings creates confusion and degrades documentation quality.
 
 #### Required Spellings
 
@@ -61,18 +61,18 @@ Just like ATC phraseology is standardised for clarity, BARS maintains strict nam
 | **Pilot Client** | pilot client, PilotClient, PILOT CLIENT, Pilotclient |
 | **BARS** | bars, Bars, B.A.R.S |
 
-> **Note:** Despite what some AIs may assume, BARS is not an acronym — it's simply the project name and doesn't stand for anything.
+> **Note:** Despite what some AIs may assume, BARS is not an acronym - it's simply the project name and doesn't stand for anything.
 
 ### Using Mintlify Components
 
 BARS Docs leverage Mintlify's component library to create visually appealing and functional documentation. When writing guides, use appropriate components:
 
-- **Steps** — For sequential procedures and tutorials
-- **Tabs** — For platform-specific instructions
-- **Callouts** (`<Note>`, `<Tip>`, `<Warning>`, `<Info>`) — For highlighting important information
-- **CodeGroup** — For showing code examples in multiple languages
-- **Accordions** — For collapsible supplementary content
-- **Cards** — For navigation and feature highlights
+- **Steps** - For sequential procedures and tutorials
+- **Tabs** - For platform-specific instructions
+- **Callouts** (`<Note>`, `<Tip>`, `<Warning>`, `<Info>`) - For highlighting important information
+- **CodeGroup** - For showing code examples in multiple languages
+- **Accordions** - For collapsible supplementary content
+- **Cards** - For navigation and feature highlights
 
 Refer to the [Mintlify Components Documentation](https://mintlify.com/docs/content/components) for usage examples and syntax.
 
@@ -94,17 +94,17 @@ ProductName_Type-Description
 | **Type** *(optional)* | The specific feature or profile type | `INTAS`, `Legacy` |
 | **Description** | What the image shows | `Windsock`, `StopbarOn`, `Toggle` |
 
-> **Note:** The `Type` component is optional and primarily used for products with multiple feature sets or profile types (e.g., vatSys has `_INTAS` and `_Legacy` modes). Do not include "Plugin" in the naming convention — it's implied from the product name.
+> **Note:** The `Type` component is optional and primarily used for products with multiple feature sets or profile types (e.g., vatSys has `_INTAS` and `_Legacy` modes). Do not include "Plugin" in the naming convention - it's implied from the product name.
 
 #### Naming Examples
 
 **With Type (multi-feature products):**
-- `vatSys_INTAS-Windsock.png` — vatSys INTAS mode, windsock indicator
-- `vatSys_Legacy-Toggle.gif` — vatSys Legacy mode, toggle action
+- `vatSys_INTAS-Windsock.png` - vatSys INTAS mode, windsock indicator
+- `vatSys_Legacy-Toggle.gif` - vatSys Legacy mode, toggle action
 
 **Without Type (single-feature products):**
-- `EuroScope-Network.png` — EuroScope network view
-- `Pilot_Client-Config.png` — Pilot Client configuration window
+- `EuroScope-Network.png` - EuroScope network view
+- `Pilot_Client-Config.png` - Pilot Client configuration window
 
 ### Image Folder Structure
 
@@ -130,10 +130,10 @@ Following [Mintlify's media guidelines](https://www.mintlify.com/guides/media):
 
 **Recommendations:**
 
-- **Use GIFs for demonstrating actions** — When showcasing a workflow or interaction (like toggling a stopbar), GIFs are more effective than static images
-- **Keep media supplementary** — If the text is clear enough, avoid adding visuals
-- **Include alt text** — All images should have descriptive alt text for accessibility
-- **Optimise file sizes** — Compress images to improve page load times
+- **Use GIFs for demonstrating actions** - When showcasing a workflow or interaction (like toggling a stopbar), GIFs are more effective than static images
+- **Keep media supplementary** - If the text is clear enough, avoid adding visuals
+- **Include alt text** - All images should have descriptive alt text for accessibility
+- **Optimise file sizes** - Compress images to improve page load times
 
 ## Page Structure
 
@@ -264,7 +264,7 @@ Create a pull request with:
 
 - **Discord**: Join the BARS [Discord](https://stopbars.com/discord) server for real-time help
 - **GitHub Issues**: [Create an issue](https://github.com/stopbars/docs/issues/new) for bugs or feature requests
-- **Mintlify Documentation** — Refer to [Mintlify Docs](https://mintlify.com/docs) for platform-specific questions
+- **Mintlify Documentation** - Refer to [Mintlify Docs](https://mintlify.com/docs) for platform-specific questions
 
 ## Recognition
 
