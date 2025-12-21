@@ -27,9 +27,17 @@
         "tab": "EuroScope Plugin",
         "groups": [
           {
-            "group": "Getting Started",
+            "group": "Get Started",
             "pages": [
-              "euroscope/index"
+              "euroscope/index",
+              "euroscope/installation",
+              "euroscope/config"
+            ]
+          },
+          {
+            "group": "Divisions",
+            "pages": [
+              "euroscope/guide"
             ]
           }
         ]
