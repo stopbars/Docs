@@ -5,7 +5,7 @@
 	<h1 align="center"><b>stopbars/Docs</b></h1>
 	<p align="center">
     <br />
-		Official documentation for BARS products, including the Pilot Client, EuroScope Plugin, EuroScope division configuration guide, and vatSys Plugin. Find setup instructions, configuration options, and usage guides for all supported platforms.
+		Official documentation for BARS products, including the Pilot Client, EuroScope Plugin, EuroScope division configuration guide, and vatSys Plugin. Find setup instructions, configuration options, and usage guides for all supported platforms and services.
     <br />
     <br />
     <a href="https://stopbars.com"><strong>stopbars.com »</strong></a>

@@ -4,8 +4,6 @@ Thank you for your interest in contributing to BARS Docs! This guide will help y
 
 BARS Docs is built using [Mintlify](https://mintlify.com/), a modern documentation platform. For detailed information on Mintlify's features and capabilities, refer to the [Mintlify Documentation](https://mintlify.com/docs).
 
----
-
 ## Getting Started
 
 ### Prerequisites
@@ -78,8 +76,6 @@ BARS Docs leverage Mintlify's component library to create visually appealing and
 
 Refer to the [Mintlify Components Documentation](https://mintlify.com/docs/content/components) for usage examples and syntax.
 
----
-
 ## Image Guidelines
 
 ### Image Naming Convention
@@ -139,8 +135,6 @@ Following [Mintlify's media guidelines](https://www.mintlify.com/guides/media):
 - **Include alt text** — All images should have descriptive alt text for accessibility
 - **Optimise file sizes** — Compress images to improve page load times
 
----
-
 ## Page Structure
 
 ### Frontmatter Requirements
@@ -195,8 +189,6 @@ If you create a new page at `vatsys/troubleshooting.mdx`, add it to the vatSys t
 
 > **Important:** Failing to update `docs.json` will result in your new page being inaccessible through the site navigation, even though the file exists.
 
----
-
 ## Contribution Process
 
 ### 1. Create a Feature Branch
@@ -242,8 +234,6 @@ Create a pull request with:
 - Reference to related issues (if applicable)
 - Screenshots of rendered pages for visual changes
 
----
-
 ## Common Issues
 
 ### Local Preview Not Loading
@@ -269,8 +259,6 @@ Create a pull request with:
 - Ensure the file extension is `.mdx` (not `.md`)
 - Check component syntax matches [Mintlify documentation](https://mintlify.com/docs)
 - Verify all component tags are properly closed
-
----
 
 ## Getting Help
 
