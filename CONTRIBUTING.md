@@ -20,32 +20,33 @@ Thank you for your interest in contributing to BARS Docs! This guide will help y
 
    cd docs
    ```
-   <br>
+
+   <br />
 
 2. **Install Dependencies**
 
    ```bash
-   
+
    ```
 
-   <br>
+   <br />
 
 3. **Configure Development Environment**
 
    **Setup environment variables:**
 
-   <br>
+   <br />
 
    ```bash
    copy .dev.vars.example .dev.vars
    ```
 
-   <br>
+   <br />
 
 4. **Start Development Server**
 
    ```bash
-   
+
    ```
 
 ## Development Guidelines
@@ -122,11 +123,10 @@ Create a pull request with:
 
 ### Testing
 
-1. 
-2. 
-3. 
-4. 
-
+1.
+2.
+3.
+4.
 
 ## Common Issues
 
@@ -140,7 +140,6 @@ Create a pull request with:
 
 -
 -
-
 
 ## Getting Help
 
