@@ -47,11 +47,12 @@ The Pilot Client can be minimized to your system tray for quick access while kee
 
 Right-click on the BARS Pilot Client icon in your system tray to access additional settings:
 
-<img 
-  src="/images/v2/Pilot_Client-System_Tray_Context_Menu.png" 
-  alt="System tray context menu"
-  noZoom
-/>
+<Frame>
+  <img 
+    src="/images/v2/Pilot_Client-System_Tray_Context_Menu.png" 
+    alt="System tray context menu"
+  />
+</Frame>
 
 #### Auto Minimize on Start
 
@@ -68,11 +69,12 @@ By default, **Discord Rich Presence** is enabled to show your activity in the BA
 - Your current server status (Connected, Disconnected, Error, or No VATSIM Connection)
 - Your active connected flight simulator (MSFS 2020 or MSFS 2024) with a small icon indicator
 
-<img 
-  src="/images/v2/Pilot_Client-Discord_Rich_Presence_Example.png" 
-  alt="Discord Rich Presence example"
-  noZoom
-/>
+<Frame>
+  <img 
+    src="/images/v2/Pilot_Client-Discord_Rich_Presence_Example.png" 
+    alt="Discord Rich Presence example"
+  />
+</Frame>
 
 <Info>
 If you wish to disable Discord Rich Presence, simply uncheck it in the system tray settings.
@@ -104,4 +106,43 @@ If you need to disable auto-start or re-enable it, you can modify this setting a
 Auto Start combined with the **[Auto Minimize on Start](/pilot-client/config#auto-minimize-on-start)** setting, enables the Pilot Client to quietly launch in the background whenever you start your simulator, keeping your desktop clean while ensuring BARS lights are active, ready for use without manual starting.
 </Tip>
 
+## Debug Mode
 
+The Pilot Client includes a **Debug Mode** feature that allows you to verify your light models and states are working correctly without needing to connect.
+
+When activated, Debug Mode freezes the current state and automatically cycles through all possible light states at the nearest holding point. This helps you confirm that:
+- All light models have been successfully installed
+- Lights are displaying and functioning correctly in your simulator
+
+### Activating Debug Mode
+
+To use Debug Mode, press `Ctrl + Shift + D` while the **Pilot Client window is selected**. To disable Debug Mode, simply press the same keybind again.
+
+<Note>
+Before using Debug Mode, ensure that:
+- You are spawned at an airport with [BARS compatibility](https://stopbars.com/status)
+- Light models have fully loaded (wait a few seconds after spawning)
+
+If these conditions are not met, you won't see the closest light objects changing when Debug Mode is activated, as it freezes the current state.
+</Note>
+
+When Debug Mode is active, a **red warning** will display in the top-right corner of the Pilot Client. This warning also shows the **current light state** being displayed in the simulator as it cycles through each state.
+
+<Frame>
+  <img 
+    src="/images/v2/Pilot_Client-DebugMode.gif" 
+    alt="Debug Mode active in the Pilot Client showing red warning and current light state"
+  />
+</Frame>
+The closest light model will automatically toggle through all possible states in your simulator:
+
+<Frame>
+  <img 
+    src="/images/v2/Pilot_Client-DebugModeSimulator.gif" 
+    alt="Debug Mode cycling through light states in the simulator"
+  />
+</Frame>
+
+<Warning>
+Debug Mode will **not** activate if your simulator window is focused instead of the Pilot Client. Pressing `Ctrl + Shift + D` in the simulator will trigger any action bound to that keybind within the simulator itself, rather than activating BARS Debug Mode.
+</Warning>

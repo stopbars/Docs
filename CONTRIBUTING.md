@@ -118,6 +118,45 @@ images/
 
 **Always add new images to the appropriate version folder**
 
+### Displaying Images with Frames
+
+All images in BARS Docs must be wrapped in a [Frame component](https://www.mintlify.com/docs/components/frames). This is the standardised way of displaying images and ensures consistent styling across all documentation pages.
+
+**Required format:**
+
+```jsx
+<Frame>
+  <img src="/images/v2/ProductName_Type-Description.png" alt="Descriptive alt text" />
+</Frame>
+```
+
+**Do not use:**
+- Basic Markdown image syntax (`![alt](path)`)
+- HTML `<img>` tags without a Frame wrapper
+- Any other image embedding method
+
+#### Alt Text
+
+Always include descriptive alt text for accessibility. The alt text should describe what the image shows, not just repeat the filename.
+
+```jsx
+// Good
+<img src="/images/v2/vatSys_INTAS-Windsock.png" alt="INTAS windsock showing wind direction" />
+
+// Bad
+<img src="/images/v2/vatSys_INTAS-Windsock.png" alt="vatSys_INTAS-Windsock" />
+```
+
+#### Captions and Hints
+
+The Frame component supports optional `caption` and `hint` attributes. Only use these when additional context is genuinely needed.
+
+```jsx
+<Frame caption="Stopbar in the on state">
+  <img src="/images/v2/vatSys_INTAS-StopbarOn.png" alt="INTAS stopbar on" />
+</Frame>
+```
+
 ### Media Best Practices
 
 Following [Mintlify's media guidelines](https://www.mintlify.com/guides/media):
