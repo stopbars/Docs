@@ -14,9 +14,11 @@
         "tab": "Pilot Client",
         "groups": [
           {
-            "group": "Getting Started",
+            "group": "Get Started",
             "pages": [
-              "pilot-client/index"
+              "pilot-client/index",
+              "pilot-client/installation",
+              "pilot-client/config"
             ]
           }
         ]
@@ -25,9 +27,17 @@
         "tab": "EuroScope Plugin",
         "groups": [
           {
-            "group": "Getting Started",
+            "group": "Get Started",
             "pages": [
-              "euroscope/index"
+              "euroscope/index",
+              "euroscope/installation",
+              "euroscope/config"
+            ]
+          },
+          {
+            "group": "Divisions",
+            "pages": [
+              "euroscope/guide"
             ]
           }
         ]
@@ -36,9 +46,19 @@
         "tab": "vatSys Plugin",
         "groups": [
           {
-            "group": "Getting Started",
+            "group": "Get Started",
             "pages": [
-              "vatsys/index"
+              "vatsys/index",
+              "vatsys/installation",
+              "vatsys/config"
+            ]
+          },
+          {
+            "group": "Overview",
+            "pages": [
+              "vatsys/profiletypes",
+              "vatsys/INTAS",
+              "vatsys/legacy"
             ]
           }
         ]
@@ -96,10 +116,6 @@
   },
   "navbar": {
     "links": [
-      {
-        "label": "Support",
-        "href": "https://stopbars.com/support"
-      },
       {
         "label": "Status",
         "href": "https://status.stopbars.com/"

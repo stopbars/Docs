@@ -1,0 +1,110 @@
+---
+title: "INTAS"
+---
+
+The <Tooltip tip="Integrated Tower Automation Suite">INTAS</Tooltip> profile type provides an advanced airport lighting management interface with features like countdown timers, lead-on light animations, and windsock indications. This guide covers everything you need to know to effectively operate airport lighting using the INTAS interface.
+
+<Frame>
+  <img src="/images/v2/vatSys_INTAS.png" alt="INTAS interface" />
+</Frame>
+
+## Window Navigation
+
+### Zooming
+
+Use your **mouse scroll wheel** to zoom in and out of the airport layout.
+
+<Frame>
+  <img 
+  src="/images/v2/vatSys_INTAS-Zoom.gif" alt="INTAS zoom" />
+</Frame>
+
+### Panning
+
+Hold down your **middle mouse button** and drag to move around the window.
+
+<Frame>
+  <img src="/images/v2/vatSys_INTAS-Pan.gif" alt="INTAS pan" />
+</Frame>
+
+## Stopbar Controls
+
+### Timed Toggle (Left Click)
+
+Left clicking a stopbar toggles it **with a 45 second countdown timer**.
+
+<Steps>
+  <Step title="Left click the stopbar">
+    Click on the stopbar you want to toggle using your **left mouse button**.
+  </Step>
+  <Step title="Timer begins countdown">
+    The 45 second countdown timer appears to the left of the stopbar, displayed as **"T0:45"**.
+    
+    <Frame>
+      <img src="/images/v2/vatSys_INTAS-Timer.gif" alt="INTAS stopbar timer" />
+    </Frame>
+  </Step>
+</Steps>
+
+### Instant Toggle (Right Click)
+
+Right clicking a stopbar toggles it **immediately without a timer**. 
+
+<Frame>
+  <img src="/images/v2/vatSys_INTAS-InstantToggle.gif" alt="INTAS instant toggle" />
+</Frame>
+
+## Stopbar States
+
+| State | Appearance |
+|-------|------------|
+| **On** | Pink |
+| **Off** | Black |
+
+<Columns>
+  <Frame caption="Stopbar On">
+    <img src="/images/v2/vatSys_INTAS-StopbarOn.png" alt="INTAS stopbar on" />
+  </Frame>
+  <Frame caption="Stopbar Off">
+    <img src="/images/v2/vatSys_INTAS-StopbarOff.png" alt="INTAS stopbar off" />
+  </Frame>
+</Columns>
+
+## Additional Features
+
+### Windsock Indications
+
+In the real world, each runway end has its own wind detector to provide accurate wind information for that specific runway. However, on VATSIM we are limited to a singular wind reading from the METAR.
+
+INTAS takes the wind data from the VATSIM METAR and applies basic logic to calculate a fairly accurate runway-specific wind direction and speed for each runway end. The windsock icon is positioned based on the real world location of that airport's windsocks, and will rotate and animate based on the calculated wind direction.
+
+<Frame>
+  <img src="/images/v2/vatSys_INTAS-Windsock.png" alt="INTAS windsock" />
+</Frame>
+
+#### Windsock Warnings
+
+As part of the wind calculations, INTAS displays orange warnings on the windsock direction and knots reading when either of the following conditions are met:
+
+- **Crosswind** greater than 20 knots
+- **Tailwind** greater than 5 knots
+
+<Frame>
+  <img src="/images/v2/vatSys_INTAS-WindsockWarning.png" alt="INTAS windsock warning" />
+</Frame>
+
+<Warning>
+VATSIM only provides a singular wind reading from the METAR with no real runway-specific winds. INTAS attempts to calculate runway-specific wind but this is not 100% accurate. Always refer to your ATIS or VATSIM METAR for official wind information.
+</Warning>
+
+### Lead-on Light Animations
+
+Lead-on light animations are a purely visual effect that showcase what the lead-on lights look like for pilots in the simulator. The real world INTAS system includes this feature as part of its suite.
+
+<Note>
+Lead-on light animations are purely visual and have no operational effect for controllers.
+</Note>
+
+<Frame>
+  <img src="/images/v2/vatSys_INTAS-LeadOnLights.gif" alt="INTAS lead-on lights" />
+</Frame>

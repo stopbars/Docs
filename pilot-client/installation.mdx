@@ -1,0 +1,87 @@
+---
+title: "Installation"
+---
+
+This quickstart guide shows you how to install and setup the BARS Pilot Client in minutes.
+After completing this guide, you will have successfully installed the client, and are ready to see the BARS Pilot Client in action.
+
+<Info>
+
+**Prerequisites**: 
+
+Before you begin, you must have the following:
+1. BARS Account & API Token
+2. BARS Installer
+3. Microsoft Flight Simulator 2020 or 2024
+
+</Info>
+
+<Steps>
+<Step title="Install the client with BARS Installer">
+  Launch the **BARS Installer**, choose and install the **Pilot Client**. 
+</Step>
+
+<Step title="Open the Pilot Client">
+  After installation, click **Open** in the installer to launch the Pilot Client for the first time.
+</Step>
+
+<Step title="Enter your API token">
+  Open the Pilot Client and paste your API token from the [account page](https://preview.stopbars.com/account) and click **Save**.
+
+  <Frame>
+    <img src="/images/v2/Pilot_Client-Config.png" alt="BARS Pilot Client configuration window" />
+  </Frame>
+</Step>
+</Steps>
+
+<Danger>
+  Keep this token secret, never share it with anyone. It is used to authenticate API requests.
+</Danger>
+
+## Default Light Removal Package
+
+### Understanding the Default Light Removal Package
+
+The BARS Pilot Client includes a default light removal package that is installed by default. This package automatically removes defaultbaked scenery lights at all BARS supported airports to prevent duplicate lighting after BARS spawns its own dynamic lights.
+
+#### Why This Package is Important
+
+Without the default light removal package, you would see:
+- Duplicate lights at BARS supported airports
+- Conflicting lighting from both scenery and BARS lights
+- Confusion when identifying which lights are controlled by BARS
+- Unrealistic lighting effects and positions
+
+<Danger>
+**We strongly recommend keeping the default light removal package installed**. Disabling it will result in duplicate, conflicting lights at BARS supported airports and negatively impact your visual experience. Only disable this package if you have a specific technical reason to do so.
+</Danger>
+
+### Disabling the Default Light Removal Package (Not Recommended)
+
+**While we do not recommend it**, if you still wish to disable the default light removal package, you can skip installing it during installation:
+
+<Steps>
+<Step title="Open the BARS Installer">
+  Launch the **BARS Installer** application.
+</Step>
+
+<Step title="Navigate to Settings">
+  Go to the **Settings** page.
+</Step>
+
+<Step title="Enable skip option">
+  Check the **"Skip default scenery removal addon installation"** option.
+</Step>
+
+<Step title="Reinstall the Pilot Client">
+  Reinstall the Pilot Client to apply this change.
+</Step>
+</Steps>
+
+<Warning>
+If you choose to skip the default light removal package, you may experience duplicate lights at BARS supported airports where the baked scenery lights conflict with BARS lighting.
+</Warning>
+
+### Airport Lighting When ATC is Offline
+
+Even when ATC is offline, a controller is not using BARS, or you are not connected to VATSIM, simply having the BARS Pilot Client open will spawn airport lighting in a **"Default"** state. This ensures your scenery always has appropriate lighting, preventing you from flying in an unlit environment.

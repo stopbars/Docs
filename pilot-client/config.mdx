@@ -1,0 +1,148 @@
+---
+title: "Configuration"
+---
+
+## Configuring Your Airport Scenery Packages
+
+With the plethora of scenery options available in simulators nowadays, pilots use a wide range of different scenery packages. Once the Pilot Client is [installed](/pilot-client/installation), you'll need to configure which scenery package you use for each supported airport.
+
+### Finding Your Airport
+
+Navigate to the **Airport List** section in the Pilot Client. You can search for airports by:
+- **ICAO code** (e.g., `YPPH`)
+- **Package name** (e.g., `FlyTampa`)
+- **Airport name** (e.g., `East Midlands`)
+
+### Selecting Your Scenery Package
+
+<Steps>
+<Step title="Find your desired airport">
+  Use the search function to locate your airport.
+</Step>
+
+<Step title="Click the dropdown menu">
+  Click the dropdown menu next to the airport ICAO code.
+</Step>
+
+<Step title="Choose a scenery package">
+  Choose from the available scenery packages for that airport.
+</Step>
+
+<Step title="Verify your selection">
+  Your selection will update where lights are placed in your simulator.
+</Step>
+</Steps>
+
+<Note>
+If an airport does not appear in the list or a specific scenery package is missing, it may not have been contributed yet. You can help contribute to BARS by following the [scenery contribution guide](https://preview.stopbars.com/contribute).
+</Note>
+
+## System Tray and Window Management
+
+### Minimize to System Tray
+
+The Pilot Client can be minimized to your system tray for quick access while keeping your desktop clean. Click the **minimize button** in the top-right corner of the window to minimize the application to your system tray.
+
+### System Tray Icon Settings
+
+Right-click on the BARS Pilot Client icon in your system tray to access additional settings:
+
+<Frame>
+  <img 
+    src="/images/v2/Pilot_Client-System_Tray_Context_Menu.png" 
+    alt="System tray context menu"
+  />
+</Frame>
+
+#### Auto Minimize on Start
+
+Enabling **Auto Minimize on Start** will automatically minimize the Pilot Client to your system tray.
+
+<Check>
+We recommend enabling this setting after you've configured your scenery packages, so the application starts quietly in the background without taking up screen space.
+</Check>
+
+#### Discord Rich Presence
+
+By default, **Discord Rich Presence** is enabled to show your activity in the BARS Pilot Client on your Discord profile. When enabled, your Discord status will display:
+- Your nearest airport (automatically detected from your simulator position)
+- Your current server status (Connected, Disconnected, Error, or No VATSIM Connection)
+- Your active connected flight simulator (MSFS 2020 or MSFS 2024) with a small icon indicator
+
+<Frame>
+  <img 
+    src="/images/v2/Pilot_Client-Discord_Rich_Presence_Example.png" 
+    alt="Discord Rich Presence example"
+  />
+</Frame>
+
+<Info>
+If you wish to disable Discord Rich Presence, simply uncheck it in the system tray settings.
+</Info>
+
+## Auto-Start Configuration
+
+### Starting Pilot Client with the Flight Simulator
+
+The BARS Pilot Client is configured to **automatically launch when you start your flight simulator by default**. This ensures BARS lights are active whenever you fly without requiring manual startup.
+
+If you need to disable auto-start or re-enable it, you can modify this setting at any time:
+
+<Steps>
+<Step title="Open the BARS Installer">
+  Launch the **BARS Installer** application.
+</Step>
+
+<Step title="Navigate to Settings">
+  Go to the **Settings** page.
+</Step>
+
+<Step title="Configure auto-start option">
+  Toggle the **"Start Pilot Client automatically with Microsoft Flight Simulator"** option as desired.
+</Step>
+</Steps>
+
+<Tip>
+Auto Start combined with the **[Auto Minimize on Start](/pilot-client/config#auto-minimize-on-start)** setting, enables the Pilot Client to quietly launch in the background whenever you start your simulator, keeping your desktop clean while ensuring BARS lights are active, ready for use without manual starting.
+</Tip>
+
+## Debug Mode
+
+The Pilot Client includes a **Debug Mode** feature that allows you to verify your light models and states are working correctly without needing to connect.
+
+When activated, Debug Mode freezes the current state and automatically cycles through all possible light states at the nearest holding point. This helps you confirm that:
+- All light models have been successfully installed
+- Lights are displaying and functioning correctly in your simulator
+
+### Activating Debug Mode
+
+To use Debug Mode, press `Ctrl + Shift + D` while the **Pilot Client window is selected**. To disable Debug Mode, simply press the same keybind again.
+
+<Note>
+Before using Debug Mode, ensure that:
+- You are spawned at an airport with [BARS compatibility](https://stopbars.com/status)
+- Light models have fully loaded (wait a few seconds after spawning)
+
+If these conditions are not met, you won't see the closest light objects changing when Debug Mode is activated, as it freezes the current state.
+</Note>
+
+When Debug Mode is active, a **red warning** will display in the top-right corner of the Pilot Client. This warning also shows the **current light state** being displayed in the simulator as it cycles through each state.
+
+<Frame>
+  <img 
+    src="/images/v2/Pilot_Client-DebugMode.gif" 
+    alt="Debug Mode active in the Pilot Client showing red warning and current light state"
+  />
+</Frame>
+The closest light model will automatically toggle through all possible states in your simulator:
+
+<Frame>
+  <img 
+    src="/images/v2/Pilot_Client-DebugModeSimulator.gif" 
+    alt="Debug Mode cycling through light states in the simulator"
+  />
+</Frame>
+
+<Warning>
+Debug Mode will **not** activate if your simulator window is focused instead of the Pilot Client. Pressing `Ctrl + Shift + D` in the simulator will trigger any action bound to that keybind within the simulator itself, rather than activating BARS Debug Mode.
+</Warning>
