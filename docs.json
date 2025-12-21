@@ -45,7 +45,7 @@
       },
       {
         "tab": "BARS API",
-        "openapi": "https://v2.stopbars.com/openapi.json"
+        "openapi": "https://raw.githubusercontent.com/stopbars/Core/refs/heads/main/data/openapi.json"
       }
     ],
     "global": {
