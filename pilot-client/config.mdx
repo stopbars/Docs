@@ -16,6 +16,10 @@ Navigate to the **Airport List** section in the Pilot Client. You can search for
 ### Selecting Your Scenery Package
 
 <Steps>
+<Step title="Select your simulator">
+  Select your simulator on the right through the simulator filter. This is purely a filter to only show airports compatible with each sim.
+</Step>
+
 <Step title="Find your desired airport">
   Use the search function to locate your airport.
 </Step>
@@ -120,7 +124,7 @@ To use Debug Mode, press `Ctrl + Shift + D` while the **Pilot Client window is s
 
 <Note>
 Before using Debug Mode, ensure that:
-- You are spawned at an airport with [BARS compatibility](https://stopbars.com/status)
+- You are spawned at an airport [supported](https://preview.stopbars.com/status) by BARS
 - Light models have fully loaded (wait a few seconds after spawning)
 
 If these conditions are not met, you won't see the closest light objects changing when Debug Mode is activated, as it freezes the current state.
@@ -130,11 +134,11 @@ When Debug Mode is active, a **red warning** will display in the top-right corne
 
 <Frame>
   <img 
-    src="/images/v2/Pilot_Client-DebugMode.gif" 
+    src="/images/v2/Pilot_Client-DebugMode.png" 
     alt="Debug Mode active in the Pilot Client showing red warning and current light state"
   />
 </Frame>
-The closest light model will automatically toggle through all possible states in your simulator:
+The closest light model will automatically toggle through all possible lighting states in your simulator:
 
 <Frame>
   <img 
@@ -144,5 +148,5 @@ The closest light model will automatically toggle through all possible states in
 </Frame>
 
 <Warning>
-Debug Mode will **not** activate if your simulator window is focused instead of the Pilot Client. Pressing `Ctrl + Shift + D` in the simulator will trigger any action bound to that keybind within the simulator itself, rather than activating BARS Debug Mode.
+Debug Mode will **not** activate if your simulator window is focused instead of the Pilot Client. Pressing `Ctrl + Shift + D` in the simulator will trigger any action bound to that keybind within the simulator itself, rather than activating Debug Mode inside the Pilot Client.
 </Warning>

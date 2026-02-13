@@ -117,14 +117,18 @@
   "navbar": {
     "links": [
       {
+        "label": "About",
+        "href": "https://preview.stopbars.com/about"
+      },
+      {
+        "label": "Contribute",
+        "href": "https://preview.stopbars.com/contribute"
+      },
+      {
         "label": "Status",
         "href": "https://status.stopbars.com/"
       }
-    ],
-    "primary": {
-      "type": "github",
-      "href": "https://github.com/stopbars/Docs"
-    }
+    ]
   },
   "contextual": {
     "options": [
