@@ -1,0 +1,75 @@
+---
+title: "Testing Your Contribution"
+---
+
+Before submitting your contribution, you should export your scenery XML and test it through the Contribution Tester. This step allows you to visually verify your work and catch any issues before the review process.
+
+## Pre-Export Checklist
+
+Before exporting, perform one final check over your contribution:
+
+- All lighting polygon positions are accurate to your scenery
+- Every polygon is named with the correct BARS ID
+- Remove areas cover all default scenery lights that BARS will replace
+- No duplicate or missing polygons
+
+<Info>
+Taking the time to verify your work before exporting will save time during the review process. Contributions with incorrect BARS IDs or missing remove areas will be rejected.
+</Info>
+
+## Exporting Your Contribution
+
+Export your scenery contribution as an XML file from the simulator.
+
+<Info>
+Detailed instructions for exporting the contribution XML from MSFS developer mode, including file naming conventions and export location, will be added in a future update.
+</Info>
+
+{/* Placeholder: Add image/GIF showing the export process in MSFS developer mode */}
+{/* <Frame>
+  <img src="/images/v2/Contributions-Export.png" alt="Exporting scenery contribution XML from MSFS developer mode" />
+</Frame> */}
+
+## Upload and Test
+
+Once you have your exported XML file, navigate to the test page for your airport on the Contribution Tester. Upload your XML file and click **Test XML**.
+
+{/* Placeholder: Add image showing the test upload page */}
+{/* <Frame>
+  <img src="/images/v2/Contributions-TestUpload.png" alt="Contribution test page with XML upload area" />
+</Frame> */}
+
+After processing, your contribution will be displayed on the **XML Preview** map. This interactive preview provides a visual representation of what your contribution will look like in the simulator, giving you a clear opportunity to identify and fix any issues before submission.
+
+{/* Placeholder: Add image showing the XML Preview map with contribution data */}
+{/* <Frame caption="The XML Preview map displays your contribution polygons overlaid on the airport layout">
+  <img src="/images/v2/Contributions-XMLPreview.png" alt="XML Preview map showing contribution polygons on the airport" />
+</Frame> */}
+
+### Verify Remove Areas
+
+Within the **Map Settings** on the XML Preview, you can enable **Toggle Remove Areas**. This filters the preview to show only your remove areas, allowing you to confirm they cover all relevant default scenery lighting.
+
+{/* Placeholder: Add image showing the Toggle Remove Areas view */}
+{/* <Frame>
+  <img src="/images/v2/Contributions-RemoveAreasPreview.png" alt="XML Preview map with remove areas toggled on" />
+</Frame> */}
+
+## What to Look For
+
+When reviewing the XML Preview, check for:
+
+- **Polygon positions** - Lighting polygons should align accurately with taxiway and runway positions
+- **BARS ID accuracy** - Verify that the preview shows the correct light types in the correct locations
+- **Remove area coverage** - Ensure all default scenery lights within your contribution area are covered by remove areas
+- **Missing objects** - Confirm you haven't missed any lighting objects from the airport map
+
+If you identify any issues, return to the simulator, make corrections, re-export your XML.
+
+## Next Steps
+
+Once you have verified your contribution through the Contribution Tester, you're ready to submit.
+
+<Card title="Submission" icon="paper-plane" href="/contributions/submission" horizontal>
+  Enter your scenery details, submit your contribution, and track its review status.
+</Card>

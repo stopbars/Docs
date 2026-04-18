@@ -64,6 +64,26 @@
         ]
       },
       {
+        "tab": "Contributions",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "contributions/index"
+            ]
+          },
+          {
+            "group": "How to Contribute",
+            "pages": [
+              "contributions/getting-started",
+              "contributions/mapping",
+              "contributions/testing",
+              "contributions/submission"
+            ]
+          }
+        ]
+      },
+      {
         "tab": "BARS API",
         "openapi": "https://raw.githubusercontent.com/stopbars/Core/refs/heads/main/data/openapi.json"
       }
@@ -81,7 +101,7 @@
           "icon": "github"
         },
         {
-          "anchor": "Open Collective",
+          "anchor": "Donate",
           "href": "https://opencollective.com/stopbars",
           "icon": "hand-holding-dollar"
         }

@@ -10,7 +10,7 @@ After completing this guide, you will have successfully installed the client, an
 **Prerequisites**: 
 
 Before you begin, you must have the following:
-1. BARS Account & API Token
+1. BARS Account
 2. BARS Installer
 3. Microsoft Flight Simulator 2020 or 2024
 
@@ -38,54 +38,10 @@ Before you begin, you must have the following:
   Keep this token secret, never share it with anyone. It is used to authenticate API requests.
 </Danger>
 
-## Default Light Removal Package
+## Next Steps
 
-### Understanding the Default Light Removal Package
+You've successfully installed the BARS Pilot Client! Now it's time to configure the client.
 
-The BARS Pilot Client includes a default light removal package that is installed by default. This package automatically removes defaultbaked scenery lights at all BARS supported airports to prevent duplicate lighting after BARS spawns its own dynamic lights.
-
-#### Why This Package is Important
-
-Without the default light removal package, you would see:
-- Duplicate lights at BARS supported airports
-- Conflicting lighting from both scenery and BARS lights
-- Confusion when identifying which lights are controlled by BARS
-- Unrealistic lighting effects and positions
-
-<Danger>
-**We strongly recommend keeping the default light removal package installed**. Disabling it will result in duplicate, conflicting lights at BARS supported airports and negatively impact your visual experience. Only disable this package if you have a specific technical reason to do so.
-</Danger>
-
-### Disabling the Default Light Removal Package (Not Recommended)
-
-**While we do not recommend it**, if you still wish to disable the default light removal package, you can do so per airport:
-
-<Steps>
-<Step title="Open the BARS Pilot Client">
-  Launch the **BARS Pilot Client** application.
-</Step>
-
-<Step title="Select your simulator">
-  Select your simulator on the right through the simulator filter. This is purely a filter to only show airports compatible with each sim.
-</Step>
-
-<Step title="Find your desired airport">
-  Use the search function to locate your airport.
-</Step>
-
-<Step title="Click the removals toggle">
-  On the right of the scenery package dropdown is a toggle to turn removals on or off for that specific airport.
-</Step>
-
-<Step title="Restart your simulator">
-  If your simulator is already open, you will need to restart it to update your removals preference. The Pilot Client will display an orange warning in the top right when a restart is required.
-</Step>
-</Steps>
-
-<Warning>
-If you disable the default light removal package, you may experience duplicate lights at BARS supported airports where the baked scenery lights conflict with BARS lighting.
-</Warning>
-
-### Airport Lighting When ATC is Offline
-
-Even when ATC is offline, a controller is not using BARS, or you are not connected to VATSIM, simply having the BARS Pilot Client open will spawn airport lighting in a **"Default"** state. This ensures your scenery always has appropriate lighting, preventing you from flying in an unlit environment.
+<Card title="Configuration" icon="gear" href="/pilot-client/config" horizontal>
+  Configure your scenery packages, and customize your client preferences.
+</Card>

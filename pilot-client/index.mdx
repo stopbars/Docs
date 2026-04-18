@@ -6,6 +6,10 @@ title: "Overview"
 
 The **BARS Pilot Client** brings real-time airport lighting updates to simulators, receiving lighting state updates from controllers, to reflect changes in the pilot's simulator. The client updates airport lighting positions based on selected scenery packages, provides status monitoring including simulator detection, nearest airport, server connection, and rich Discord presence integration.
 
+<Frame>
+  <img src="/images/v2/Pilot_Client.png" alt="BARS Pilot Client interface" />
+</Frame>
+
 ### How It Works
 
 The Pilot Client operates through a seamless three-step process:
@@ -14,9 +18,9 @@ The Pilot Client operates through a seamless three-step process:
 2. **Loads Your Scenery Package** — Based on your configuration, it loads the scenery package positions for your current airport, adjusting airport lighting positions as required
 3. **Spawns and Controls Lights** — Using BARS contribution data, the client places airport lights at precise positions in your simulator. Controllers can then manage these lights in real-time through vatSys or EuroScope, and you'll see the changes instantly in your cockpit
 
-<Tip>
+<Note>
 Since the Pilot Client communicates directly with the BARS Core server which connects to controller clients, you get real-time lighting changes without any delay or manual updates.
-</Tip>
+</Note>
 
 ## Get Started
 
