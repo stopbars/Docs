@@ -1,0 +1,96 @@
+---
+title: "Tools"
+---
+
+## Debug Mode
+
+The Pilot Client includes a **Debug Mode** feature that allows you to verify your light models and states are working correctly without needing to connect.
+
+When activated, Debug Mode freezes the current state and automatically cycles through all possible light states at the nearest holding point. This helps you confirm that:
+- All light models have been successfully installed
+- Lights are displaying and functioning correctly in your simulator
+
+### Activating Debug Mode
+
+To use Debug Mode, press `Ctrl + Shift + D` while the **Pilot Client window is selected**. To disable Debug Mode, simply press the same keybind again.
+
+<Note>
+Before using Debug Mode, ensure that:
+- You are spawned at an airport [supported](https://preview.stopbars.com/status) by BARS
+- Light models have fully loaded (wait a few seconds after spawning)
+
+If these conditions are not met, you won't see the closest light objects changing when Debug Mode is activated, as it freezes the current state.
+</Note>
+
+When Debug Mode is active, a **red warning** will display in the top-right corner of the Pilot Client. This warning also shows the **current light state** being displayed in the simulator as it cycles through each state.
+
+<Frame>
+  <img 
+    src="/images/v2/Pilot_Client-DebugMode.png" 
+    alt="Debug Mode active in the Pilot Client showing red warning and current light state"
+  />
+</Frame>
+The closest light model will automatically toggle through all possible lighting states in your simulator:
+
+<Frame>
+  <img 
+    src="/images/v2/Pilot_Client-DebugModeSimulator.gif" 
+    alt="Debug Mode cycling through light states in the simulator"
+  />
+</Frame>
+
+<Warning>
+Debug Mode will **not** activate if your simulator window is focused instead of the Pilot Client. Pressing `Ctrl + Shift + D` in the simulator will trigger any action bound to that keybind within the simulator itself, rather than activating Debug Mode inside the Pilot Client.
+</Warning>
+
+## Testing Mode
+
+The Pilot Client includes a **Testing Mode** feature that allows you to load and preview your contribution XML directly in your simulator before submitting it. This lets you verify the positions of your lights in sim.
+
+When Testing Mode is active, the Pilot Client disconnects from the network and loads your contribution data locally, setting all light states to true so every light in your submission is visible at once.
+
+### Using Testing Mode
+
+Testing Mode is initiated from the Test page of the Contribution flow, not from within the Pilot Client itself.
+
+<Steps>
+<Step title="Upload your XML">
+  Navigate to the **Test** page of the Contribution flow, upload your XML file, and click the **Test XML** button.
+</Step>
+
+<Step title="Open in the Pilot Client">
+  Once your XML has been processed, a **Test in Client** button will appear. Click it to open your contribution in the Pilot Client's Testing Mode.
+
+  <Note>
+  If this is your first time, your device may prompt you to allow the website to open the BARS Client. 
+  </Note>
+</Step>
+
+<Step title="Verify Testing Mode is active">
+  Once the Pilot Client opens, it will display a **Testing Mode enabled** indicator in the top-right corner. Your contribution lights will load in your simulator with all states set to true, allowing you to verify their positions.
+
+  {/* TODO: Add screenshot/gif of Testing Mode active in the Pilot Client and simulator */}
+</Step>
+
+<Step title="Exit Testing Mode">
+  When you are done, click the **X** cancel icon in the Pilot Client UI to exit Testing Mode. This will stop the test session and resume normal network connectivity.
+</Step>
+</Steps>
+
+<Warning>
+Testing Mode only works if your simulator is already open and you are loaded into the airport you wish to test. If you trigger Testing Mode before your simulator is open or before you have spawned at the correct airport, the lights will not load. You must **exit Testing Mode first**, then open your simulator, spawn at the correct airport, and trigger Testing Mode again from the website.
+</Warning>
+
+### What Testing Mode Does
+
+When Testing Mode is active:
+- The Pilot Client **disconnects from the network**
+- Your contribution XML is loaded locally into the simulator
+- **All light states are set to true**, making every mapped light visible simultaneously
+- A indicator will display in the Pilot Client confirming Testing Mode is active
+
+{/* TODO: Add screenshot of Testing Mode indicator in the Pilot Client UI */}
+
+<Note>
+Testing Mode only affects your local simulator session. No data is submitted or published by activating Testing Mode — it is purely for local verification before you submit your contribution.
+</Note>
