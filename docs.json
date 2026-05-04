@@ -18,7 +18,8 @@
             "pages": [
               "pilot-client/index",
               "pilot-client/installation",
-              "pilot-client/config"
+              "pilot-client/config",
+              "pilot-client/tools"
             ]
           }
         ]
