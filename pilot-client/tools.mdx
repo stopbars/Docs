@@ -51,35 +51,78 @@ When Testing Mode is active, the Pilot Client disconnects from the network and l
 
 ### Using Testing Mode
 
-Testing Mode is initiated from the Test page of the Contribution flow, not from within the Pilot Client itself.
+Testing Mode is initiated from the Test page of the Contribution flow, not from the Pilot Client.
 
 <Steps>
 <Step title="Upload your XML">
-  Navigate to the **Test** page of the Contribution flow, upload your XML file, and click the **Test XML** button.
+  Navigate to the **Test** page of the Contribution flow, upload your XML file, and click the **Test XML** button. Once your XML has been processed, a **Test in Client** button will appear.
+
+  <Frame>
+    <img
+      src="/images/v2/Pilot_Client-TestingMode_TestInClient.png"
+      alt="Contribution test page showing the Test In Client button after XML has been processed"
+    />
+  </Frame>
 </Step>
 
 <Step title="Open in the Pilot Client">
-  Once your XML has been processed, a **Test in Client** button will appear. Click it to open your contribution in the Pilot Client's Testing Mode.
+  Click the **Test in Client** button to open your contribution in the Pilot Client's Testing Mode.
 
-  <Note>
-  If this is your first time, your device may prompt you to allow the website to open the BARS Client. 
-  </Note>
+  If this is your first time, your browser may prompt you to allow the website to open the BARS Client, click **Open BARS Client** to proceed. It is recommended you select the option to always allow this, so you are not prompted again in future testing sessions.
+
+  <Frame>
+    <img
+      src="/images/v2/Pilot_Client-TestingMode_BrowserPrompt.png"
+      alt="Browser prompt asking whether to open the BARS Client"
+    />
+  </Frame>
+
+  <Warning>
+  You must have the Pilot Client installed through the **BARS Installer** for the Client to open correctly. If the Pilot Client is not installed, the browser prompt will appear but nothing will open.
+  </Warning>
 </Step>
 
 <Step title="Verify Testing Mode is active">
-  Once the Pilot Client opens, it will display a **Testing Mode enabled** indicator in the top-right corner. Your contribution lights will load in your simulator with all states set to true, allowing you to verify their positions.
+  Once the Pilot Client opens, it will display a **Testing Mode** indicator in the top-right corner confirming Testing Mode is active with your contribution loaded.
 
-  {/* TODO: Add screenshot/gif of Testing Mode active in the Pilot Client and simulator */}
+  <Frame>
+    <img
+      src="/images/v2/Pilot_Client-TestingMode.png"
+      alt="Pilot Client with Testing Mode indicator visible in the top-right corner"
+    />
+  </Frame>
+</Step>
+
+<Step title="Check your lights in the simulator">
+  With Testing Mode active, your contribution XML is loaded locally into your simulator. All light states are set to true, so every mapped light in your submission will be visible simultaneously, allowing you to verify their positions.
+
+  <Note>
+  Your aircraft must be in close proximity to the lights for them to load in your simulator. Lights only load near your aircraft to keep simulator performance smooth, this prevents your simulator from loading in airport lights across the entire airport at once.
+  </Note>
+
+  <Frame>
+    <img
+      src="/images/v2/Pilot_Client-TestingModeSimulator.png"
+      alt="Simulator view showing all mapped lights active simultaneously during Testing Mode"
+    />
+  </Frame>
 </Step>
 
 <Step title="Exit Testing Mode">
-  When you are done, click the **X** cancel icon in the Pilot Client UI to exit Testing Mode. This will stop the test session and resume normal network connectivity.
+  When you are done, click the **X** icon on the **Testing Mode** button in the Pilot Client UI to exit Testing Mode. This will stop the test session and return the client to normal network operations.
+
+  <Frame>
+    <img
+      src="/images/v2/Pilot_Client-TestingMode_Exit.png"
+      alt="Pilot Client Testing Mode button with the X icon to exit Testing Mode"
+    />
+  </Frame>
 </Step>
 </Steps>
 
-<Warning>
+<Danger>
 Testing Mode only works if your simulator is already open and you are loaded into the airport you wish to test. If you trigger Testing Mode before your simulator is open or before you have spawned at the correct airport, the lights will not load. You must **exit Testing Mode first**, then open your simulator, spawn at the correct airport, and trigger Testing Mode again from the website.
-</Warning>
+</Danger>
 
 ### What Testing Mode Does
 
@@ -87,10 +130,8 @@ When Testing Mode is active:
 - The Pilot Client **disconnects from the network**
 - Your contribution XML is loaded locally into the simulator
 - **All light states are set to true**, making every mapped light visible simultaneously
-- A indicator will display in the Pilot Client confirming Testing Mode is active
-
-{/* TODO: Add screenshot of Testing Mode indicator in the Pilot Client UI */}
+- A **Testing Mode** indicator will display in the Pilot Client confirming Testing Mode is active
 
 <Note>
-Testing Mode only affects your local simulator session. No data is submitted or published by activating Testing Mode — it is purely for local verification before you submit your contribution.
+Testing Mode only affects your local simulator session. No contribution is submitted or published by activating Testing Mode, it is purely for local in simulator testing before you submit your contribution.
 </Note>
