@@ -2,7 +2,7 @@
 title: "INTAS"
 ---
 
-The <Tooltip tip="Integrated Tower Automation Suite">INTAS</Tooltip> profile type provides an advanced airport lighting management interface with features like countdown timers, lead-on light animations, and windsock indications. This guide covers everything you need to know to effectively operate airport lighting using the INTAS interface.
+The <Tooltip tip="Integrated Tower Automation Suite">INTAS</Tooltip> profile type provides an advanced airport lighting management interface with features like reactivation timers, lead-on light animations, and windsock indications. This guide covers everything you need to know to effectively operate airport lighting using the INTAS interface.
 
 <Frame>
   <img src="/images/v2/vatSys_INTAS.png" alt="INTAS interface" />
@@ -37,16 +37,16 @@ Double click your **middle mouse button** to reset the view to the default zoom 
 
 ## Stopbar Controls
 
-### Timed Toggle (Left Click)
+### Standard Toggle (Left Click)
 
-Left clicking a stopbar toggles it **with a 45 second countdown timer**.
+Left clicking a stopbar turns it off with a visible 45 second reactivation countdown. When the countdown reaches zero, the stopbar automatically returns to the on state.
 
 <Steps>
   <Step title="Left click the stopbar">
     Click on the stopbar you want to toggle using your **left mouse button**.
   </Step>
   <Step title="Timer begins countdown">
-    The 45 second countdown timer appears to the left of the stopbar, displayed as **"T0:45"**.
+    The reactivation countdown appears to the left of the stopbar, displayed as **"T0:45"**
     
     <Frame>
       <img src="/images/v2/vatSys_INTAS-Timer.gif" alt="INTAS stopbar timer" />
@@ -54,9 +54,9 @@ Left clicking a stopbar toggles it **with a 45 second countdown timer**.
   </Step>
 </Steps>
 
-### Instant Toggle (Right Click)
+### Permanent Toggle (Right Click)
 
-Right clicking a stopbar toggles it **immediately without a timer**. 
+Right clicking a stopbar turns it off without a reactivation timer. The stopbar **remains off** until you activate it again yourself. It will **not** auto-reactivate after 45 seconds.
 
 <Frame>
   <img src="/images/v2/vatSys_INTAS-InstantToggle.gif" alt="INTAS instant toggle" />
