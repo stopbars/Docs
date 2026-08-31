@@ -68,16 +68,18 @@
         "tab": "Contributions",
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Get started",
             "pages": [
-              "contributions/index"
+              "contributions/index",
+              "contributions/getting-started"
             ]
           },
           {
-            "group": "How to Contribute",
+            "group": "Contribution workflow",
             "pages": [
-              "contributions/getting-started",
               "contributions/mapping",
+              "contributions/draft",
+              "contributions/editor",
               "contributions/testing",
               "contributions/submission"
             ]

@@ -1,58 +1,80 @@
 ---
-title: "Overview"
+title: "Contribute airport scenery"
+description: "Create, edit, test, and submit BARS airport lighting support for MSFS and X-Plane scenery."
 ---
 
-<Danger>
-These contribution docs are a draft and still in progress. The V2 contribution system is not yet enabled, and contributions cannot be submitted at this time. This documentation is incomplete and may contain placeholder content or outdated information. All content is subject to change before the official release.
-</Danger>
+Use a BARS contribution to align an airport's approved lighting layout with a specific simulator scenery package. You can create the draft, correct it, test it, and submit it from the contribution flow.
 
-## What are Contributions?
-
-The **BARS Contribution System** allow anyone to help expand compatible airport support across the globe. By contributing scenery packages for specific airports, you directly increase the number of compatible airports available to pilots using BARS. Each contribution adds support for a specific simulator scenery package, enabling real-time airport lighting at that airport for pilots using that scenery.
-
-Your contributions help:
-
-- **Expand global airport coverage** - Add lighting support for airports worldwide
-- **Support multiple scenery packages** - Increase compatibility with both default and third-party simulator scenery
-
-<Frame>
-  <img src="/images/v2/Contributions-Banner.png" alt="BARS Contribution at YSCB" />
+<Frame caption="BARS lighting at Canberra Airport">
+  <img src="/images/v2/Contributions-Banner.png" alt="BARS-controlled airfield lighting at Canberra Airport at night" />
 </Frame>
 
-## How It Works
-
-The contribution process is straightforward. Divisions provide airport lighting data, including all metadata for each lighting object. Each object receives a unique `BARS_ID` that contains all relevant metadata. As a contributor, you create scenery polygons in your simulator and name them after these BARS IDs. The system then generates the correct lighting behaviour automatically - no manual lighting configuration required.
+## The contribution flow
 
 <Steps>
-<Step title="Set up your environment">
-  Enable developer mode in MSFS 2020/2024 and spawn at your desired airport.
-</Step>
-
-<Step title="Map lighting polygons">
-  Use the interactive airport map on the Contribution Dashboard to access BARS IDs, then create scenery polygons in your simulator, naming each polygon after the corresponding BARS ID.
-</Step>
-
-<Step title="Add remove areas">
-  Add removal areas to prevent duplicate lighting between default lights and BARS lights.
-</Step>
-
-<Step title="Test your contribution">
-  Export your scenery XML and upload it to the Contribution Tester for testing and visual preview.
-</Step>
-
-<Step title="Submit for review">
-  Enter your scenery package details and submit. The BARS Team will review and approve your contribution, making it available to all.
-</Step>
+  <Step title="Choose an airport">
+    Enter its four-character ICAO code.
+  </Step>
+  <Step title="Review the BARS layout">
+    Check the lighting objects supplied by the airport's division. Each object has a BARS ID.
+  </Step>
+  <Step title="Create a draft">
+    Select the matching MSFS or X-Plane scenery folder. The generator compares the scenery with the division layout and marks anything that still needs manual work.
+  </Step>
+  <Step title="Edit the draft">
+    Correct shapes, add missing objects, adjust source-light removals, and clear validation errors in the browser editor.
+  </Step>
+  <Step title="Test the contribution">
+    Prepare the draft, inspect its map preview, and open it in the BARS Pilot Client for an in-simulator test.
+  </Step>
+  <Step title="Submit for review">
+    Add the scenery name, select the simulator, confirm the acknowledgement, and send the tested draft to the BARS team.
+  </Step>
 </Steps>
 
-## Get Started
+<Columns cols={2}>
+  <Card title="Prepare to contribute" icon="clipboard-check" href="/contributions/getting-started">
+    Check the requirements and start from the Contribution Dashboard.
+  </Card>
+  <Card title="Review an airport" icon="map" href="/contributions/mapping">
+    Learn what the airport map shows before creating a draft.
+  </Card>
+  <Card title="Create a draft" icon="wand-magic-sparkles" href="/contributions/draft">
+    Select the correct scenery package and read the generator results.
+  </Card>
+  <Card title="Use the editor" icon="pen-ruler" href="/contributions/editor">
+    Work through every editor tool, layer, and validation control.
+  </Card>
+</Columns>
 
-The contribution process is simple to follow and open to anyone, get started today.
+## Supported simulators
 
-<Card title="Getting Started" icon="rocket" href="/contributions/getting-started" horizontal>
-  Set up your environment and prepare to make your first contribution.
+<Tabs>
+  <Tab title="MSFS 2024">
+    Use the airport package from your MSFS 2024 Community folder. The browser editor is experimental for MSFS, so compare the rendered scenery with the simulator before submitting.
+  </Tab>
+  <Tab title="MSFS 2020">
+    Use the airport package from your MSFS 2020 Community folder. The browser editor is experimental for MSFS, so compare the rendered scenery with the simulator before submitting.
+  </Tab>
+  <Tab title="X-Plane">
+    Use the custom airport package or the Global Airports folder. If the editor cannot resolve every referenced texture, add the relevant X-Plane folder when prompted.
+  </Tab>
+</Tabs>
+
+<Note>
+  A contribution supports one scenery package and one simulator. Submit a separate contribution for each package or simulator combination.
+</Note>
+
+## What the division controls
+
+The airport's division supplies the lighting objects, their BARS IDs, and whether contributions are open. You cannot continue when the division has disabled contributions or has not supplied airport lighting data.
+
+As a contributor, you align those approved objects with the simulator scenery. You do not change the operational lighting configuration.
+
+<Card title="Start a contribution" icon="arrow-up-right-from-square" href="https://preview.stopbars.com/contribute/new" horizontal>
+  Open the contribution flow and enter an airport ICAO.
 </Card>
 
-<Card title="Discord" icon="discord" href="https://stopbars.com/discord" horizontal>
-  Need support getting started? Join our Discord server for help.
+<Card title="Get help on Discord" icon="discord" href="https://stopbars.com/discord" horizontal>
+  Ask for help with a scenery package, rejected submission, or unclear airport data.
 </Card>
