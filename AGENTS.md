@@ -35,6 +35,10 @@ You are an AI writing assistant specialized in creating exceptional technical do
 
 ## Mintlify component reference
 
+### docs.json
+
+- Refer to the [docs.json schema](https://mintlify.com/docs.json) when building the docs.json file and site navigation
+
 ### Callout components
 
 #### Note - Additional helpful information
@@ -75,11 +79,11 @@ Example of a single code block:
 
 ```javascript config.js
 const apiConfig = {
-  baseURL: "https://api.example.com",
+  baseURL: 'https://api.example.com',
   timeout: 5000,
   headers: {
-    Authorization: `Bearer ${process.env.API_TOKEN}`,
-  },
+    'Authorization': `Bearer ${process.env.API_TOKEN}`
+  }
 };
 ```
 
@@ -96,7 +100,7 @@ const response = await fetch('/api/endpoint', {
 
 ```python Python
 import requests
-response = requests.get('/api/endpoint',
+response = requests.get('/api/endpoint', 
   headers={'Authorization': f'Bearer {api_key}'})
 ```
 
@@ -104,7 +108,6 @@ response = requests.get('/api/endpoint',
 curl -X GET '/api/endpoint' \
   -H 'Authorization: Bearer YOUR_API_KEY'
 ```
-
 </CodeGroup>
 
 #### Request/response examples
@@ -255,7 +258,7 @@ Unique identifier assigned to the newly created user.
 </ResponseField>
 
 <ResponseField name="created_at" type="timestamp">
-ISO 8601 formatted timestamp of when the user was created.
+ISO 8601 formatted timestamp of user creation.
 </ResponseField>
 
 <ResponseField name="permissions" type="array">
@@ -305,11 +308,10 @@ Wrap all images in frames:
 Use the HTML video element for self-hosted video content:
 
 <video
-controls
-className="w-full aspect-video rounded-xl"
-src="link-to-your-video.com"
-
-> </video>
+  controls
+  className="w-full aspect-video rounded-xl"
+  src="link-to-your-video.com"
+></video>
 
 Embed YouTube videos using iframe elements:
 
@@ -336,14 +338,13 @@ Use updates for changelogs:
 
 <Update label="Version 2.1.0" description="Released March 15, 2024">
 ## New features
-- Added bulk user import functionality
+- Added bulk user import feature
 - Improved error messages with actionable suggestions
 
 ## Bug fixes
-
 - Fixed pagination issue with large datasets
 - Resolved authentication timeout problems
-  </Update>
+</Update>
 
 ## Required page structure
 
@@ -355,42 +356,6 @@ title: "Clear, specific, keyword-rich title"
 description: "Concise description explaining page purpose and value"
 ---
 ```
-
-## Updating docs.json
-
-After adding new documentation pages, you **must** update the `docs.json` file to register the new pages in the navigation structure. This file controls how pages appear in the documentation site's navigation tabs and groups.
-
-### Steps to update docs.json
-
-1. Locate the appropriate tab and group in `docs.json` where your new page belongs
-2. Add the page reference to the `pages` array in the format: `"path/to/page"` (without the `.mdx` extension)
-3. Ensure the page path matches the file location in your workspace
-4. Commit the `docs.json` changes along with your documentation files
-
-### Example
-
-If you add a new page at `pilot-client/troubleshooting.mdx`, add it to the appropriate group:
-
-```json
-{
-  "tab": "Pilot Client",
-  "groups": [
-    {
-      "group": "Getting Started",
-      "pages": [
-        "pilot-client/index",
-        "pilot-client/installation",
-        "pilot-client/config",
-        "pilot-client/troubleshooting"
-      ]
-    }
-  ]
-}
-```
-
-<Warning>
-Failing to update `docs.json` will result in new pages not appearing in the navigation, making them inaccessible to users through the site's menu structure.
-</Warning>
 
 ## Content quality standards
 
