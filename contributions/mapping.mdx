@@ -1,17 +1,20 @@
 ---
-title: "Review the airport"
-description: "Read the division's BARS layout, inspect object details, and choose how to continue."
+title: "Mapping"
 ---
 
-The review page shows the airport lighting layout supplied by its division. Check that it covers the area and objects you intend to support before you select a scenery package.
+At this step, you review the airport lighting data submitted by the owning Division. Check which lighting objects are included and where they are placed before creating your contribution.
 
-<Frame caption="The map shows the approved BARS layout. The contribution actions stay beside it.">
+<Note>
+  The Division must have submitted airport lighting data and enabled contributions for this airport. Without both, you cannot create a draft or submit a contribution.
+</Note>
+
+<Frame>
   <img src="/images/v2/Contributions-Review-Airport.png" alt="Review airport page with the BARS lighting layout map, contribution progress tracker, and Create contribution draft action" />
 </Frame>
 
-## Read the map
+## Read the Map
 
-Pan and zoom to inspect the airport. Select a marker or line to open its object card.
+Pan and zoom to check that the Division's layout covers the areas you want to support. Select a marker or line to see its lighting object details.
 
 The card shows:
 
@@ -23,36 +26,18 @@ The card shows:
 
 Select the BARS ID in the card to copy it.
 
-<Frame caption="Select an object to see and copy its BARS ID.">
+<Frame>
   <img src="/images/v2/Contributions-Review-Object.png" alt="Selected airport lighting object with its name, copyable BARS ID, type, direction, and other object details" />
 </Frame>
 
-<Note>
-  The division owns the object metadata. The later editor lets you align the object with the scenery, but it does not change the division's operational settings.
-</Note>
+## Next Steps
 
-## Map controls
+Once you have reviewed the Division's data, create a draft to match those lighting objects to your scenery package. You can adjust their positions in the editor afterwards. If you already have a draft, you can skip to testing.
 
-| Control | What it does |
-| --- | --- |
-| Zoom buttons | Change the map scale. |
-| Pan | Move around the airport. |
-| Satellite or Street Map | Switch the base map. The button names the view that is currently active. |
-| Object selection | Open the selected object's details and highlight it on the map. |
-
-## Continue from the review
-
-<Columns cols={2}>
-  <Card title="Create contribution draft" icon="wand-magic-sparkles">
-    Open the draft generator. This is the normal route for MSFS and X-Plane scenery.
-  </Card>
-  <Card title="Skip to test" icon="forward">
-    Open the test page with an existing draft. Use it for a previously downloaded draft or the legacy MSFS workflow.
-  </Card>
-</Columns>
-
-If the division has not supplied airport lighting data, the page asks you to check back later or contact the division. If contributions are disabled, the draft and submission actions remain unavailable.
-
-<Card title="Create a draft" icon="arrow-right" href="/contributions/draft" horizontal>
+<Card title="Draft" icon="wand-magic-sparkles" href="/contributions/draft" horizontal>
   Select the correct scenery package and compare it with the division layout.
+</Card>
+
+<Card title="Testing" icon="flask" href="/contributions/testing" horizontal>
+  Test an existing draft or an XML file created with the legacy MSFS workflow.
 </Card>

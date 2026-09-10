@@ -1,32 +1,33 @@
 ---
-title: "Create a contribution draft"
-description: "Generate a BARS draft from an MSFS or X-Plane scenery package and review the matching result."
+title: "Draft"
 ---
 
-The draft generator compares the selected airport scenery with the division layout and creates the first version of your contribution.
+Select your airport scenery package to generate a contribution draft. The generator compares the scenery with the Division's lighting layout and identifies objects that need manual editing.
 
-## Choose the scenery package
+## Choose the Scenery Package
 
 <Tabs>
   <Tab title="MSFS">
-    Select or drag the airport package from the Community folder. Choose the package itself, not the whole Community folder.
+    Select or drag the airport package from the Community folder. Choose the package itself, not the whole Community folder. Generation starts after BARS recognizes the package and airport.
   </Tab>
   <Tab title="X-Plane">
-    Select or drag the custom airport package. For a default airport, select the Global Airports folder.
+    Select or drag the custom airport package. For a default airport, select the Global Airports folder. Generation starts after BARS recognizes the package and airport.
   </Tab>
 </Tabs>
 
-You can use **Choose folder to start** or drag the folder into the selection area. Generation starts after BARS recognizes the package and airport.
+<Note>
+  Selecting a scenery folder **does not** upload the scenery files to any BARS server. BARS only uploads the contribution XML when you test and submit it.
+</Note>
 
 <Warning>
   Select the package for the ICAO shown at the top of the page. BARS cannot create a draft when the package contains no usable scenery near that airport.
 </Warning>
 
-<Frame caption="Choose or drag the airport scenery package to create the draft.">
+<Frame>
   <img src="/images/v2/Contributions-Draft-Select.png" alt="Create a draft page with the airport map, Choose airport scenery panel, and Choose folder to start button" />
 </Frame>
 
-## Follow generation progress
+## Follow Generation Progress
 
 The progress panel shows what BARS is working on while it reads the scenery and matches its lights with the division layout.
 
@@ -35,13 +36,13 @@ When it finishes, the map and result panel separate the draft into:
 - **Matched and included** objects, shown in green.
 - **Needs manual work** objects, shown with a red dashed line and excluded from the automatic draft.
 
-Red objects are not submission errors by themselves. Open the editor and add or correct them before testing.
+Red objects need manual editing before testing. Open the editor to add or correct them.
 
-<Frame caption="The result panel counts automatic matches and lists objects that need manual editing.">
+<Frame>
   <img src="/images/v2/Contributions-Draft-Result.png" alt="Completed draft generation with matched objects in green, manual-work objects in red, and the Draft ready result panel" />
 </Frame>
 
-## Inspect the result map
+## Inspect the Result Map
 
 | Control | What it shows |
 | --- | --- |
@@ -53,7 +54,7 @@ Red objects are not submission errors by themselves. Open the editor and add or 
 
 Use the **Simulator Geometry** legend to distinguish the original scenery lights from the shapes BARS included in the draft.
 
-## Choose the next action
+## Choose the Next Action
 
 <Steps>
   <Step title="Open editor">
@@ -72,6 +73,10 @@ Use the **Simulator Geometry** legend to distinguish the original scenery lights
   <img src="/images/v2/Contributions-MSFS-Editor-Warning.png" alt="MSFS Editor is Experimental dialog with Continue with MSFS Editor and Use Legacy XML actions" />
 </Frame>
 
-<Card title="Edit the draft" icon="pen-ruler" href="/contributions/editor" horizontal>
+## Next Steps
+
+Once your draft is ready, open the editor to check and adjust the lighting objects.
+
+<Card title="Editor" icon="pen-ruler" href="/contributions/editor" horizontal>
   Correct geometry, add missing objects, manage removals, and clear validation errors.
 </Card>

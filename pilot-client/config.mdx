@@ -37,6 +37,10 @@ Navigate to the **Airport List** section in the Pilot Client. You can search for
 </Step>
 </Steps>
 
+<Frame>
+  <img src="/images/v2/Pilot_Client-Selecting-Scenery.png" alt="BARS Pilot Client selecting scenery package" />
+</Frame>
+
 <Note>
 If an airport does not appear in the list or a specific scenery package is missing, it may not have been contributed yet. You can help contribute to BARS by following the [scenery contribution guide](/contributions).
 </Note>
@@ -93,32 +97,40 @@ If you disable the default light removal package, you may experience duplicate l
 
 Even when ATC is offline, a controller is not using BARS, or you are not connected to VATSIM, simply having the BARS Pilot Client open will spawn airport lighting in a **"Default"** state. This ensures your scenery always has appropriate lighting, preventing you from flying in an unlit environment.
 
-## System Tray and Window Management
+## System Tray
 
 ### Minimize to System Tray
 
 The Pilot Client can be minimized to your system tray for quick access while keeping your desktop clean. Click the **minimize button** in the top-right corner of the window to minimize the application to your system tray.
 
-### System Tray Icon Settings
+## Settings
 
-Right-click on the BARS Pilot Client icon in your system tray to access additional settings:
+To access the BARS Pilot Client settings, click the **gear icon** to the right of the title in the client, or right-click the Pilot Client icon in your system tray. Click **Save settings** after making your changes.
 
 <Frame>
   <img 
-    src="/images/v2/Pilot_Client-System_Tray_Context_Menu.png" 
-    alt="System tray context menu"
+    src="/images/v2/Pilot_Client-Settings.png"
+    alt="BARS Pilot Client settings with Light draw distance, Start minimized, and Discord Rich Presence controls"
   />
 </Frame>
 
-#### Auto Minimize on Start
+### Light Draw Distance
 
-Enabling **Auto Minimize on Start** will automatically minimize the Pilot Client to your system tray.
+**Light draw distance** controls how far from your aircraft BARS lights are loaded. The default is **500 m**. Drag the slider to adjust the distance between **250 m** and **10 km**.
+
+<Note>
+  Higher distances use more simulator resources. We recommend keeping the default of 500 m unless you need a longer draw distance. Setting the maximum of 10 km is not recommended because of the additional resource use.
+</Note>
+
+### Start Minimized
+
+Enable **Start minimized** to keep the BARS Pilot Client in your system tray when it starts.
 
 <Check>
 We recommend enabling this setting after you've configured your scenery packages, so the application starts quietly in the background without taking up screen space.
 </Check>
 
-#### Discord Rich Presence
+### Discord Rich Presence
 
 By default, **Discord Rich Presence** is enabled to show your activity in the BARS Pilot Client on your Discord profile. When enabled, your Discord status will display:
 - Your nearest airport (automatically detected from your simulator position)
@@ -133,7 +145,7 @@ By default, **Discord Rich Presence** is enabled to show your activity in the BA
 </Frame>
 
 <Info>
-If you wish to disable Discord Rich Presence, simply uncheck it in the system tray settings.
+To disable Discord Rich Presence, turn off the **Discord Rich Presence** toggle in settings.
 </Info>
 
 ## Auto-Start Configuration
@@ -159,6 +171,12 @@ If you need to disable auto-start or re-enable it, you can modify this setting a
 </Steps>
 
 <Tip>
-Auto Start combined with the **[Auto Minimize on Start](/pilot-client/config#auto-minimize-on-start)** setting, enables the Pilot Client to quietly launch in the background whenever you start your simulator, keeping your desktop clean while ensuring BARS lights are active, ready for use without manual starting.
+Auto Start combined with the **[Start minimized](/pilot-client/config#start-minimized)** setting, enables the Pilot Client to quietly launch in the background whenever you start your simulator, keeping your desktop clean while ensuring BARS lights are active, ready for use without manual starting.
 </Tip>
+
+## Next Steps
+
+<Card title="Tools" icon="wrench" href="/pilot-client/tools" horizontal>
+  Explore the tools available in the BARS Pilot Client.
+</Card>
 

@@ -68,14 +68,14 @@
         "tab": "Contributions",
         "groups": [
           {
-            "group": "Get started",
+            "group": "Get Started",
             "pages": [
               "contributions/index",
-              "contributions/getting-started"
+              "contributions/preparation"
             ]
           },
           {
-            "group": "Contribution workflow",
+            "group": "Contribution Workflow",
             "pages": [
               "contributions/mapping",
               "contributions/draft",
@@ -141,11 +141,11 @@
     "links": [
       {
         "label": "About",
-        "href": "https://preview.stopbars.com/about"
+        "href": "https://stopbars.com/about"
       },
       {
         "label": "Contribute",
-        "href": "https://preview.stopbars.com/contribute"
+        "href": "https://stopbars.com/contribute"
       },
       {
         "label": "Status",

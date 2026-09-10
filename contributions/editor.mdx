@@ -1,32 +1,37 @@
 ---
-title: "Edit a contribution draft"
-description: "Correct object positions, assign BARS IDs, manage default-light removals, and prepare a draft for testing."
+title: "Editor"
 ---
 
-Use the full-screen editor to align the draft with your scenery. The object list, map, editing controls, scenery layers, and validation results remain visible while you work.
+Use the editor to align your draft's lighting objects with the scenery. Adjust their positions, remove default lights where needed, and resolve validation errors before testing.
 
-## Finish editor setup
+## Finish Editor Setup
 
-The editor may ask you to select the scenery package again after you refresh the page or reopen the draft.
+The editor may ask you to select the scenery package again or reopen the draft.
 
 <Tabs>
   <Tab title="MSFS">
     Reconnect the same airport scenery package when prompted so the editor can display it again.
+
+    The editor warns you if the selected scenery differs from the package used to create the draft. Recheck every object and removal before continuing.
+
+      <Frame>
+      <img src="/images/v2/Contributions-Editor-Setup.png" alt="Finish editor setup page showing Draft ready, Scenery package, and X-Plane missing texture steps" />
+      </Frame>
   </Tab>
   <Tab title="X-Plane">
     Add the airport scenery first. If texture definitions or source textures remain unresolved, add the relevant X-Plane folder under **Missing textures**.
+
+    The editor warns you if the selected scenery differs from the package used to create the draft. Recheck every object and removal before continuing.
+
+      <Frame>
+        <img src="/images/v2/Contributions-Editor-Setup-XPlane.png" alt="Finish editor setup page showing Draft ready, Scenery package, and X-Plane missing texture steps" />
+      </Frame>
   </Tab>
 </Tabs>
 
-The editor warns you if the selected scenery differs from the package used to create the draft. Recheck every object and removal before continuing.
+## Understand the Workspace
 
-<Frame caption="Reconnect any local source files the editor needs before the map opens.">
-  <img src="/images/v2/Contributions-Editor-Setup.png" alt="Finish editor setup page showing Draft ready, Scenery package, and X-Plane missing texture steps" />
-</Frame>
-
-## Understand the workspace
-
-<Frame caption="Objects are on the left, the editable map is in the center, and object or scenery controls are on the right.">
+<Frame>
   <img src="/images/v2/Contributions-Editor-Overview.png" alt="BARS contribution editor with the object list, scenery map, editor toolbar, object panel, validation panel, and top actions" />
 </Frame>
 
@@ -40,7 +45,7 @@ The editor warns you if the selected scenery differs from the package used to cr
 | Scenery panel | Selected scenery, display layers, and unique colors. |
 | Validation panel | Blocking errors and non-blocking warnings. |
 
-## Top bar controls
+## Top Bar Controls
 
 | Control | What it does |
 | --- | --- |
@@ -53,7 +58,7 @@ The editor warns you if the selected scenery differs from the package used to cr
 
 The editor saves your progress in the current browser. Download a copy before switching browsers, clearing site data, or moving to another computer.
 
-## Work with the object list
+## Work with the Object List
 
 Select an object name to focus it on the map and open its details. The list also shows:
 
@@ -62,13 +67,13 @@ Select an object name to focus it on the map and open its details. The list also
 - A part count when one BARS object uses multiple line sections.
 - A warning icon when validation found a problem.
 
-Use the pencil action for a compact BARS ID edit. Use the trash action to delete that line section.
+Click the pencil icon to edit the BARS ID, or the trash icon to delete that line section.
 
 <Note>
   Multiple line parts can share one BARS ID. They still represent one BARS object.
 </Note>
 
-## Map tools
+## Map Tools
 
 | Tool | Shortcut | How to use it |
 | --- | --- | --- |
@@ -83,7 +88,7 @@ Use the pencil action for a compact BARS ID edit. Use the trash action to delete
 
 Press `Escape` to return to Edit, cancel an unfinished removal or measurement, and clear the current selection.
 
-### Add or correct an object
+### Add or Correct an Object
 
 <Steps>
   <Step title="Show useful reference layers">
@@ -107,7 +112,7 @@ Press `Escape` to return to Edit, cancel an unfinished removal or measurement, a
   <img src="/images/v2/Contributions-Editor-Object.png" alt="Selected BARS object in the contribution editor with editable map points, BARS ID suggestions, object details, and Reverse direction control" />
 </Frame>
 
-## Edit source-light removals
+## Edit Source-Light Removals
 
 Source-light removals prevent default scenery lights from appearing beneath BARS-controlled lights. You edit a section of an existing scenery light row instead of drawing an area on the map.
 
@@ -134,7 +139,7 @@ Source-light removals prevent default scenery lights from appearing beneath BARS
   <img src="/images/v2/Contributions-Editor-Removals.png" alt="Contribution editor in source-light removal mode with Remove lights and Keep lights controls and a selected source row interval" />
 </Frame>
 
-## Object panel
+## Object Panel
 
 The **Object** tab appears on the right. Select an object to use these controls:
 
@@ -145,7 +150,7 @@ The **Object** tab appears on the right. Select an object to use these controls:
 | Delete object | Removes the selected line section. |
 | Issue message | Shows the first validation issue for the selection. |
 
-## Scenery panel and reference layers
+## Scenery Panel and Reference Layers
 
 The **Scenery** tab shows the selected package and whether it loaded correctly. You can replace the package or add missing X-Plane textures from this panel.
 
@@ -166,9 +171,9 @@ Open **Advanced** for display controls:
 
 Some source categories become **Required** while a tool depends on them and cannot be hidden until you leave that tool.
 
-<Frame caption="Use reference layers to compare draft geometry with the selected scenery without cluttering the map.">
+{/* <Frame> @Edward fix this
   <img src="/images/v2/Contributions-Editor-Layers.png" alt="Contribution editor Scenery panel with local source status, Unique colors, and reference layer visibility controls" />
-</Frame>
+</Frame> */}
 
 ## Validation
 
@@ -180,7 +185,7 @@ The bottom of the right panel shows **Ready to test** when no issues remain. Oth
 
 Typical errors include a missing BARS ID, a conflicting duplicate object, an invalid line, or a division object that is still missing from the draft.
 
-## Keyboard reference
+## Keyboard Reference
 
 | Key | Action |
 | --- | --- |
@@ -195,8 +200,12 @@ Typical errors include a missing BARS ID, a conflicting duplicate object, an inv
 | `Ctrl+Z` | Undo |
 | `Ctrl+Shift+Z` or `Ctrl+Y` | Redo |
 
-Shortcuts do not run while you are typing in an input or notes field.
+Keyboard shortcuts are disabled while you are typing in a text or notes field.
 
-<Card title="Test the contribution" icon="flask" href="/contributions/testing" horizontal>
+## Next Steps
+
+Once you have finished editing and resolved any validation errors, test the draft in your simulator.
+
+<Card title="Testing" icon="flask" href="/contributions/testing" horizontal>
   Prepare the draft, inspect the preview, and open it in the Pilot Client.
 </Card>

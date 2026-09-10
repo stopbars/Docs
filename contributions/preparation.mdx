@@ -1,50 +1,41 @@
 ---
-title: "Prepare to contribute"
-description: "Check the account, airport, scenery, and simulator requirements before starting a BARS contribution."
+title: "Preparation"
 ---
 
-You create most contributions in the browser. You only need the simulator when you perform the final in-simulator test.
+Before starting a contribution, make sure your scenery package, simulator, and BARS Pilot Client are ready. You'll create and edit the draft in your browser, then test the lighting in your simulator.
 
-## Before you start
+<Info>
 
-<Check>
-  Sign in to your BARS account before opening the contribution flow.
-</Check>
+**Prerequisites**:
 
-Have these ready:
+Before you begin, you must have the following:
 
-- The four-character ICAO code for the airport.
-- The exact scenery package you want to support.
-- MSFS 2020, MSFS 2024, or X-Plane installed with that scenery.
-- The BARS Pilot Client installed for the in-simulator test.
-- A desktop browser that can select a local folder.
+1. The exact scenery package you want to support.
+2. MSFS 2020, MSFS 2024, or X-Plane installed with that scenery.
+3. The BARS Pilot Client installed for the in-simulator test.
+
+</Info>
 
 <Warning>
   Use the same scenery package when you create, edit, and test the draft. If you reconnect a different package, the editor warns that the scenery no longer matches the draft source.
 </Warning>
 
-## Check the airport
+## Start from the Dashboard
 
-The airport's division must have supplied lighting data and enabled contributions. The review page shows a clear message when either requirement is missing.
-
-You can contribute another scenery package for an airport that already has approved contributions. Each scenery and simulator combination has its own submission.
-
-## Start from the dashboard
-
-Open the [Contribution Dashboard](https://preview.stopbars.com/contribute). It has two views:
+Open the [Contribution Dashboard](https://stopbars.com/contribute). It has two views:
 
 - **All Contributions** lists approved airport and scenery combinations. You can search by airport, scenery, or simulator and download an approved XML file.
 - **Your Contributions** shows your approved, pending, and rejected submissions. It also shows a status summary.
 
 The leaderboard lists the community's top contributors.
 
-<Frame caption="Use Contribute New Airport to begin. Your Contributions shows the status of submissions made from your account.">
+<Frame>
   <img src="/images/v2/Contributions-Dashboard.png" alt="BARS Contribution Dashboard with the All Contributions and Your Contributions tabs, search field, leaderboard, and Contribute New Airport button" />
 </Frame>
 
 <Steps>
   <Step title="Select Contribute New Airport">
-    The button is available after you sign in.
+    Click **Contribute New Airport** on the dashboard. The button is available after you sign in.
   </Step>
   <Step title="Enter the airport ICAO">
     Enter the airport's four-character ICAO code.
@@ -54,17 +45,13 @@ The leaderboard lists the community's top contributors.
   </Step>
 </Steps>
 
-<Frame caption="Enter an ICAO to begin the six-step contribution flow.">
+<Frame>
   <img src="/images/v2/Contributions-Start.png" alt="Start a contribution page with the Airport ICAO field, Review airport button, and contribution progress tracker" />
 </Frame>
 
-<Note>
-  Selecting a scenery folder does not upload the package. BARS only uploads the contribution XML when you test and submit it.
-</Note>
+## Legacy MSFS Workflow
 
-## Legacy MSFS workflow
-
-You can still build an MSFS contribution with the simulator's developer tools and upload the resulting XML at the test step. Use this route when the experimental MSFS browser editor cannot render your scenery correctly.
+You may need to use the legacy workflow when the experimental MSFS browser editor is unavailable for your selected scenery package or cannot render it correctly. This lets you build the contribution with the simulator's developer tools and upload the resulting XML at the test step.
 
 <Accordion title="Create a legacy MSFS contribution">
   <Steps>
@@ -144,6 +131,10 @@ You can still build an MSFS contribution with the simulator's developer tools an
   </Steps>
 </Accordion>
 
-<Card title="Review the airport" icon="map-location-dot" href="/contributions/mapping" horizontal>
+## Next Steps
+
+Once you have entered the airport ICAO, review its lighting layout before creating a draft.
+
+<Card title="Mapping" icon="map-location-dot" href="/contributions/mapping" horizontal>
   Check the division layout and BARS IDs before creating a draft.
 </Card>
