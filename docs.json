@@ -74,6 +74,15 @@
             "group": "Get Started",
             "pages": [
               "divisions/index",
+              "divisions/getting-started",
+              "divisions/management"
+            ]
+          },
+          {
+            "group": "Airport Data",
+            "pages": [
+              "divisions/airport-data",
+              "divisions/website-editor",
               "divisions/euroscope-guide"
             ]
           }
