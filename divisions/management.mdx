@@ -1,38 +1,26 @@
 ---
 title: "Staff and airports"
-description: "Understand Nav Head and Nav Member permissions, manage staff, request airports, and control scenery contributions."
 ---
-
-Open your account on the [BARS website](https://stopbars.com/account) and select **Manage Division**.
 
 ## Staff permissions
 
-Roles apply to the division where the person is a member. Both roles can maintain lighting data for that division's approved airports.
-
-| Action | Nav Head | Nav Member |
+| Permission | Nav Head | Nav Member |
 | --- | --- | --- |
-| Add a Nav Head or Nav Member | Yes | No |
-| Remove a Nav Member other than yourself | Yes | No |
-| Remove yourself or another Nav Head | No, contact BARS | No, contact BARS |
-| Request an airport | Yes | Yes |
-| Delete a pending or rejected airport request | Any request in your division | Only your own request |
-| Add, edit, or delete lighting data at an approved airport | Yes | Yes |
-| Enable or disable scenery contributions at an approved airport | Yes | Yes |
-| Approve airport access or remove an approved airport assignment | Contact BARS | Contact BARS |
-
-<Note>
-  A Nav Member has editing access, not read-only access. Assign this role only to staff who should be able to change your airport lighting data.
-</Note>
+| Add Nav Heads or Nav Members | Yes | No |
+| Remove Nav Members | Yes | No |
+| Remove Nav Heads or yourself | No | No |
+| Request airport access | Yes | Yes |
+| Delete pending or rejected airport requests | Any in your division | Only your own |
+| Add, edit, or delete lighting data at approved airports | Yes | Yes |
+| Enable or disable scenery contributions | Yes | Yes |
 
 ### Add a staff member
 
-As a Nav Head, select **Add Member**, enter the person's VATSIM CID, choose **Nav Head** or **Nav Member**, and confirm. Check the CID and role in the member list after adding them.
-
-Use Nav Head for staff who need to manage division membership. Use Nav Member for staff who need to maintain airport data.
+As a Nav Head, select **Add Member**, enter the person's VATSIM CID, choose **Nav Head** or **Nav Member**, and save. If the person has logged in to the BARS website before, their name appears as their public display name. If they have not logged in yet, only their CID appears.
 
 ### Remove a staff member
 
-As a Nav Head, use the remove button beside a Nav Member and confirm the removal. Review access when staff leave or change responsibilities.
+As a Nav Head, use the remove button beside a Nav Member and confirm the removal.
 
 Contact [BARS support](https://stopbars.com/discord) to remove a Nav Head, arrange a leadership handover, or resolve a role change that the page cannot make. Nav Heads cannot remove themselves or other Nav Heads.
 
@@ -45,29 +33,21 @@ You must request an airport and receive approval before adding its lighting data
     Select **Request Airport**, enter the airport's four-character ICAO code, and submit the request.
   </Step>
   <Step title="Wait for BARS review">
-    The airport appears in your division's list with its request status. BARS staff review the request before granting access.
+    The airport appears in your division's list with its request status.
   </Step>
   <Step title="Open the approved airport">
-    Once its status is **Approved**, you can open its data editor. Both Nav Heads and Nav Members in your division can maintain its lighting data.
+    Once its status is **Approved**, you can begin adding lighting data.
   </Step>
 </Steps>
 
-| Status | What to do |
-| --- | --- |
-| Pending | Wait for review. If the request is a mistake, its requester or a Nav Head can delete it. |
-| Approved | Prepare and maintain the airport's lighting data. Contact BARS if its division assignment needs to change. |
-| Rejected | Contact BARS if you need clarification. Its requester or a Nav Head can delete the rejected request. |
-
-BARS checks airport ownership to prevent conflicting division assignments. If an airport is already assigned elsewhere, contact BARS to resolve ownership before proceeding.
-
 ## Control scenery contributions
 
-Each approved airport has a scenery contributions switch. Both Nav Heads and Nav Members can change it.
+Each approved airport has a scenery contributions switch. Both Nav Heads and Nav Members can change it. Keep contributions disabled while preparing the airport data. The website requires you to add objects before enabling the switch, but the presence of objects alone does not mean the airport is complete.
 
-Keep contributions disabled while preparing the airport layout. The website requires you to add objects before enabling the switch, but the presence of objects alone does not mean the airport is complete.
+Before enabling contributions, check that all intended lighting objects are present, their properties are correct, and your changes have uploaded successfully. Then enable the switch and confirm that the airport data is ready. Disabling contributions prevents contributors from continuing the contribution workflow for that airport.
 
-Before enabling contributions, check that all intended lighting objects are present, their properties are correct, and your changes have uploaded successfully. Then enable the switch and confirm that the airport data is ready.
+## Next Steps
 
-Disabling contributions prevents contributors from continuing the contribution workflow for that airport. Use it when the shared layout needs work, and coordinate any effect on existing scenery support with BARS staff.
-
-Read [Airport lighting data](/divisions/airport-data) before preparing your first layout.
+<Card title="Airport lighting data" icon="map" href="/divisions/airport-data" horizontal>
+  Learn about lighting data and their properties, before your first airport.
+</Card>
