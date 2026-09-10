@@ -1,0 +1,57 @@
+---
+title: "Airport lighting data"
+description: "Define shared lighting objects, understand BARS IDs, and prepare accurate data for scenery contributors."
+---
+
+## One shared airport layout
+
+Your division defines the airport's shared lighting data, also called its canonical object data. This describes where lighting objects are located and the properties they should have.
+
+A lighting object can represent a row or section of lights, such as a stopbar or taxiway centreline section. It does not need a separate BARS ID for every individual lamp in that row.
+
+Use current airport information to define the layout. Satellite imagery is a reference and may not show recent taxiway changes or the exact position of lighting.
+
+## Object types and properties
+
+Every object has a name, a type, and an ordered series of coordinates describing its shape. The website editor requires at least two coordinates per object.
+
+| Object type | What to define |
+| --- | --- |
+| Stopbar | Its location, name, and directionality. Set elevated lighting and intermediate holding point properties where applicable. Elevated stopbars must be unidirectional. |
+| Lead-on | The shape and name of the lead-on lighting. In the website workflow, link it to the appropriate stopbar after uploading the objects. |
+| Taxiway | The centreline section's shape, name, directionality, and colour option. |
+| Stand | The shape and name of the stand lighting. |
+
+The editor shows the fields that apply to the selected type. Directionality describes whether lighting is visible from one direction or both. For unidirectional objects, the order of coordinates affects orientation, so inspect the map preview before uploading.
+
+An intermediate holding point, or IHP, is a holding point on the taxiway system. Set the IHP property for the appropriate stopbar using your airport's published information.
+
+Use names that your staff can recognise and check against charts. Split lighting into objects that reflect how your airport's control configuration needs to operate.
+
+## What is a BARS ID?
+
+BARS assigns a unique identifier to each new lighting object when it is created on the server. A BARS ID starts with `BARS_`. The editor may display a temporary identifier before a new object has been uploaded.
+
+The ID connects the shared division object to its scenery-specific versions. Contributors keep that identity while adjusting the object's position to match a particular scenery package.
+
+Edit an existing object when correcting it. Deleting and recreating an object produces a new ID, even if you reuse its name. Coordinate substantial changes with BARS and scenery contributors so existing mappings can be checked.
+
+## How contributors use your data
+
+Contributors start by reviewing your division's airport layout and its BARS IDs. They generate or draw scenery-specific versions of those objects, adjust their placement, test them in the simulator, and submit them to BARS for review.
+
+One airport can have several contributions, each for a different scenery package or simulator. They all refer back to your shared lighting objects. This expands scenery support while your division retains control of the airport's operational lighting definitions.
+
+<Frame caption="Contributors review the division's objects before mapping them to a scenery package.">
+  <img src="/images/v2/Contributions-Review-Airport.png" alt="Contribution airport review map showing the lighting objects supplied by the division" />
+</Frame>
+
+The [contribution guide](/contributions/index) explains this process from the contributor's side. Only [enable contributions](/divisions/management#control-scenery-contributions) once your full layout is ready.
+
+## Review and maintain the layout
+
+Before uploading changes, check the airport and object names, coordinates, directionality, and any stopbar properties or lead-on links. Compare the layout with current charts and resolve missing or duplicate sections.
+
+After an airport layout changes, review the affected lighting objects and tell BARS staff about changes that may require updated scenery contributions or controller configuration. Keep the existing BARS IDs when updating the same objects.
+
+Use the [website editor](/divisions/website-editor) for the vatSys workflow, or the [EuroScope data editor](/divisions/euroscope-guide) for EuroScope lighting graphs, profiles, and maps.

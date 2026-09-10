@@ -1,0 +1,105 @@
+---
+title: "Website editor"
+description: "Add and maintain division lighting data for vatSys and other supported clients using the BARS website editor."
+---
+
+Divisions using vatSys or another supported client outside the EuroScope workflow can maintain airport lighting data in the browser at [stopbars.com](https://stopbars.com). You can draw lighting objects, enter coordinates, and overlay a chart to help position the layout.
+
+<Note>
+  Divisions using EuroScope should use the [EuroScope data editor](/divisions/euroscope-guide). It edits the lighting objects alongside the graph, profiles, and maps needed by that client.
+</Note>
+
+## Before you start
+
+Complete [division setup](/divisions/getting-started), have a Nav Head add the staff who will edit data, and [request your airports](/divisions/management#request-an-airport). Both Nav Heads and Nav Members can edit an approved airport.
+
+Gather current charts or reliable coordinates. Open your account on the BARS website, select **Manage Division**, then open the approved airport's editor.
+
+## Draw a lighting object
+
+<Steps>
+  <Step title="Create the shape">
+    Start a new object and click the map to place vertices along the lighting row. Add at least two vertices. Finish with **Ctrl + left-click** on the map or by clicking a vertex. Press **Escape** to cancel drawing.
+  </Step>
+  <Step title="Set its properties">
+    Choose the object type and enter a useful name. Set the directionality, colour, or stopbar properties shown for that type. See [Airport lighting data](/divisions/airport-data#object-types-and-properties) for the differences.
+  </Step>
+  <Step title="Check its position and orientation">
+    Adjust the vertices to follow the lighting layout. For unidirectional lights, inspect the displayed direction and use **Reverse** if the coordinate order needs to change.
+  </Step>
+  <Step title="Save the object to your pending changes">
+    Select **Save** and fix any validation errors. Repeat for the other lighting objects you need to add or change.
+  </Step>
+</Steps>
+
+<Warning>
+  Saving an object's properties does not upload the airport changes. Finish with **Review Changes** and **Save & Upload** before leaving the editor.
+</Warning>
+
+## Enter coordinates when imagery is outdated
+
+You can place lighting at known coordinates even when the background map does not show the current airport layout.
+
+1. Start a new object and select **Vertices by Coordinates**.
+2. Enter each vertex in order, using latitude followed by longitude. Decimal coordinates such as `-27.3815, 153.1314` and degrees, minutes, and seconds are supported. This example only illustrates the format.
+3. Use **Add Vertex** for additional points and provide at least two valid coordinates within the airport boundary.
+4. Select **Map Coordinates**, check the shape on the map, then select **Next Step** to complete the object's properties.
+5. Save it to the pending changes, then review and upload when ready.
+
+If coordinates are rejected, check their format, latitude and longitude order, and hemisphere signs. If reliable coordinates fall outside the airport boundary, contact BARS with the ICAO code and the affected location.
+
+## Overlay an airport chart
+
+The **Image Overlay** panel lets you place a chart image over the map. Use a PNG, JPEG, WebP, or GIF image. Export a PDF chart page to an image before uploading it here.
+
+<Steps>
+  <Step title="Upload the image">
+    Select **Upload** in Image Overlay and choose your chart image.
+  </Step>
+  <Step title="Position the chart">
+    Move, resize, and rotate it to match the airport. Lower **Opacity** so you can compare the chart with the map underneath.
+  </Step>
+  <Step title="Align matching landmarks">
+    For **Auto Align**, select **Start**. Click a recognisable point on the overlay, then the same location on the basemap. Repeat with at least one more landmark pair, then select **Apply Alignment**.
+
+    Choose landmarks that still agree with the current airport layout. Check the alignment across the area you intend to edit.
+  </Step>
+  <Step title="Lock the overlay and add lighting">
+    Lock the overlay position to avoid moving it while working. Draw or adjust the lighting objects using the chart as a reference.
+  </Step>
+</Steps>
+
+<Tip>
+  A chart may be schematic or distorted. Check known coordinates and several landmarks before tracing it. An overlay helps you position data, but does not verify the lighting layout for you.
+</Tip>
+
+## Review and upload changes
+
+<Frame caption="Object edits stay pending until you upload the airport changes.">
+  <img src="/images/v2/Divisions-Editor-Save-Flow.svg" alt="Draw or edit an object, save it to pending changes, review additions modifications and deletions, then Save and Upload and wait for confirmation" />
+</Frame>
+
+Select **Review Changes** to inspect additions, modifications, and deletions. Check each changed object against your source information, including its name, type, shape, and directionality.
+
+Select **Save & Upload** when the changes are ready. Wait for the **Changes Saved** confirmation and check the refreshed objects. New objects now have their BARS IDs.
+
+If the upload fails, read the error and resolve it before leaving the page. Do not assume that a failed upload or an object-level save has applied your changes to BARS.
+
+## Link lead-on lights to stopbars
+
+Upload the stopbar and lead-on objects before linking them.
+
+1. Select an existing stopbar.
+2. In **Lead-on links**, select **Click Lead-ons**.
+3. Click the lead-on objects on the map to select or deselect their links to this stopbar.
+4. Select **Save** in the Lead-on links section and wait for **Lead-on Links Saved**.
+
+Lead-on links save separately from the pending geometry and property changes. A lead-on can link to more than one stopbar, so check the selection against the intended airport configuration.
+
+## Finish airport setup
+
+Once the complete layout and links are checked, return to division management and [enable scenery contributions](/divisions/management#control-scenery-contributions).
+
+For vatSys, also follow the [plugin installation](/vatsys/installation) and [configuration guide](/vatsys/config). Check the appropriate controller profile and test the airport with supported scenery. Uploading division data is one part of airport setup; controllers still need their client configuration and pilots need scenery support.
+
+For help with another supported client or an airport-specific configuration, ask in the [division support channels](/divisions/getting-started#join-the-division-support-channels).
