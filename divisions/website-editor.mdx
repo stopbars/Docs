@@ -2,22 +2,32 @@
 title: "Website Editor"
 ---
 
-Divisions using vatSys or another controller client other than EuroScope can maintain airport lighting data in the browser at [stopbars.com](https://stopbars.com). You can draw lighting objects, enter coordinates, and overlay a chart to help position the lighting objects.
+Divisions using vatSys or another controller client other than EuroScope can maintain airport lighting data in the editor through [stopbars.com](https://stopbars.com). You can draw lighting objects, enter coordinates, and overlay a chart to help position the lighting objects.
 
 ## Before you start
 
-Complete [division setup](/divisions/getting-started), have a Nav Head add the staff who will edit data, and [request your airports](/divisions/management#request-an-airport). Both Nav Heads and Nav Members can edit an approved airport.
+Complete [division setup](/divisions/getting-started). Open your account on the BARS website, select **Manage Division**, then open the approved airport's editor through gear icon.
 
-Open your account on the BARS website, select **Manage Division**, then open the approved airport's editor through gear icon.
+<Frame>
+  <img src="/images/v2/Divisions-Open-Airport-Editor.png" alt="Approved YSSY airport card with the pointer over the gear icon that opens the airport editor" />
+</Frame>
 
 ## Draw a lighting object
 
 <Steps>
-  <Step title="Create the shape">
-    Start a new object and click the map to place vertices along the lighting row. Add at least two vertices. Finish with **Ctrl + left-click** on the map or by clicking a vertex. Press **Escape** to cancel drawing.
+  <Step title="Create new object">
+    Create a new object through the **+ Add New Object** button, click the map to place vertices along the lighting row. Add at least two vertices. Finish with **Ctrl + left-click** on the map or by clicking a vertex. Press **Escape** to cancel drawing.
+
+    <Frame>
+      <img src="/images/v2/Divisions-Create-New-Object.gif" alt="Animation demonstrating how to create a new lighting object and place its vertices on the map" />
+    </Frame>
   </Step>
   <Step title="Set its properties">
     Choose the object type and enter its name. Set the directionality, colour, properties, etc
+
+    <Frame>
+      <img src="/images/v2/Divisions-Add-New-Object.png" alt="Add New Object panel showing the object type, name, directionality, additional properties, and Save button" />
+    </Frame>
   </Step>
   <Step title="Check its position and orientation">
     Adjust the vertices to follow the positions of the lights. For unidirectional lights, inspect the displayed direction and use **Reverse** button to change the lights direction.
@@ -43,6 +53,10 @@ You can place lighting at known coordinates even when the background map does no
 
 If coordinates are rejected, check their format, latitude and longitude order, and hemisphere signs.
 
+<Frame>
+  <img src="/images/v2/Divisions-Vertices-By-Coordinates.png" alt="Add New Object panel with two latitude and longitude vertices, Coordinates Mapped confirmation, and an enabled Next Step button" />
+</Frame>
+
 ## Overlay an airport chart
 
 The **Image Overlay** panel lets you place a chart image over the map. Use a PNG, JPEG, WebP, or GIF image. Export a PDF chart page to an image before uploading it here.
@@ -61,6 +75,10 @@ The **Image Overlay** panel lets you place a chart image over the map. Use a PNG
   </Step>
   <Step title="Lock the overlay and add lighting">
     Lock the overlay position to avoid moving it while working. Draw or adjust the lighting objects using the chart as a reference.
+
+    <Frame>
+      <img src="/images/v2/Divisions-Locked-Chart-Overlay.png" alt="Airport chart overlaid on satellite imagery with lighting objects and the Image Overlay panel showing a locked padlock icon" />
+    </Frame>
   </Step>
 </Steps>
 
