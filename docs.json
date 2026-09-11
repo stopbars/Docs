@@ -8,6 +8,12 @@
     "dark": "#18181b"
   },
   "favicon": "/favicon.png",
+  "redirects": [
+    {
+      "source": "/euroscope/guide",
+      "destination": "/divisions/euroscope-guide"
+    }
+  ],
   "navigation": {
     "tabs": [
       {
